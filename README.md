@@ -55,7 +55,6 @@
 - [Integrations - Home Assistant](https://www.home-assistant.io/integrations/?cat=vacuum)
 - [Living Colour: Tiny Desk Concert : NPR](https://www.npr.org/2025/06/25/g-s1-70062/living-colour-tiny-desk-concert)
 - [Empire of AI](https://bookshop.org/p/books/empire-of-ai-dreams-and-nightmares-in-sam-altman-s-openai-karen-hao/22156498)
-- [DD12 - Schedule](https://dd12streams.com/schedule)
 - [Drama in der grünen Hölle... Mola geht der Sprit aus - YouTube](https://www.youtube.com/clip/Ugkx9IS1EdX-hS1fImk5bMD_c4Y9JvaLTPyV)
 - [Stanley Clarke: Tiny Desk Concert - YouTube](https://www.youtube.com/watch?v=R81jAk9LgiQ)
 - [The Demonstration - YouTube](https://www.youtube.com/playlist?list=OLAK5uy_mPwklvB48O_AfJQIOzHfSbFnk8ijRvgyA)
