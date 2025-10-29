@@ -2,13 +2,11 @@
 
 ## concerts
 
-- [AIR played Moon Safari at Royal Albert Hall – the synth setup](https://synthanatomy.com/2024/09/air-played-moon-safari-at-royal-albert-hall-the-synth-setup.html)
 - [AIR - Live at the Niemeyer Space for ARTE Concert (Binaural Show) (Full Concert - Official Video) - YouTube](https://www.youtube.com/watch?v=3GALJl6Y16w)
 - [Can - Vernal Equinox Live - YouTube](https://www.youtube.com/watch?v=I4nHr44vE9I)
 - [Davis Miles - Live in Vienna 1973 Stadthalle ganzes Konzert - YouTube](https://www.youtube.com/watch?v=Of-iP_VL7Bg)
 - [Davis Miles Quintet, Concert in Karlsruhe, November 7th, 1967 (in color) - YouTube](https://www.youtube.com/watch?v=oCMDf5MXd2s&t=55s)
 - [Davis Miles - Montreux Jazz Festival - 07 July 1988 - YouTube](https://m.youtube.com/watch?v=WmIn_IfJh90&t=2130s&pp=2AHSEJACAQ%3D%3D)
-- [Demonstration - YouTube](https://www.youtube.com/playlist?list=OLAK5uy_mPwklvB48O_AfJQIOzHfSbFnk8ijRvgyA)
 - [Clarke Stanley Tiny Desk Concert - YouTube](https://www.youtube.com/watch?v=R81jAk9LgiQ)
 - [Clarke Stanley Tiny Desk Concert : NPR](https://www.npr.org/2025/06/17/g-s1-70053/stanley-clarke-tiny-desk-concert)
 - [Cure: Robert Smith - 'Songs of a Lost World' track-by-track | Tim's Listening Party - YouTube](https://www.youtube.com/watch?v=J-gWGkfapbk)
