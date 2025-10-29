@@ -23,6 +23,9 @@
 - [Porsche Motorsport Hub](https://racing.porsche.com/de-CH/live-timing/fia-wec)
 - [Drama in der grünen Hölle... Mola geht der Sprit aus - YouTube](https://www.youtube.com/clip/Ugkx9IS1EdX-hS1fImk5bMD_c4Y9JvaLTPyV)
 - [Die 24 Stunden von Le Mans: Das härteste Autorennen der Welt (1/3) | SPIEGEL TV Classics - YouTube](https://www.youtube.com/watch?v=xjWcm90QwV8)
+- [24 Hours of Le Mans - 1968 - YouTube](https://www.youtube.com/watch?v=Z1jJVe79vTc)
+- [That time Ford defeated Porsche: The Legend of the Zakspeed Capri and Fox Mustang - YouTube](https://www.youtube.com/watch?v=Np6xTXAkaRI)
+- [Endurance Racing’s Golden Age: Group C - Full Story](https://www.youtube.com/watch?v=Oe7jymcP2T0)
 - [Legendäres Rennen 2008](https://www.youtube.com/watch?v=W6LWLt59HEA)
 - [Walter Röhrl im Interview mit Christian Geistdörfer Das Jahr 1980 im Rückspiegel](https://youtube.com/watch?v=9M9wYn)
 - [Bobby Unser Rightly heralded for his 3 Indy 500 wins, but if you want to see the man's extreme ability behind the wheel, you should watch him behind the wheel of a Gp B Audi Quattro in 1986, winning his tenth Pikes Peak.](https://www.crankandpiston.com/video-bobby-unser-1986-pikes-peak-record/)
@@ -35,6 +38,7 @@
 - [Gran Turismo presents The Ring](https://www.youtube.com/watch?v=Owf2R9XMa8Y)
 - [Classic Super GT races to watch during the COVID-19 crisis](https://www.racingblog.de/2020/03/20/classic-super-gt-races-to-watch-during-the-covid-19-crisis/)
 - [Der-Rennfahrer-Rolf-Stommelen](https://www.ndr.de/fernsehen/sendungen/sportclub/Der-Rennfahrer-Rolf-Stommelen,sendung759164.html)
+- [Steve McQueen: The Lost Formula 1 Movie - YouTube](https://www.youtube.com/watch?v=LU657hfITd8&t=930s&pp=2AGiB5ACAQ%3D%3D)
 - [Driverrating](https://www.youtube.com/watch?v=bHrDkrmK1Kw)
 
 ## Cars

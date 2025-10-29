@@ -6,9 +6,9 @@
 - [Christian Löffler, Hania Rani & Fejká - Haingeraide](https://www.reddit.com/r/progonlycom/comments/kle4eb/christian_l%C3%B6ffler_hania_rani_fejk%C3%A1_haingeraide/)
 - [On this day in 1983 Blue Monday was released. Watch how the band embraced technology on the @thisisdigmusic](https://thisisdig.lnk.to/NOI)
 
-
 ## Magazines
 
+- [Latest Music Technology News | MusicTech](https://musictech.com/news/)
 - [Moonbuilding - Moonbuilding Weekly Issue 73](https://www.buymusic.club/list/moonbuilding-moonbuilding-weekly-issue-73)
 - [Issue 73 / 1 August 2025](https://moonbuilding.substack.com/p/issue-73-1-august-2025)
 - [Issue 75 / 15 August 2025 - MOONBUILDING WEEKLY](https://moonbuilding.substack.com/p/issue-75-15-august-2025)
@@ -16,11 +16,14 @@
 
 ## Krautrock
 
+- [20 Essential Krautrock Songs](https://www.stereogum.com/2064023/krautrock-ultimate-playlist-essential-songs/lists/ultimate-playlist/)
 - [The History of The Motorik Beat in 10 Records](https://www.discogs.com/digs/music/essential-motorik-albums/)
 - [Can hero Holger Czukay on Stockhausen, shortwave radio and being “too intriguing”](https://www.factmag.com/2017/09/06/holger-czukay-interview)
 - [Top 10 Must-Have Krautrock Records](https://ultimate-guitar.com/articles/features/top_10_must-have_krautrock_records-76281)
 - [Kraut und Rüben - Sendung - Rockpalast - Fernsehen - WDR](https://www1.wdr.de/fernsehen/rockpalast/sendung/doku-kraut-und-rueben-100.html)
 - [Krautrock Legend Roedelius on the Designs That Front His Groundbreaking Sounds – Eye on Design](https://eyeondesign.aiga.org/krautrock-legend-roedelius-on-the-designs-that-front-his-groundbreaking-sounds/)
+- [As told in our Radio Show // Part 5 The History of Rock'n'Roll - Krautrock Jahre](https://www.br.de/radio/bayern2/sendungen/zuendfunk/zuendfunk-the-history-of-rocknroll-as-told-in-our-zuendfunk-part-5_x-100.html)
+- [Reflections: Neu!](https://relix.com/articles/detail/reflections-neu/)
 
 ## Podcasts
 
