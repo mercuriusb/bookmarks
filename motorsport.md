@@ -3,11 +3,9 @@
 ## Nürburgring
 
 - [PS Nürburgring - Steilstrecke](http://www.pro-steilstrecke.de/steilstrecke/nuerburgring_steilstrecke.php)
-- [Nordschleife: Brünnchen](https://dobermann-wandern.blogspot.com/2018/01/nordschleife-bruennchen.html)
 - [Nürburgring Nordschleife](https://www.google.com/maps/d/viewer?mid=1llwVYOFRqFitedCnen9371zrt4I&hl=en_US)
 - [Nürburgring Nordschleife DSLR-Forum](http://www.dslr-forum.de/showthread.php?t=478168&page=2)
-- [Streckenabschnitte - VLN Langstreckenmeisterschaft Nürburgring](http://www.vln.de/de/infos/zuschauer/streckenabschnitte.html)
-- [Pro-Steilstrecke-Forum Nürburgring](http://f3.webmart.de/f.cfm?id=3435667)
+- [VLN - Nürburgring Langstrecken Serie](https://www.nuerburgring-langstrecken-serie.de)
 - [Fotostrecke: Die Eifel aus der Vogelperspektive - SportsCar-Info.de](http://sportscar-info.de/2016/08/05/fotostrecke-die-eifel-aus-der-vogelperspektive/?rwgimg=0#gallery-2)
 - [Nordschleife: Brünnchen - mit Hunden • Wanderung](https://www.outdooractive.com/de/route/wanderung/ahrtal/nordschleife-bruennchen-mit-hunden/113560012)
 
