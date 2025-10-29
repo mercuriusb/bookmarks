@@ -24,8 +24,7 @@
 
 ## Podcasts
 
-- [https://www.ardaudiothek.de/sendung/popundrewind-der-nachtmix-podcast/urn:ard:show:89f7126325a7c81d/](https://www.ardaudiothek.de/sendung/popundrewind-der-nachtmix-podcast/urn:ard:show:89f7126325a7c81d/)
-
+- [Pop&Rewind - der Nachtmix Podcast](https://www.ardaudiothek.de/sendung/popundrewind-der-nachtmix-podcast/urn:ard:show:89f7126325a7c81d/)
 
 ## Apple Music
 
