@@ -53,3 +53,24 @@
 - [24h Rennen Cams](http://web-robot.de/Nring)
 - [Leaderboard - Live Timing](https://livetiming.azurewebsites.net/event=50?config=w3)
 - [About RaceResults](https://getraceresults.com/)
+
+### racing
+
+- [Motorsport.com](http://de.motorsport.com/)
+- [RACER](https://racer.com/)
+- [Racingblog](http://www.racingblog.de/)
+- [Racingblog TV-Planer](https://calendar.google.com/calendar/u/0/embed?mode=AGENDA&height=800&wkst=1&bgcolor=%23FFFFFF&src=9vdcbe3v885jtkma6pkek64j60@group.calendar.google.com&color=%23853104&ctz=Europe/Rome)
+- [Racingblog · Cbox](https://my.cbox.ws/racingblog)
+- [dailysportscar.com](http://www.dailysportscar.com/)
+- [GT-Eins](http://cms3.gt-eins.at/)
+- [GT-Eins Forum](http://www.gt-eins.at/cgi-bin/GT1-Forum/YaBB.pl)
+- [Motor-Kritik](http://motor-kritik.de/)
+- [RadioLeMans.com](http://www.radiolemans.co/)
+- [RS Player](http://player.radiolemans.co/)
+- [Zwischengas](https://www.zwischengas.com/de/index.html)
+- [DRM Norisring 1984 - Photo Gallery - Racing Sports Cars](https://www.racingsportscars.com/photo/Norisring-1984-07-01.html?sort=Results)
+- [Sports Car Digest](http://www.sportscardigest.com/)
+- [Speedhunters](http://www.speedhunters.com/)
+- [INDYCAR Live](https://www.indycar.com/ways-to-watch/stream)
+
+
