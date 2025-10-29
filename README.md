@@ -1,6 +1,5 @@
 # bookmarks
 
-
 ## ios music
 - [Online-Magazin für Keyboards, Synthesizers, Recording & DJ](https://www.keyboards.de/)
 - [CHORDJAM by Audiomodern™ | The Ultimate Chord Machine](https://audiomodern.com/shop/plugins/chordjam/)
@@ -34,19 +33,6 @@
 ## shopping
 
 - ["Aber?" als eBook kaufen](https://www.thalia.de/shop/home/artikeldetails/A1075005791)
-
-## motorsport
-- [Eifel Rallye Festival 2025 | Group B & WRC legends, crashes, flames & action - YouTube](https://www.youtube.com/watch?v=OznLU4yBnB4)
-- [Starterliste - Eifel Rallye Festival](https://www.eifel-rallye-festival.de/de/starterliste.html)
-- [ADAC Eifel Rallye Festival: Endlich geht’s los - Eifel Rallye Festival](https://www.eifel-rallye-festival.de/de/news-de/adac-eifel-rallye-festival-endlich-geht-s-los.html)
-- [https://www.eifel-rallye-festival.de/files/Teilnehmer/Starterlisten/ERF-2025-Starterliste-DS1.pdf](https://www.eifel-rallye-festival.de/files/Teilnehmer/Starterlisten/ERF-2025-Starterliste-DS1.pdf)
-- [https://www.eifel-rallye-festival.de/files/download/allgemein/Strassensperrungen_und_Umleitungen_fuer_Zuschauer.pdf](https://www.eifel-rallye-festival.de/files/download/allgemein/Strassensperrungen_und_Umleitungen_fuer_Zuschauer.pdf)
-- [ADAC Eifel Rallye Festival: Endlich geht’s los - Eifel Rallye Festival](https://eifel-rallye-festival.de/de/news-de/adac-eifel-rallye-festival-endlich-geht-s-los.html)
-- [Drew Gibson: In Focus - YouTube](https://www.youtube.com/watch?v=eaeKXpDhvV0)
-- [Porsche Motorsport Hub](https://racing.porsche.com/de-CH/live-timing/fia-wec)
-- [Drama in der grünen Hölle... Mola geht der Sprit aus - YouTube](https://www.youtube.com/clip/Ugkx9IS1EdX-hS1fImk5bMD_c4Y9JvaLTPyV)
-- [Die 24 Stunden von Le Mans: Das härteste Autorennen der Welt (1/3) | SPIEGEL TV Classics - YouTube](https://www.youtube.com/watch?v=xjWcm90QwV8)
-- [1982 Jaguar XJR-5 - Chassis XJR-5/001 - Ultimatecarpage.com](https://www.ultimatecarpage.com/chassis/154/Jaguar-XJR-5-XJR-5-001.html)
 
 
 ## misc

@@ -11,6 +11,16 @@
 - [The History of The Motorik Beat in 10 Records](https://www.discogs.com/digs/music/essential-motorik-albums/)
 - [Issue 75 / 15 August 2025 - MOONBUILDING WEEKLY](https://moonbuilding.substack.com/p/issue-75-15-august-2025)
 - [Albert Koch (@thethealbert.bsky.social)](https://bsky.app/profile/thethealbert.bsky.social/post/3lvya3if3av76)
+- [Can hero Holger Czukay on Stockhausen, shortwave radio and being “too intriguing”](https://www.factmag.com/2017/09/06/holger-czukay-interview)
+- [Top 10 Must-Have Krautrock Records](https://ultimate-guitar.com/articles/features/top_10_must-have_krautrock_records-76281)
+- [Christian Löffler, Hania Rani & Fejká - Haingeraide](https://www.reddit.com/r/progonlycom/comments/kle4eb/christian_l%C3%B6ffler_hania_rani_fejk%C3%A1_haingeraide/)
+- [On this day in 1983 Blue Monday was released. Watch how the band embraced technology on the @thisisdigmusic](https://thisisdig.lnk.to/NOI)
+- [Best of Echoes 2020-The Top 30 Albums of the Year](https://echoes.org/2020/12/07/echoes-november-2020-top-25-2/)
+- [Kraut und Rüben - Sendung - Rockpalast - Fernsehen - WDR](https://www1.wdr.de/fernsehen/rockpalast/sendung/doku-kraut-und-rueben-100.html)
+- [Krautrock Legend Roedelius on the Designs That Front His Groundbreaking Sounds – Eye on Design](https://eyeondesign.aiga.org/krautrock-legend-roedelius-on-the-designs-that-front-his-groundbreaking-sounds/)
+
+## Podcasts
+- [https://www.ardaudiothek.de/sendung/popundrewind-der-nachtmix-podcast/urn:ard:show:89f7126325a7c81d/](https://www.ardaudiothek.de/sendung/popundrewind-der-nachtmix-podcast/urn:ard:show:89f7126325a7c81d/)
 
 
 ## Apple Music
