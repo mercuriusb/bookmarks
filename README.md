@@ -102,31 +102,6 @@
 - [Nachtspeicherheizung per Wifi möglich ?? | Techniker-Forum](https://www.techniker-forum.de/thema/nachtspeicherheizung-per-wifi-moeglich.115105/)
 - [Hörmann Garagen-Torsteuerung A445 Erfahrungen](https://www.hausbau-forum.de/threads/hoermann-garagen-torsteuerung-a445-erfahrungen.42084/page-5)
 
-### lokal
-
-#### bi
-
-- [https://sessionnet-oparl.krz.de/Oparl/bodies/5232/downloadfiles/a/00106843.pdf](https://sessionnet-oparl.krz.de/Oparl/bodies/5232/downloadfiles/a/00106843.pdf)
-- [https://map-final.rlp-umwelt.de/docs_kartendienste/bwp_2016_04_n/BWP_2016_04_N_Fachplan_Grundlagen.pdf](https://map-final.rlp-umwelt.de/docs_kartendienste/bwp_2016_04_n/BWP_2016_04_N_Fachplan_Grundlagen.pdf)
-- [https://www.regierung.unterfranken.bayern.de/mam/service/planfeststellungen/32-4354-3-1-5/bekanntmachungen-beschlusserlass/beschluss_kleinwallstadt_druckfassung.pdf](https://www.regierung.unterfranken.bayern.de/mam/service/planfeststellungen/32-4354-3-1-5/bekanntmachungen-beschlusserlass/beschluss_kleinwallstadt_druckfassung.pdf)
-- [Wichtige Fledermaus Habitate in Rheinland-Pfalz in Gefahr](https://www.bund-rlp.de/service/presse/detail/news/wichtige-fledermaus-habitate-in-rheinland-pfalz-in-gefahr/)
-- [Basalttagebau](https://myk.bund-rlp.de/basalttagebau/)
-- [Hauptbetriebsplan des Tagebau Hambach - FragDenStaat](https://fragdenstaat.de/anfrage/hauptbetriebsplan-des-tagebau-hambach-2/)
-- [https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2019-07-04-texte_71-2019_instro-1.pdf](https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2019-07-04-texte_71-2019_instro-1.pdf)
-- [§§ 72 bis 78 VwVfG Verwaltungsverfahrensgesetz](https://www.buzer.de/s1.htm?a=72-78&ag=1586)
-- [datenschutz.rlp.de | Beratung |](https://www.datenschutz.rlp.de/de/themenfelder-themen/beratung/)
-- [https://transparenzgesetz.rlp.de/transparenzrlp/de/home/file/fileId/121/name/GVBINr14.pdf](https://transparenzgesetz.rlp.de/transparenzrlp/de/home/file/fileId/121/name/GVBINr14.pdf)
-- [https://backend.dnr.de/sites/default/files/Publikationen/Themenhefte/16_11_R2-0_Fallstudie_Basaltabbau_Eifel.pdf](https://backend.dnr.de/sites/default/files/Publikationen/Themenhefte/16_11_R2-0_Fallstudie_Basaltabbau_Eifel.pdf)
-- [Kommunalbrevier](https://www.kommunalbrevier.de/kommunalbrevier/ratssitzung/einladung-oeffentlichkeit-tagesordnung/Oeffentlichkeit/oeffentliche-oder-nicht-oeffentliche-sitzung/)
-- [Kommunalbrevier](https://www.kommunalbrevier.de/kommunalbrevier/ratssitzung/sitzungsniederschrift/oeffentlichkeitsarbeit/)
-- [Genehmigung von Bergbauprojekten](https://rohstofftransparenz.de/rohstoffgewinnung/genehmigung-von-bergbauprojekten/)
-- [Wie läuft eine Umweltverträglichkeitsprüfung ab?](https://www.uvp-portal.de/de/node/250)
-
-- ["JÄNGEL" - offenes Forum für Kottenheim und die Dorfgemeinschaft Öffentliche Gruppe | Facebook](https://m.facebook.com/groups/338135982974619/?locale=de_DE)
-- [SPD Kottenheim (@spdkottenheim) • Instagram-Fotos und -Videos](https://www.instagram.com/spdkottenheim/)
-- [wir für kottenheim e. V. (@wir_fuer_kottenheim) • Instagram-Fotos und -Videos](https://www.instagram.com/wir_fuer_kottenheim/)
-- [CDU Kottenheim auf Instagram: „CDU Kottenheim informiert: Öffentliche Informationsveranstaltung zum Basaltslava-Tagebauarbeiten der Firma Scherer GmbH im Bereich des…“](https://www.instagram.com/p/Ctb6ejLI-TM/)
-
 ### umwelt
 
 - [Podcast Deep Science: Renaturierung im Meer - Klang der Korallen](https://share.deutschlandradio.de/dlf-audiothek-audio-teilen.html?mdm:audio_id=dira_DLF_8cc60b00)
