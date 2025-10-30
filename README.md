@@ -9,6 +9,10 @@
 - [Blofeld iPad – Waldorf Music](https://waldorfmusic.com/de/blofeld-ipad/)
 - [Patchstorage | Discover & Showcase Your Patches](https://patchstorage.com/)
 - [iOS Musician Apps, Supported Technologies is Audio Unit (AU), Type is Host (29)](https://synthyfrog.com/technology-is-audiounit/type-is-host/sort-pricedropped-desc/)
+- [ROZETA - CELLS Polyphonic Step Sequencer - Tutorial for the iPad - YouTube](https://www.youtube.com/watch?v=YXm7h-xbpZM&t=2s)
+- [How To Set Up AUM To Record Into Cubasis - FULL Tutorial For The iPad](https://www.youtube.com/watch?v=Kpb313MT9HQ)
+- [Rozeta Scaler + Fugue Machine Demo](https://www.youtube.com/watch?v=zCY_MvAp-5w&pp=ygUXc3RyZXRjaCBtaWRpIHRlY2huaXF1ZXM%3D)
+- [How To Use That 800 Year Old Melody Technique That's Awesome 👨‍🔬 - YouTube](https://www.youtube.com/watch?v=vR-nbz8DJzI)
 
 
 ## home
@@ -19,6 +23,9 @@
 - [Top 10: Das beste Balkonkraftwerk mit 800 Watt im Test – mit exklusiven Rabatten | Heise online bestenlisten](https://www.heise.de/bestenlisten/testsieger/top-10-das-beste-balkonkraftwerk-mit-800-watt-im-test-mit-exklusiven-rabatten/19w3c1t)
 - [Contour 4](https://www.oneforall.com/de-de/universal-fernbedienungen/urc-1240-contour-4/support)
 - [Hublifte bis 3m Höhe: Preise, Beratung & Einbau](https://www.treppenlifter.me/hublift-3m.html)
+- [Die ungeliebten Nachtspeicheröfen, für mich GELÖST! - HomeMatic-Forum / FHZ-Forum](https://homematic-forum.de/forum/viewtopic.php?t=28407)
+- [Nachtspeicherheizung per Wifi möglich ?? | Techniker-Forum](https://www.techniker-forum.de/thema/nachtspeicherheizung-per-wifi-moeglich.115105/)
+- [Hörmann Garagen-Torsteuerung A445 Erfahrungen](https://www.hausbau-forum.de/threads/hoermann-garagen-torsteuerung-a445-erfahrungen.42084/page-5)
 
 ## env
 
@@ -29,10 +36,6 @@
 - [https://map-final.rlp-umwelt.de/docs_kartendienste/BWP_2016_04_N/BWP_2016_04_N_Fachplan_Maßnahmen.pdf](https://map-final.rlp-umwelt.de/docs_kartendienste/BWP_2016_04_N/BWP_2016_04_N_Fachplan_Ma%C3%9Fnahmen.pdf)
 - [Methanol statt Wasserstoff als Langzeitspeicher](https://www.klimareporter.de/strom/methanol-statt-wasserstoff-als-langzeitspeicher)
 - [Maximilian Fichtner: Energiespeicher der Zukunft](https://www.youtube.com/live/uTbiMGl0mts)
-
-## shopping
-
-- ["Aber?" als eBook kaufen](https://www.thalia.de/shop/home/artikeldetails/A1075005791)
 
 
 ## misc
@@ -51,7 +54,7 @@
 - [Add file](https://github.com/trimstray/the-book-of-secret-knowledge)
 - [Usage | Apache Fury (incubating)](https://fury.apache.org/docs/start/usage/)
 
-### photos
+## photos
 
 - [500px](https://500px.com/following)
 - [https://pixabay.com/](https://pixabay.com/)
@@ -62,9 +65,8 @@
 - [Behance](https://www.behance.net/galleries/photography)
 - [Heinrich Wolf Fotograf | 1919 - 1983](https://heinrich-wolf-fotograf.de/)
 
-### apps
+## apps
 
-- [ciderapp/Cider: A new cross-platform Apple Music experience based on Electron and Vue.js written from scratch with performance in mind. 🚀](https://github.com/ciderapp/Cider)
 - [GitHub - MacGesture/MacGesture: Global mouse gestures for macOS](https://github.com/MacGesture/MacGesture)
 - [Rclone](https://rclone.org/)
 - [Difftastic, a structural diff](https://difftastic.wilfred.me.uk/)
@@ -75,7 +77,7 @@
 - [reveal.js](https://revealjs.com/)
 - [insomnium](https://github.com/ArchGPT/insomnium/releases)
 
-### gifs
+## gifs
 
 - [Car Fast GIF - Car Fast Ridding - Discover & Share GIFs](https://tenor.com/view/car-fast-ridding-kid-gif-14176897)
 - [Kids Playing Push GIF - Kids Playing Push Pushing - Discover & Share GIFs](https://tenor.com/view/kids-playing-push-pushing-fun-children-gif-17736016)
@@ -89,13 +91,7 @@
 - [Fred Flintstone The Flintstones GIF - Fred Flintstone The Flintstones Kissing Money - Discover & Share GIFs](https://tenor.com/view/fred-flintstone-the-flintstones-kissing-money-bag-of-cash-kiss-dollars-gif-23200951)
 
 
-### smarthome
-
-- [Die ungeliebten Nachtspeicheröfen, für mich GELÖST! - HomeMatic-Forum / FHZ-Forum](https://homematic-forum.de/forum/viewtopic.php?t=28407)
-- [Nachtspeicherheizung per Wifi möglich ?? | Techniker-Forum](https://www.techniker-forum.de/thema/nachtspeicherheizung-per-wifi-moeglich.115105/)
-- [Hörmann Garagen-Torsteuerung A445 Erfahrungen](https://www.hausbau-forum.de/threads/hoermann-garagen-torsteuerung-a445-erfahrungen.42084/page-5)
-
-### umwelt
+## umwelt
 
 - [Podcast Deep Science: Renaturierung im Meer - Klang der Korallen](https://share.deutschlandradio.de/dlf-audiothek-audio-teilen.html?mdm:audio_id=dira_DLF_8cc60b00)
 - [Mein Gespräch mit Harald Grethe über nachhaltige Landwirtschaft – Sonne & Stahl](https://sonneundstahl.at/podcast/mein-gespraech-mit-harald-grethe-ueber-nachhaltige-landwirtschaft/)
@@ -104,35 +100,28 @@
 - [Methanol statt Wasserstoff? - Methanol und Allam-Turbinen könnten Alternative für die Energiespeicherung bieten - scinexx.de](https://www.scinexx.de/news/energie/methanol-statt-wasserstoff/#:~:text=Gegen%C3%BCber%20Wasserstoff%20hat%20Methanol%20einen,Tanks%20gelagert%20und%20transportiert%20werden.)
 - [Refurbished Three Mile Island Payment Structure Is Not Quite What It Seems - CleanTechnica](https://cleantechnica.com/2024/10/04/refurbished-three-mile-island-payment-structure-is-not-quite-what-it-seems/)
 - [Ein Ansatz für den Wald im Wandel](https://m.youtube.com/watch?v=FpmB96Riwn0&feature=youtu.be)
+- [https://www.nabu.de/imperia/md/content/nabude/energie/biomasse/250312-nabu-flyer-heizen-mit-holz.pdf](https://www.nabu.de/imperia/md/content/nabude/energie/biomasse/250312-nabu-flyer-heizen-mit-holz.pdf)
 
-### youtube
 
-#### ios-music
-
-- [ROZETA - CELLS Polyphonic Step Sequencer - Tutorial for the iPad - YouTube](https://www.youtube.com/watch?v=YXm7h-xbpZM&t=2s)
-- [How To Set Up AUM To Record Into Cubasis - FULL Tutorial For The iPad](https://www.youtube.com/watch?v=Kpb313MT9HQ)
-- [Rozeta Scaler + Fugue Machine Demo](https://www.youtube.com/watch?v=zCY_MvAp-5w&pp=ygUXc3RyZXRjaCBtaWRpIHRlY2huaXF1ZXM%3D)
-- [How To Use That 800 Year Old Melody Technique That's Awesome 👨‍🔬 - YouTube](https://www.youtube.com/watch?v=vR-nbz8DJzI)
-
-### darts
+## darts
 
 - [dartn.de](https://www.dartn.de/)
 - [Darts News](https://dartsnews.de/)
 - [DartConnect TV - PDC Events](https://tv.dartconnect.com/events/pdc)
 
 
-#### misc
+## misc
 
 - [AGILLO Akku-Sense Zusammenbau und Inbetriebnahme | #unboxing - YouTube](https://www.youtube.com/watch?v=XW9ZVuZ8hWw)
+- [Bedienungsanleitung - Amica International GmbH](https://www.yumpu.com/de/document/read/23373337/bedienungsanleitung-amica-international-gmbh)
+- [Club | Sponeta](https://www.sponeta.de/produkt/club-en-stationaer-199-091/)
 - [Filmanalyse - YouTube](https://www.youtube.com/@Filmanalyse)
 - [JanistanTV - YouTube](https://www.youtube.com/channel/UC-zvicLXfZMta6FlacELRXw)
 - [explain xkcd](https://www.explainxkcd.com/wiki/index.php/Main_Page)
 - [Wenn schon sterben, dann in einem Ferrari](https://www.artechock.de/film/text/artikel/2024/03_14_ferrari.html)
-- [Bedienungsanleitung - Amica International GmbH](https://www.yumpu.com/de/document/read/23373337/bedienungsanleitung-amica-international-gmbh)
 - [alternative-front-ends](https://github.com/mendel5/alternative-front-ends#twitter)
 - [LEGO Building Instructions : Free Texts : Free Download, Borrow and Streaming : Internet Archive](https://archive.org/details/lego-set-instructions)
-- [Club | Sponeta](https://www.sponeta.de/produkt/club-en-stationaer-199-091/)
-- [https://podcastaddict.com/carls-zukunft-der-woche/episode/172507294](https://podcastaddict.com/carls-zukunft-der-woche/episode/172507294)
+- [Podcast Carls Zukunft der Woche](https://podcastaddict.com/carls-zukunft-der-woche/episode/172507294)
 - [Dreimuehlen-wasserfall dreimuehlen-wasserfall.de › startseite DREIMÜHLEN WASSERFALL 2025 ⭐‍ Nohner Wasserfall Eifel](https://www.dreimuehlen-wasserfall.de/)
 - [Netzwerk mit Nebenwirkungen: Jens Spahn und der Milliardär](https://correctiv.org/aktuelles/gesundheit/2025/07/22/netzwerk-mit-nebenwirkungen-jens-spahn-und-der-milliardaer/)
 - [Die 150 besten Science-Fiction-Filme aller Zeiten — Rolling Stone](https://www.rollingstone.de/die-150-besten-science-fiction-filme-aller-zeiten-2683949/)

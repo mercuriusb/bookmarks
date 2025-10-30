@@ -15,7 +15,7 @@
 - [FKJ & Yussef Dayes - Live From The Greenhouse - YouTube](https://www.youtube.com/watch?v=wneX5-M07TA)
 - [GABRIEL PETER family portrait - YouTube](https://www.youtube.com/watch?v=JwfaDytMCBk)
 - [GoGo Penguin - From the North - GoGo Penguin Live in Manchester - YouTube](https://www.youtube.com/watch?v=NyydSocn5dM)
-- [Hill Judith | KNKX Studio SessionSuchenInfoShoppingTon einschalten 2-fachFalls die Wiedergabe nicht in Kürze beginnt, empfehlen wir dir, das Gerät neu zu starten.•Nächstes VideoLiveDemnächstAbbrechenJetzt abspielenTeilenMit Playlist teilenBei dem Versuch, Informationen zum Teilen abzurufen, ist ein Fehler aufgetreten. Versuche es bitte später noch einmal.Später ansehenTeilenLink kopieren](https://www.youtube.com/watch?v=wFbIBcTjm4k)
+- [Hill Judith | KNKX Studio Session](https://www.youtube.com/watch?v=wFbIBcTjm4k)
 - [Living Colour: Tiny Desk Concert : NPR](https://www.npr.org/2025/06/25/g-s1-70062/living-colour-tiny-desk-concert)
 - [The Killers & Bruce Springsteen: Encore At The Garden - YouTube](https://www.youtube.com/watch?v=Cma_-E6pG2Y)
 - [Kraftklub – "Schief in jedem Chor" | ZDF Magazin Royale - YouTube](https://www.youtube.com/watch?v=QDMcC6MEAiE)
@@ -34,14 +34,13 @@
 - [Rother Michael (NEU!) performing "Negativland"](https://www.youtube.com/watch?v=t_zYJTvyM4c)
 - [Rother Michael - Live Session & interview](https://m.youtube.com/watch?v=wUumTBqk7zo)
 - [Rodrigo Olivia - Just Like Heaven (feat. Robert Smith) (Glastonbury 2025) - YouTube](https://m.youtube.com/watch?v=MDTlUtrzeFI)
-- [Sting Isle Of Wight 20.06.2025SuchenInfoShoppingTon einschalten 2-fachFalls die Wiedergabe nicht in Kürze beginnt, empfehlen wir dir, das Gerät neu zu starten.•Nächstes VideoLiveDemnächstAbbrechenJetzt abspielenTeilenMit Playlist teilenBei dem Versuch, Informationen zum Teilen abzurufen, ist ein Fehler aufgetreten. Versuche es bitte später noch einmal.Später ansehenTeilenLink kopieren](https://www.youtube.com/watch?v=V40YstCKggc)
+- [Sting Isle Of Wight 20.06.2025](https://www.youtube.com/watch?v=V40YstCKggc)
 - [Streetmark - Welcome (inclusiv Intro) - YouTube](https://www.youtube.com/watch?v=lcZq9JPjQ-k)
 - [Underworld | Boiler Room: London - YouTube](https://www.youtube.com/watch?v=rAOHJqJMYDA)
 - [Weather Report | Live In 1978 | Full Live Concert | Rockpalast - YouTube](https://www.youtube.com/watch?v=fo-z_IeO4ms)
 - [Wesseltoft Bugge, Dhafer Youssef, Erik Truffaz - live 2004 - YouTube](https://www.youtube.com/watch?v=JcuNiFGq5A8)
 - [YESTERTOONS - Official Channel - YouTube](https://www.youtube.com/@YestertoonsEnglish)
 - [Zappa Frank - Dog Breath Variations + Uncle Meat - YouTube](https://www.youtube.com/watch?v=26X9ecyMZss&list=RD26X9ecyMZss&start_radio=1)
-
 
 
 ## documentaries
