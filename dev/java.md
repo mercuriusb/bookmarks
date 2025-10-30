@@ -42,7 +42,6 @@
 - [Java Concurrency Cheatsheet](https://www.javacodegeeks.com/java-concurrency-cheatsheet.html)
 - [New Livestream: Virtual Threads in Action!](https://blog.jetbrains.com/idea/2024/01/new-livestream-virtual-threads-in-action/)
 - [https://www.atomicjar.com/2023/11/testcontainers-best-practices/](https://www.atomicjar.com/2023/11/testcontainers-best-practices/)
-- [Gunter Rotsaert: "With Maven Archetypes, you can create a template for your Maven projects. It is a great way to enable and apply best practices within your project or organization. #java #maven" — Bluesky](https://bsky.app/profile/mydeveloperplanet.com/post/3lge7ivcrdr2l)
 - [https://vaadin.com/blog/build-modern-web-apps-100-in-kotlin?utm_content=287629617&utm_medium=social&utm_source=linkedin&hss_channel=lcp-52231](https://vaadin.com/blog/build-modern-web-apps-100-in-kotlin?utm_content=287629617&utm_medium=social&utm_source=linkedin&hss_channel=lcp-52231)
 - [Simon Martinelli – Auf Wiedersehen Microservices, Hallo Self-Contained Systems - YouTube](https://www.youtube.com/watch?v=Jjrencq8sUQ)
 - [https://martinelli.ch/spec-driven-development-with-ai-a-new-approach-and-a-journey-into-the-past/](https://martinelli.ch/spec-driven-development-with-ai-a-new-approach-and-a-journey-into-the-past/)
