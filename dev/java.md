@@ -18,7 +18,6 @@
 - [MiG Layout](http://www.miglayout.com/)
 - [JBang](https://www.jbang.dev/)
 - [JBoss Tools - Downloads](https://tools.jboss.org/downloads/)
-- [JetBrains Platform](https://platform.jetbrains.com/)
 - [Releases · eclipse/org.aspectj](https://github.com/eclipse/org.aspectj/releases/)
 - [drewnoakes/metadata-extractor: Extracts Exif, IPTC, XMP, ICC and other metadata from image, video and audio files](https://github.com/drewnoakes/metadata-extractor)
 - [JReleaser](https://jreleaser.org/)
@@ -165,6 +164,7 @@
 
 ## Intellij
 
+- [JetBrains Platform](https://platform.jetbrains.com/)
 - [Debugging Java Code in IntelliJ IDEA](https://blog.jetbrains.com/idea/2025/04/debugging-java-code-in-intellij-idea/)
 - [IntelliJ IDEA Conf 2025. Day 2 - YouTube](https://www.youtube.com/live/qg6tj8Tf36E)
 - [hotswap - How to enable Intellij hot code swap - Stack Overflow](https://stackoverflow.com/questions/6402162/how-to-enable-intellij-hot-code-swap)
