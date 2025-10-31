@@ -1,0 +1,17 @@
+site_name: Meine Bookmarks
+theme:
+  name: material
+plugins:
+  - search
+  - gen-nav:
+      root: docs
+      index: index.md
+      strip_number_prefix: true
+      exclude:
+        - "*/_archive/*"
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
