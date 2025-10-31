@@ -25,6 +25,7 @@
 - [Massive Attack: Unfinished: The Making of Massive Attack - YouTube](https://www.youtube.com/watch?v=pt2e4wv7Q_o)
 - [Massive Attack Live from Abbey Road - YouTube](https://www.youtube.com/watch?v=1EfyGJ1KyHw)
 - [Kratzen - Rockpalast Crossroads](https://www.3sat.de/kultur/rockpalast-crossroads/rockpalast-crossroads-kratzen-104.html)
+- [PRINCE & 3RDEYEGIRL - CRAZY2COOL (June 1, 2014 - Le Zénith, Paris, FR)](https://www.youtube.com/watch?v=5iYyBxUislE)
 - [Radiohead - Present Tense (Live at Lollapalooza Chicago 2016) - YouTube](https://www.youtube.com/watch?v=G9gmOGjO9L0)
 - [Red Hot Chili Peppers - Live at the Pyramids](https://www.youtube.com/watch?v=W7YF_DqZY_c)
 - [Red Hot Chili Peppers - Buenos Aires, Argentina 2023 (HD) | River Plate Stadium](https://www.youtube.com/watch?v=d_HiP0i7dyk)
