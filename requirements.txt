@@ -1,3 +1,3 @@
 mkdocs>=1.6.1
-mkdocs-gen-nav>=0.2.0
+mkdocs-gen-nav-plugin>=0.2.0
 
