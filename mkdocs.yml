@@ -1,6 +1,6 @@
 site_name: Meine Bookmarks
 theme:
-  name: material
+  name: readthedocs
 plugins:
   - search
   - gen-nav:
