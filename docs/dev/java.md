@@ -159,6 +159,7 @@
 ## Batches
 
 - [Distributed Java Background Job Scheduler · JobRunr](https://www.jobrunr.io/en/)
+- [JobrRunr Github](https://github.com/jobrunr/jobrunr)
 - [JobRunr brings Carbon Aware Scheduling to JVM: Saving the planet one job at a time - JVM Weekly vol. 138](https://www.jvm-weekly.com/p/jobrunr-brings-carbon-aware-scheduling)
 - [JobRunr v8 released: Java job scheduler now with Carbon Aware Jobs : r/java](https://www.reddit.com/r/java/comments/1luic04/jobrunr_v8_released_java_job_scheduler_now_with/)
 - [JobRunr Java Docs](https://javadoc.io/doc/org.jobrunr/jobrunr/latest/index.html)
