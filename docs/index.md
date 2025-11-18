@@ -2,7 +2,7 @@
 
 ## todo
 - https://www.youtube.com/watch?v=ao6lRftB0Mg Arazzo Definition Editor YouTube video by Bruno Pedro
-
+- https://code.visualstudio.com/blogs/2025/11/18/privatemarketplace
 
 ## home
 
