@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/db - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details open><summary><a class="active-tag" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/db</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hdombrovskaya.wordpress.com/2024/05/05/3937/" target="_blank">(Bi)Temporal Tables, PostgreSQL and SQL Standard | The World of Data</a></span>
+                <span class="ml-1 text-sm opacity-80">- Blog post on bi-temporal tables and SQL standards.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://tedamoh.com/de/academy/secret-spice/temporale-daten/247-8-gruende-warum-man-bitemporale-daten-benoetigt" target="_blank">8 Gründe, warum man bitemporale Daten benötigt</a></span>
+                <span class="ml-1 text-sm opacity-80">- Eight reasons for using bitemporal data in German.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://kmoppel.github.io/2025-04-10-postgres-scaling-roadmap/" target="_blank">A roadmap to scaling Postgres</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide outlining strategies for scaling PostgreSQL databases.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://airbyte.com/" target="_blank">Airbyte | Open-Source Data Integration Platform | ELT tool</a></span>
+                <span class="ml-1 text-sm opacity-80">- Open-source platform for data ingestion and ELT workflows.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.crunchydata.com/blog/an-overview-of-distributed-postgresql-architectures" target="_blank">An Overview of Distributed PostgreSQL Architectures</a></span>
+                <span class="ml-1 text-sm opacity-80">- Examination of distributed Postgres deployment architectures.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.mimacom.com/autocomplete-elasticsearch-part1/" target="_blank">Autocomplete with Elasticsearch - Part 1: Prefix Queries</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide on prefix query autocomplete in Elasticsearch.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.mimacom.com/autocomplete-elasticsearch-part2/" target="_blank">Autocomplete with Elasticsearch - Part 2: Index-Time Search-as-You-Type</a></span>
+                <span class="ml-1 text-sm opacity-80">- Explanation of search-as-you-type features.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.mimacom.com/autocomplete-elasticsearch-part3/" target="_blank">Autocomplete with Elasticsearch - Part 3: Completion Suggester</a></span>
+                <span class="ml-1 text-sm opacity-80">- Completion suggester implementation in Elasticsearch.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dhamaniasad.github.io/awesome-postgres/" target="_blank">Awesome Postgres | awesome-postgres</a></span>
+                <span class="ml-1 text-sm opacity-80">- Curated list of awesome PostgreSQL tools and resources.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.morling.dev/blog/backfilling-postgres-toast-columns-debezium-change-events/" target="_blank">Backfilling Postgres TOAST Columns in Debezium Data Change Events</a></span>
+                <span class="ml-1 text-sm opacity-80">- Technical article on Debezium handling of Postgres TOAST columns.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://konsilium.de/blog/2014/04/07/bi-temporale-historisierung/" target="_blank">Bi-temporale Historisierung – konsilium</a></span>
+                <span class="ml-1 text-sm opacity-80">- German blog on bitemporal historical data.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.peerislands.io/bitemporal-data-access-patterns-using-mongodb/" target="_blank">BiTemporal data access patterns using MongoDB – Accelerate with PeerIslands</a></span>
+                <span class="ml-1 text-sm opacity-80">- Discussion on bitemporal data patterns with MongoDB.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=MGSdq6EYaKk" target="_blank">Bitemporal Data Model: Making it happened in Postgres- Chad Slaughter &amp; Hennrietta Dombrovskaya - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">- Presentation on implementing bitemporal data in PostgreSQL.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://martinfowler.com/articles/bitemporal-history.html" target="_blank">Bitemporal History</a></span>
+                <span class="ml-1 text-sm opacity-80">- Overview of bitemporal data concepts and history tracking.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://en.wikipedia.org/wiki/Bitemporal_modeling" target="_blank">Bitemporal modeling</a></span>
+                <span class="ml-1 text-sm opacity-80">- Wikipedia article on bitemporal data modeling techniques.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/darold/pgcluu" target="_blank">darold/pgcluu: PostgreSQL Cluster performances monitoring and auditing tool</a></span>
+                <span class="ml-1 text-sm opacity-80">- Monitoring and auditing tool for Postgres clusters.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.dbgate.io/de/" target="_blank">DbGate | Open Source (no)SQL Database Client</a></span>
+                <span class="ml-1 text-sm opacity-80">- Lightweight database client supporting multiple database types for data management visually.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/ankane/dexter" target="_blank">Dexter</a></span>
+                <span class="ml-1 text-sm opacity-80">- Postgres schema change tool.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_varchar.28n.29_by_default" target="_blank">Don&#39;t Do This - PostgreSQL wiki</a></span>
+                <span class="ml-1 text-sm opacity-80">- Common Postgres anti-patterns to avoid.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hamidmosalla.com/2021/06/06/elastic-search-highlighting-text-that-contains-html-tags/" target="_blank">Elastic Search: Highlighting Text That Contains HTML Tags - Hamid Mosalla</a></span>
+                <span class="ml-1 text-sm opacity-80">- Blog on Elasticsearch highlighting for HTML content.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://doc.nuxeo.com/nxdoc/elasticsearch-highlights/" target="_blank">Elasticsearch Highlights</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide on text highlights using Elasticsearch.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://netflixtechblog.com/elasticsearch-indexing-strategy-in-asset-management-platform-amp-99332231e541" target="_blank">Elasticsearch Indexing Strategy in Asset Management Platform</a></span>
+                <span class="ml-1 text-sm opacity-80">- Case study on Elasticsearch indexing techniques.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://elasticvue.com/" target="_blank">Elasticvue - Elasticsearch gui for the browser</a></span>
+                <span class="ml-1 text-sm opacity-80">- Browser GUI client for Elasticsearch management.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.postgresql.org/docs/16/btree-gist.html" target="_blank">F.9. btree_gist — GiST operator classes with B-tree behavior</a></span>
+                <span class="ml-1 text-sm opacity-80">- Postgres documentation on GiST operator classes.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackoverflow.com/questions/30811046/fielddata-data-is-too-large" target="_blank">FIELDDATA Data is too large</a></span>
+                <span class="ml-1 text-sm opacity-80">- StackOverflow discussion on Elasticsearch fielddata size errors.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.crunchydata.com/blog/five-tips-for-a-healthier-postgres-database-in-the-new-year" target="_blank">Five Tips For a Healthier Postgres Database in the New Year</a></span>
+                <span class="ml-1 text-sm opacity-80">- Practical advice for maintaining Postgres health.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/elastic/curator" target="_blank">GitHub - elastic/curator: Curator: Tending your Elasticsearch indices</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tool for managing Elasticsearch indices.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/wikimedia/search-highlighter" target="_blank">GitHub - wikimedia/search-highlighter</a></span>
+                <span class="ml-1 text-sm opacity-80">- Wikimedia&#39;s search highlighting library.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://buildkite.com/resources/blog/goodbye-integers-hello-uuids/" target="_blank">Goodbye integers. Hello UUIDv7!</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article on benefits of using UUIDv7 over integers for database identifiers.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.frank-rahn.de/historisierung-von-entitaeten-versicherungswirtschaft/" target="_blank">Historisierung von Daten in der Versicherungswirtschaft</a></span>
+                <span class="ml-1 text-sm opacity-80">- German article on data historization in insurance.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://discord.com/blog/how-discord-indexes-trillions-of-messages" target="_blank">How Discord Indexes Trillions of Messages</a></span>
+                <span class="ml-1 text-sm opacity-80">- Insight into Discord&#39;s message indexing using Postgres.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pganalyze.com/blog/how-notion-runs-postgres-at-scale?utm_source=postgresweeklyprimary_06262025" target="_blank">How Notion Runs PostgreSQL at Scale on Amazon RDS with pganalyze</a></span>
+                <span class="ml-1 text-sm opacity-80">- Case study of Notion&#39;s Postgres scaling with monitoring.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hostman.com/tutorials/how-to-deploy-postgresql-on-kubernetes/" target="_blank">How to Deploy PostgreSQL on Kubernetes</a></span>
+                <span class="ml-1 text-sm opacity-80">- Step-by-step tutorial for Postgres deployment in Kubernetes.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.tigerdata.com/blog/how-to-reduce-your-postgresql-database-size" target="_blank">How to Reduce Your PostgreSQL Database Size</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tips to reduce storage footprint of Postgres databases.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dickyaryakesuma.medium.com/how-to-use-on-conflict-clause-in-postgresql-e4c43200646c" target="_blank">How To Use ON CONFLICT CLAUSE in PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide on Postgres UPSERT feature via ON CONFLICT.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hdombrovskaya.wordpress.com/wp-content/uploads/2016/09/bi_temporal_pg_open_2016.pdf" target="_blank">https://hdombrovskaya.wordpress.com/wp-content/uploads/2016/09/bi_temporal_pg_open_2016.pdf</a></span>
+                <span class="ml-1 text-sm opacity-80">- PDF presentation on bitemporal Postgres implementation.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://postgresql.us/events/pgdaychicago2024/sessions/session/1553/slides/130/bitemporal_standard.pdf" target="_blank">https://postgresql.us/events/pgdaychicago2024/sessions/session/1553/slides/130/bitemporal_standard.pdf</a></span>
+                <span class="ml-1 text-sm opacity-80">- Slide deck on bitemporal standards in PostgreSQL.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.elastic.co/de/blog/improving-the-performance-of-high-cardinality-terms-aggregations-in-elasticsearch" target="_blank">Improving the performance of high-cardinality terms aggregations in Elasticsearch</a></span>
+                <span class="ml-1 text-sm opacity-80">- Performance tuning tips for Elasticsearch aggregations.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/jfcoz/postgresqltuner" target="_blank">jfcoz/postgresqltuner: Simple script to analyse your PostgreSQL database configuration, and give tuning advice</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tool for PostgreSQL config analysis and tuning recommendations.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.manning.com/books/just-use-postgres" target="_blank">Just Use Postgres!</a></span>
+                <span class="ml-1 text-sm opacity-80">- Book promoting PostgreSQL usage with practical advice.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://opensearch.org/blog/point-in-time/?sc_channel=sm&amp;sc_campaign=Open_Source&amp;sc_publisher=TWITTER&amp;sc_geo=GLOBAL&amp;sc_outcome=awareness&amp;trk=opensearchproject" target="_blank">Launch highlight: Paginate with Point in Time · OpenSearch</a></span>
+                <span class="ml-1 text-sm opacity-80">- Blog post on OpenSearch pagination improvements.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/le0pard/pgtune" target="_blank">le0pard/pgtune: Pgtune - tuning PostgreSQL config by your hardware</a></span>
+                <span class="ml-1 text-sm opacity-80">- Hardware-aware PostgreSQL tuning tool.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://opensearch.org/blog/ltr-with-opensearch-and-metarank/" target="_blank">Learn-to-Rank with OpenSearch and Metarank · OpenSearch</a></span>
+                <span class="ml-1 text-sm opacity-80">- Introduction to learning-to-rank features in OpenSearch.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/nexsol-technologies/pgassistant" target="_blank">nexsol-technologies/pgassistant: PgAssistant is an open-source tool designed to help developers understand and optimize their PostgreSQL database performance.</a></span>
+                <span class="ml-1 text-sm opacity-80">- Open source PostgreSQL performance optimization tool.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://philbooth.me/blog/nine-ways-to-shoot-yourself-in-the-foot-with-postgresql" target="_blank">Nine ways to shoot yourself in the foot with PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Common pitfalls to avoid when using PostgreSQL.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/c/OpenSearchProject" target="_blank">OpenSearch - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">- YouTube channel for OpenSearch project updates.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dattell.com/data-architecture-blog/opensearch-shard-optimization/" target="_blank">OpenSearch Shard Optimization - Dattell</a></span>
+                <span class="ml-1 text-sm opacity-80">- Blog on shard optimization strategies in OpenSearch.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://r.ena.to/blog/optimizing-postgres-table-layout-for-maximum-efficiency/" target="_blank">Optimizing Postgres table layout for maximum efficiency</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article on efficient physical layout for Postgres tables.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://rodoq.medium.com/partition-an-existing-table-on-postgresql-480b84582e8d" target="_blank">Partition an existing table on PostgreSQL | by Rodolphe Quiédeville | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tutorial on partitioning existing tables.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.cybertec-postgresql.com/en/partitioned-table-statistics/" target="_blank">Partitioned table statistics</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article discussing statistics collection on partitioned tables in Postgres.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=NETh2JTUVWw" target="_blank">Partitioning in Postgres and the risk of high partition counts - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">- Video explaining partitioning risks related to many partitions.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://docs.paradedb.com/blog/introducing_bm25" target="_blank">pg_bm25: Elastic-Quality Full Text Search Inside Postgres</a></span>
+                <span class="ml-1 text-sm opacity-80">- Extension enabling BM25 text search ranking in Postgres.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/dalibo/pg_activity" target="_blank">PGActivity</a></span>
+                <span class="ml-1 text-sm opacity-80">- Real-time Postgres activity monitor.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pgbadger.darold.net/examples/sample.html" target="_blank">pgBadger :: PostgreSQL Log Analyzer</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tool for analyzing PostgreSQL log files for performance.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/h4kbas/pgcalendar" target="_blank">pgcalendar - Infinite Calendar Extension for PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- PostgreSQL extension providing advanced calendar support.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/ankane/pghero" target="_blank">PGHero</a></span>
+                <span class="ml-1 text-sm opacity-80">- Postgres performance monitoring tool.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/ankane/pgslice" target="_blank">PGSlice</a></span>
+                <span class="ml-1 text-sm opacity-80">- PostgreSQL slicing tool for analytics and audits.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/ankane/pgsync" target="_blank">PGSync</a></span>
+                <span class="ml-1 text-sm opacity-80">- Tool for syncing data between Postgres databases.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pgtune.leopard.in.ua/" target="_blank">PGTune - calculate configuration for PostgreSQL based on the maximum performance for a given hardware configuration</a></span>
+                <span class="ml-1 text-sm opacity-80">- Web-based PostgreSQL tuning parameter calculator.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/esgn/pgtuned/blob/main/pgtune.sh" target="_blank">pgtuned/pgtune.sh at main · esgn/pgtuned</a></span>
+                <span class="ml-1 text-sm opacity-80">- Script to generate optimized PostgreSQL configuration parameters.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pgxn.org/" target="_blank">PGXN: PostgreSQL Extension Network</a></span>
+                <span class="ml-1 text-sm opacity-80">- Official network for discovering and distributing Postgres extensions.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.groundcover.com/blog/postgres-in-kubernetes-how-to-deploy-scale-and-manage" target="_blank">Postgres in Kubernetes: How to Deploy, Scale, and Manage</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide for deploying and managing Postgres in Kubernetes environments.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://gist.github.com/oscarychen/2be59f931c05fb19ed1f414c4f485b79" target="_blank">Postgres Ltree Cheatsheet</a></span>
+                <span class="ml-1 text-sm opacity-80">- Syntax and usage cheatsheet for LTREE in Postgres.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pganalyze.com/" target="_blank">Postgres performance at any scale | PostgreSQL Tuning - pganalyze</a></span>
+                <span class="ml-1 text-sm opacity-80">- Platform for comprehensive PostgreSQL performance tuning.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/devlink-tips/postgresql-18-just-dropped-10-powerful-new-features-devs-need-to-know-413aa601f20b" target="_blank">PostgreSQL 18 just dropped: 10 powerful new features devs need to know | by &lt;devtips&gt; | Run.it.Bare | May, 2025 | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">- Overview of new features in PostgreSQL 18 release.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/postgresql-performance-tuning-settings/" target="_blank">PostgreSQL Performance Tuning Settings</a></span>
+                <span class="ml-1 text-sm opacity-80">- Overview of key PostgreSQL settings for performance tuning.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://postgresqlco.nf/doc/en/param/" target="_blank">PostgresqlCO.NF: PostgreSQL configuration for humans</a></span>
+                <span class="ml-1 text-sm opacity-80">- PostgreSQL parameter documentation aimed at users.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=edQZauVU-ws" target="_blank">Practical Partitioning with PostgreSQL (in Production!)</a></span>
+                <span class="ml-1 text-sm opacity-80">- Video showcasing effective PostgreSQL partitioning techniques in production.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/quickwit-oss/tantivy" target="_blank">quickwit-oss/tantivy: Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust</a></span>
+                <span class="ml-1 text-sm opacity-80">- Rust-based full-text search engine library inspired by Lucene.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thoughtbot.com/blog/recurring-events-and-postgresql" target="_blank">Recurring Events and PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Handling recurring events data using PostgreSQL.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://patshaughnessy.net/2017/12/13/saving-a-tree-in-postgres-using-ltree" target="_blank">Saving a Tree in Postgres Using LTREE</a></span>
+                <span class="ml-1 text-sm opacity-80">- Example of saving tree-structured data with LTREE.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dzone.com/articles/saving-a-tree-in-postgres-using-ltree" target="_blank">Saving a Tree in Postgres Using LTREE - DZone Database</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article on tree data handling using LTREE.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.w3schools.com/sql/default.asp" target="_blank">SQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Introductory resource on SQL to learn how to store, manipulate, and retrieve data in various databases.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://sql-performance-explained.com/" target="_blank">SQL Performance Explained</a></span>
+                <span class="ml-1 text-sm opacity-80">- Resource for understanding SQL performance tuning.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/stopwords-iso/stopwords-de" target="_blank">stopwords-de/stopwords-de.txt at master · stopwords-iso/stopwords-de</a></span>
+                <span class="ml-1 text-sm opacity-80">- German stopwords list for search engines.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.cybertec-postgresql.com/en/subqueries-and-performance-in-postgresql/" target="_blank">Subqueries and performance in PostgreSQL - CYBERTEC</a></span>
+                <span class="ml-1 text-sm opacity-80">- Analysis of subqueries impact on Postgres performance.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/supabase/pg_graphql" target="_blank">supabase/pg_graphql: GraphQL support for PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Postgres extension adding GraphQL capabilities.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://wiki.postgresql.org/wiki/Temporal_Extensions" target="_blank">Temporal Extensions</a></span>
+                <span class="ml-1 text-sm opacity-80">- PostgreSQL wiki page on temporal extensions support.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://martinfowler.com/eaaDev/timeNarrative.html#dimensions" target="_blank">Temporal Patterns</a></span>
+                <span class="ml-1 text-sm opacity-80">- Explanation of temporal patterns in data modeling.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.jooq.org/doc/latest/manual/sql-building/table-expressions/temporal-tables/" target="_blank">Temporal tables</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide on using temporal tables in SQL databases.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.heise.de/ratgeber/Temporale-Datenhaltung-in-der-Praxis-mit-Java-2100268.html?seite=all" target="_blank">Temporale Datenhaltung in der Praxis mit Java | heise online</a></span>
+                <span class="ml-1 text-sm opacity-80">- Practical article on temporal data handling with Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://de.wikipedia.org/wiki/Temporale_Datenhaltung" target="_blank">Temporale Datenhaltung – Wikipedia</a></span>
+                <span class="ml-1 text-sm opacity-80">- German Wikipedia article on temporal data storage.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.hydra.so/blog-posts/the-design-of-postgres-extension-manager-pgxman" target="_blank">THE DESIGN OF POSTGRES EXTENSION MANAGER “PGXMAN”</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article on a new Postgres extension manager design.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hakibenita.com/postgresql-unused-index-size" target="_blank">The Unexpected Find That Freed 20GB of Unused Index Space</a></span>
+                <span class="ml-1 text-sm opacity-80">- Case study on reclaiming Postgres storage by removing unused indexes.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=YPorP8BsF_c" target="_blank">They Enabled Postgres Partitioning and their Backend fell apart - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">- Cautionary tale on pitfalls of enabling Postgres partitioning.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://aiven.io/blog/two-dimensional-time-with-bitemporal-data" target="_blank">Time travel: two-dimensional time with bitemporal data</a></span>
+                <span class="ml-1 text-sm opacity-80">- Blog on two-dimensional time travel with bitemporal data.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://luis-sena.medium.com/tuning-your-postgresql-for-high-performance-5580abed193d" target="_blank">Tuning your PostgreSQL for High Performance</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide for tuning Postgres for performance.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.abhinavomprakash.com/posts/understanding-bitemporal-data/" target="_blank">Understanding Bitemporal Data</a></span>
+                <span class="ml-1 text-sm opacity-80">- Comprehensive explanation of bitemporal data concepts.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://lord.technology/2025/01/28/understanding-temporal-primary-keys.html" target="_blank">Understanding Bitemporal Primary Keys</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article explaining temporal primary keys design.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.crunchydata.com/blog/understanding-postgres-iops" target="_blank">Understanding Postgres IOPS: Why They Matter Even When Everything Fits in Cache</a></span>
+                <span class="ml-1 text-sm opacity-80">- Explanation of importance of I/O operations per second in Postgres.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.cybertec-postgresql.com/en/unexpected-downsides-of-uuid-keys-in-postgresql/" target="_blank">Unexpected downsides of UUID keys in PostgreSQL | CYBERTEC PostgreSQL | Services &amp; Support</a></span>
+                <span class="ml-1 text-sm opacity-80">- Article covering UUID usage issues in Postgres keys.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.postgresonline.com/article_pfriendly/173.html" target="_blank">Using LTree to Represent and Query Hierarchy and Tree Structures - Postgres OnLine Journal</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guide on representing hierarchical data using Postgres LTREE.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://discuss.elastic.co/t/using-must-not-and-wildcard-to-search/134590/3" target="_blank">Using must_not and wildcard to search - Elastic Stack / Elasticsearch - Discuss the Elastic Stack</a></span>
+                <span class="ml-1 text-sm opacity-80">- Forum discussion on advanced Elasticsearch search syntax.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://expireddomains.com/domain/generacodice.com" target="_blank">Using PostgreSQL ltree type with a Java ORM layer - Genera Codice</a></span>
+                <span class="ml-1 text-sm opacity-80">- Integration of Postgres LTREE with Java ORM tools.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.2ndquadrant.com/en/blog/what-is-select-skip-locked-for-in-postgresql-9-5/" target="_blank">What is SKIP LOCKED for in PostgreSQL 9.5? - 2ndQuadrant | PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">- Explanation of SKIP LOCKED feature for concurrency.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.tigerdata.com/learn/when-to-consider-postgres-partitioning" target="_blank">When to Consider Postgres Partitioning</a></span>
+                <span class="ml-1 text-sm opacity-80">- Guidance on deciding when to use table partitioning in PostgreSQL.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=dr35UnAlzOQ" target="_blank">Working With SQL and Databases in JetBrains IDEs - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">- Video tutorial on managing SQL databases within JetBrains IDEs.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/zombodb/zombodb" target="_blank">zombodb/zombodb: Making Postgres and Elasticsearch work together like it&#39;s 2022</a></span>
+                <span class="ml-1 text-sm opacity-80">- Integration between Postgres and Elasticsearch for advanced search.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://discuss.elastic.co/t/dec-16th-2019-de-elasticsearch-zusammengesetzte-worte-in-elasticsearch/161003/2" target="_blank">Zusammengesetzte Worte in Elasticsearch</a></span>
+                <span class="ml-1 text-sm opacity-80">- Forum on handling compound words in Elasticsearch (German).</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dataegret.com/2017/03/deep-dive-into-postgres-stats-pg_stat_bgwriter/" target="_blank">» Deep dive into postgres stats: pg_stat_bgwriter</a></span>
+                <span class="ml-1 text-sm opacity-80">- Deep analysis of Postgres background writer statistics.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

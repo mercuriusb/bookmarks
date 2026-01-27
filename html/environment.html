@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>environment - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details ><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="active-tag" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">environment</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://5nach12.podigee.io/28-neue-episode" target="_blank">#5nach12 mit Prof. Dr. Stefan Rahmstorf</a></span>
+                <span class="ml-1 text-sm opacity-80">Diese Folge hat mich selbst nachhaltig beeindruckt und ist keine leichte Kost. Also Risiken und Nebenwirkungen beachten. Wir sollten jetzt alle genau hinhören. Manchmal gibt es Gespräche, die einen lange über das eigentliche Interview hinaus umtreiben.  2024 war das wärmste Jahr seit Beginn der Aufzeichnungen und vermutlich sogar seit 120.000 Jahren. „1,6 Grad über dem vorindustriellen Niveau“,...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.riffreporter.de/de/umwelt/wasserkrise-deutschland-ursachen-entwaesserung-landwirtschaft-renaturierung-baeche-moore" target="_blank">Befreit die Bäche, damit das Wasser im Land bleibt!</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Sommer ist vorbei, die Hitzewelle verebbt. Doch die Wasserkrise hält in vielen Teilen Deutschlands an. Das liegt auch an der großflächigen Entwässerung der Landschaft. In Vorpommern versuchen Naturschützer und Wasserbauexperten, diese zu stoppen – zum Wohl von Natur und Klima</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.deutschlandfunk.de/blaubeeren-gezuechtet-in-perus-wueste-fuer-europas-supermaerkte-dlf-de6efa34-100.html" target="_blank">Blaubeeren: Gezüchtet in Perus Wüste für Europas Supermärkte</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=FpmB96Riwn0" target="_blank">Ein Ansatz für den Wald im Wandel</a></span>
+                <span class="ml-1 text-sm opacity-80">Wie können Wälder vor den Auswirkungen der Klimakrise geschützt werden? Wie sollte eine naturnahe Waldbewirtschaftung zukünftig aussehen?  Das Reiersdorfer Konzept der Landeswaldoberförsterei Reiersdorf in Brandenburg beschreibt einen offenen Ansatz für eine achtsame und an Prinzipien der Ökologie ausgerichtete Waldbewirtschaftung unter den Vorzeichen der Klimakrise.  Ein Film von Nadja Bülow, ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://map-final.rlp-umwelt.de/docs_kartendienste/BWP_2016_04_N/BWP_2016_04_N_Fachplan_Ma%C3%9Fnahmen.pdf" target="_blank">https://map-final.rlp-umwelt.de/docs_kartendienste/BWP_2016_04_N/BWP_2016_04_N_Fachplan_Maßnahmen.pdf</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.nabu.de/imperia/md/content/nabude/energie/biomasse/250312-nabu-flyer-heizen-mit-holz.pdf" target="_blank">https://www.nabu.de/imperia/md/content/nabude/energie/biomasse/250312-nabu-flyer-heizen-mit-holz.pdf</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.spektrum.de/news/interview-was-macht-gelungene-renaturierung-aus/2274722" target="_blank">Interview: Was macht gelungene Renaturierung aus? - Spektrum der Wissenschaft</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Ökologe Stefan Zerbe hat Europa bereist, um sich anzusehen, wie Menschen kaputte Natur reparieren. Neben unerwarteten Highlights fand er einen Fehler, der fatal sein kann.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=uTbiMGl0mts" target="_blank">Maximilian Fichtner: Energiespeicher der Zukunft</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Ersatz fossiler Brennstoffe durch erneuerbare Energien und damit die gesamte Energiewende kann in Deutschland und weltweit nur gelingen, wenn die Speichertechnologien immer weiter verbessert werden. Dies gilt im großen Stil für Energiespeicher, die die natürlichen Schwankungen von Windkraft und Solarenergie ausgleichen, um eine flächendeckende und permanente Versorgung mit klimaneutralen En...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pod.link/1619628949" target="_blank">Mein Gespräch mit Harald Grethe über nachhaltige Landwirtschaft – Sonne &amp; Stahl</a></span>
+                <span class="ml-1 text-sm opacity-80">Listen to Sonne &amp; Stahl - Weltretten ohne Illusionen wherever you get your podcasts!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.klimareporter.de/strom/methanol-statt-wasserstoff-als-langzeitspeicher" target="_blank">Methanol statt Wasserstoff als Langzeitspeicher</a></span>
+                <span class="ml-1 text-sm opacity-80">Könnte grünes Methanol, hergestellt aus CO₂ und Wasserstoff, die bessere Option sein, um in einer Dunkelflaute Strom bereitzustellen? Eine Studie legt das nahe.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.scinexx.de/news/energie/methanol-statt-wasserstoff/" target="_blank">Methanol statt Wasserstoff? - Methanol und Allam-Turbinen könnten Alternative für die Energiespeicherung bieten - scinexx.de</a></span>
+                <span class="ml-1 text-sm opacity-80">Alternativer Energieträger: Um Strom aus Wind und Sonne zwischenzuspeichern, wäre statt Wasserstoff auch Methanol geeignet und unter bestimmten</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.deutschlandfunkkultur.de/weniger-regen-mehr-schaedlinge-online-wie-die-waelder-dem-klimawandel-standhalten-100.html" target="_blank">Mischwald statt Monokultur: Rettung für Deutschlands Wälder</a></span>
+                <span class="ml-1 text-sm opacity-80">Deutschlands Wälder leiden unter Klimawandel, Dürre und Schädlingen. Ein naturnaher Waldumbau mit stabilen Mischwäldern ist nötig – doch wie gelingt er?</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.deutschlandfunk.de/wer-rettet-die-erde-1-klang-der-korallen-deep-science-staffel-dlf-8cc60b00-100.html" target="_blank">Podcast Deep Science: Renaturierung im Meer - Klang der Korallen</a></span>
+                <span class="ml-1 text-sm opacity-80">Nach einer Korallenbleiche entdeckt Bioakustiker Tim Lamont: Clownfische und Haie kommen zurück, wenn er sie mit Tönen lockt. Kann es so einfach sein?</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://cleantechnica.com/2024/10/04/refurbished-three-mile-island-payment-structure-is-not-quite-what-it-seems/" target="_blank">Refurbished Three Mile Island Payment Structure Is Not Quite What It Seems - CleanTechnica</a></span>
+                <span class="ml-1 text-sm opacity-80">A plan by Microsoft and Constellation to restart Reactor 1 at the Three Mile Island nuclear power plant fudged a bit on the details.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hitech-campus.de/automotive/wasserstoff-antrieb-mit-methanol-pro-und-contra/" target="_blank">Wasserstoff und Methanol – Pro und Contra - HI:TECH CAMPUS</a></span>
+                <span class="ml-1 text-sm opacity-80">Neben den Batterien gibt es eine wichtige Alternative für den Antrieb der Zukunft: Der Wasserstoff-Antrieb mit Methanol.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

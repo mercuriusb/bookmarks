@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/index - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="active-tag" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/index</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.64er-magazin.de/" target="_blank">64&#39;er – Das Magazin für Computer-Fans</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc" target="_blank">An Illustrated Guide to OAuth and OpenID Connect</a></span>
+                <span class="ml-1 text-sm opacity-80">An illustrated guide to explain OAuth and OpenID Connect!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://pages.cloudflare.com/" target="_blank">Cloudflare Pages</a></span>
+                <span class="ml-1 text-sm opacity-80">Build your next application with Cloudflare Pages</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://wiki.samba.org/index.php/Configure_Samba_to_Work_Better_with_Mac_OS_X" target="_blank">Configure Samba to Work Better with Mac OS X</a></span>
+                <span class="ml-1 text-sm opacity-80">Below is a working recommended fruit config:</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://spectrum.ieee.org/commodore-64" target="_blank">Creating the Commodore 64: The Engineers’ Story</a></span>
+                <span class="ml-1 text-sm opacity-80">The daring and design that went into the best-selling computer of all time</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.frankel.ch/how-to-batch/" target="_blank">Do You know how to batch?</a></span>
+                <span class="ml-1 text-sm opacity-80">Concurrent systems face a delicate balance: enabling high throughput under contention while maintaining low latency and predictable behavior. Traditional locking strategies and naive parallelization often introduce performance bottlenecks through cache contention, false sharing, and excessive context switching. These issues are further exacerbated in Cloud and virtualized environments, where pe...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes" target="_blank">Ebazhanov/linkedin-skill-assessments-quizzes: Full reference of LinkedIn answers 2023 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-</a></span>
+                <span class="ml-1 text-sm opacity-80">Full reference of LinkedIn answers 2024 for skill assessments (aws-lambda, rest-api, javascript, react, git, html, jquery, mongodb, java, Go, python, machine-learning, power-point) linkedin excel t...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hotkeycheatsheet.com/hotkey-cheatsheet/git" target="_blank">Git - Hotkey Cheatsheet</a></span>
+                <span class="ml-1 text-sm opacity-80">Comprehensive guide to Git hotkeys. Boost your productivity with our detailed cheatsheet.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://hotkeycheatsheet.com/" target="_blank">Hotkey Cheatsheet - Improve Your Productivity with Keyboard Shortcuts</a></span>
+                <span class="ml-1 text-sm opacity-80">Access a comprehensive hotkey cheatsheet for popular software and applications. Enhance your workflow and productivity with time-saving keyboard shortcuts.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.composeflow.io/" target="_blank">https://composeflow.io/</a></span>
+                <span class="ml-1 text-sm opacity-80">ComposeFlow empowers developers to build fully native apps visually and effortlessly. Create stunning, production-ready apps in no time with our intuitive tools</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.min.io/solutions/modern-data-lakes-lakehouses?utm_source=google&amp;utm_medium=search&amp;utm_campaign=datalake&amp;utm_content=datalake-new-web-page&amp;utm_term=&amp;utm_campaign=&amp;utm_source=adwords&amp;utm_medium=ppc&amp;hsa_acc=8976569894&amp;hsa_cam=20593618271&amp;hsa_grp=&amp;hsa_ad=&amp;hsa_src=x&amp;hsa_tgt=&amp;hsa_kw=&amp;hsa_mt=&amp;hsa_net=adwords&amp;hsa_ver=3&amp;gad_source=1" target="_blank">MinIO for Modern Datalakes</a></span>
+                <span class="ml-1 text-sm opacity-80">MinIO delivers scalable, high-performance data lakehouse solutions, ideal for AI/ML, hybrid cloud, and cost-effective control of unstructured data.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.modular.com/mojo" target="_blank">Mojo 🔥: Programming language for all of AI</a></span>
+                <span class="ml-1 text-sm opacity-80">Mojo is a programming language that unifies high-level AI development with low-level systems programming. Write once, deploy everywhere - from CPUs to GPUs - without vendor lock-in.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/plutov/oq" target="_blank">oq - a terminal-based OpenAPI Spec (OAS) viewer</a></span>
+                <span class="ml-1 text-sm opacity-80">Terminal OpenAPI Spec viewer. Contribute to plutov/oq development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/@tpierrain/outbox-pattern-survival-guide-6ad4b57ef189" target="_blank">Outbox Pattern Survival Guide TL;DR: Successfully implementing the Outbox pattern in distributed systems is harder than it looks. Here are some common pitfalls and…medium.com</a></span>
+                <span class="ml-1 text-sm opacity-80">TL;DR: Successfully implementing the Outbox pattern in distributed systems is harder than it looks. Here are some common pitfalls and…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dev.to/msdousti/postgresql-outbox-pattern-revamped-part-2-1cbf" target="_blank">PostgreSQL + Outbox Pattern Revamped — Part 2</a></span>
+                <span class="ml-1 text-sm opacity-80">Part 1 of this series introduced the outbox pattern as a reliable approach for message delivery in...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://quickref.me/" target="_blank">QuickRef.ME - Quick Reference Cheat Sheet</a></span>
+                <span class="ml-1 text-sm opacity-80">Share quick reference and cheat sheet for developers</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.infoq.com/news/2025/05/redis-agpl-license/" target="_blank">Redis Returns to Open Source under AGPL License: Is It Too Late? - InfoQ</a></span>
+                <span class="ml-1 text-sm opacity-80">Redis 8 has recently hit general availability, switching to the AGPLv3 license. A year after leaving its open source roots to challenge cloud service providers and following the birth of Valkey, Redis</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://serverfault.com/questions/1010822/samba4-issues-with-time-machine-cannot-create-new-backup-on-samba-share" target="_blank">Samba4 issues with Time Machine: cannot create new backup on Samba share</a></span>
+                <span class="ml-1 text-sm opacity-80">Note: originally posted on StackExchange. I&#39;m not sure which location is more appropriate, my apologies if the duplication causes issues.  TL;DR: Time Machine cannot create a new backup on my shared</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=apREl0KmTdQ" target="_blank">Software Performance: Avoiding Slow Code, Myths &amp; Sane Approaches – Casey Muratori | The Marco Show - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Why does modern software feel so slow? Casey Muratori joins Marco to talk about performance-aware programming, the infamous Windows Terminal story, expectations in game servers, AI hype, and why Python might just be holding us all back. A deep, unfiltered conversation about performance, software culture, and the future of programming.  What you’ll learn: – The truth about software performance (...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thenewstack.io/" target="_blank">The New Stack | DevOps, Open Source, and Cloud Native News</a></span>
+                <span class="ml-1 text-sm opacity-80">The latest news and resources on cloud native technologies, distributed systems and data architectures with emphasis on DevOps and open source projects.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://axleos.com/writing-a-truetype-font-renderer/" target="_blank">Writing a TrueType font renderer</a></span>
+                <span class="ml-1 text-sm opacity-80">Text is the medium of digital interaction, and text rendering has an outsized impact on the overall fit and finish of any system. It therefore pains me that axle has for years relied on a low-resolution 8x8 bitmap font. Let’s fix it! Take a look at the characters composing this sentence. Note the curves, the negative space, the use of size and distance. If you’ve got a magnifying glass handy, y...</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

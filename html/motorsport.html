@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>motorsport - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details ><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="active-tag" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">motorsport</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.ultimatecarpage.com/chassis/154/Jaguar-XJR-5-XJR-5-001.html" target="_blank">1982 Jaguar XJR-5 - Chassis XJR-5/001 - Ultimatecarpage.com</a></span>
+                <span class="ml-1 text-sm opacity-80">1982 - 1985 Jaguar XJR-5: 56-shot gallery, full history and specifications</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Z1jJVe79vTc" target="_blank">24 Hours of Le Mans - 1968 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Following its victory at Daytona, Porsche 907-005 returned to Germany and was fitted with new vertical stabilizing fins on the rear bodywork in preparation for the high speeds of Le Mans.  Wearing the number 33 for the April test session, Stommelen was 3rd-quickest overall in 005.  Originally scheduled for June, the race was postponed until September and by that time the 907s had been replaced ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://web-robot.de/Nring/" target="_blank">24h Rennen Cams</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://getraceresults.com/" target="_blank">About RaceResults</a></span>
+                <span class="ml-1 text-sm opacity-80">Race results, Live timing en Race Tracker. Live timing and Tracker at Circuits in Europe, the middle-east, Asia, Australia and more.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.alexkrass.de/" target="_blank">Alexander Kraß</a></span>
+                <span class="ml-1 text-sm opacity-80">alexkrass.de | Willkommen</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.crankandpiston.com/video-bobby-unser-1986-pikes-peak-record/" target="_blank">Bobby Unser Rightly winning his tenth Pikes Peak.</a></span>
+                <span class="ml-1 text-sm opacity-80">Bobby Unser Rightly heralded for his 3 Indy 500 wins, but if you want to see the man&#39;s extreme ability behind the wheel, you should watch him behind the wheel of a Gp B Audi Quattro in 1986, winning his tenth Pikes Peak</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.racingblog.de/2020/03/20/classic-super-gt-races-to-watch-during-the-covid-19-crisis/" target="_blank">Classic Super GT races to watch during the COVID-19 crisis</a></span>
+                <span class="ml-1 text-sm opacity-80">It’s no secret that the novel COVID-19 Coronavirus crisis has an effect on everyone’s life. And with the world of sports pretty much coming to a complete hold, we all…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.dailysportscar.com/" target="_blank">dailysportscar.com</a></span>
+                <span class="ml-1 text-sm opacity-80">Sportscar Racing&#39;s Internet Magazine. Your daily dose of news and notes from the world of sportscar and GT racing...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=VZ3F7kmB2Ok" target="_blank">Der-Rennfahrer-Rolf-Stommelen</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Rennfahrer Rolf Stommelen | NDR Fernsehen   Die Formel 1 in den 1970er-Jahren: Es war die Zeit der großen Stars der Rennfahrer wie Niki Lauda, James Hunt, Emerson Fittipaldi. Sie waren die Gladiatoren der Neuzeit, riskierten ihr Leben auf der Rennstrecke bei über 300 km/h. Rolf Stommelen war mit Jochen Maas einer der wenigen Deutschen, die in der Formel 1 fuhren. Stommelen war kein Draufgän...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=xjWcm90QwV8" target="_blank">Die 24 Stunden von Le Mans: Das härteste Autorennen der Welt (1/3) | SPIEGEL TV Classics - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Motor röhrt, der Asphalt dampft, die Fahrer tropft der Schweiß. Das legendäre 24-Stunden-Rennen von Le Mans. Eine Reise nicht nur im Kreis, sondern auch in die Vergangenheit.   Mit großer Hoffnung starten auch zwei deutsche Vertreter in ihren Werks-Boliden von Porsche in das Rennen. Dieser Reifen-Marathon fordert von den Fahrern auch die letzten Reserven. Ein Sprung in die Rennfahrer-Geschi...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/clip/Ugkx9IS1EdX-hS1fImk5bMD_c4Y9JvaLTPyV" target="_blank">Drama in der grünen Hölle... Mola geht der Sprit aus - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=eaeKXpDhvV0" target="_blank">Drew Gibson: In Focus - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">What does it take to develop a successful career in the high-pressure, massively competitive world of motor racing?  With so many motor sport enthusiasts who aspire to be paid to shoot pictures, how does anyone stand out and create not only a viable career, but also be recognised as being at the very top of their game?    Drew Gibson: In Focus gives you an extensive and exclusive look behind th...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=bHrDkrmK1Kw" target="_blank">Driverrating</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.racingsportscars.com/photo/Norisring-1984-07-01.html?sort=Results" target="_blank">DRM Norisring 1984 - Photo Gallery - Racing Sports Cars</a></span>
+                <span class="ml-1 text-sm opacity-80">Photo Gallery from race DRM Norisring 1984 on Racing Sports Cars website</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=OznLU4yBnB4" target="_blank">Eifel Rallye Festival 2025 | Group B &amp; WRC legends, crashes, flames &amp; action - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">SUBSCRIBE: http://www.youtube.com/user/0understeer?sub_confirmation=1  Join us! FACEBOOK: https://www.facebook.com/0understeer  WEBSITE: http://www.zeroundersteer.com  Filmed by: zeroundersteer.com Hans Klos Fränk Schneider Peter Philippi Patrick Schneider  Editing by:  zeroundersteer.com Sebastian Klos</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.eifel-rallye-festival.de/de/home.html" target="_blank">Eifel Rallye Festival Homepage</a></span>
+                <span class="ml-1 text-sm opacity-80">Startseite Eifel Rallye Festival</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Oe7jymcP2T0" target="_blank">Endurance Racing’s Golden Age: Group C - Full Story</a></span>
+                <span class="ml-1 text-sm opacity-80">Group C Sportscar Racing was a golden age for speed. The concept of speed had never before been pushed so far during wheel-to-wheel combat. Starting in 1982 it wasn’t immediately clear the magnitude of madness about to be unleashed, but within a decade the fight for sportscar glory had birthed the fastest racing machines ever built. This is the story of Group C, and the drivers and machines cra...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Lvbkr-nXpjE" target="_blank">ENDURANCE: The Documentary about Porsche at the Two Toughest GT Races in the World</a></span>
+                <span class="ml-1 text-sm opacity-80">In 2019, the world of motorsports saw something it had rarely seen before; the two toughest endurance events in motor racing took place back-to-back: the 24h of Le Mans and the 24h of the Nürburgring. ENDURANCE is the story of the Porsche GT Team that took on this double challenge.  __ Follow Porsche on Instagram: https://www.instagram.com/porsche/ Like Porsche on Facebook: https://www.facebook...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=GoJsJfJ-s3s" target="_blank">Falken - 20 Years in 20 Stories</a></span>
+                <span class="ml-1 text-sm opacity-80">To mark the 20th anniversary, which the tyre brand celebrated last year at the Nürburgring, the film crew thought up something very special: a total of 24 people were brought in front of the camera before, during and after the race to tell their stories relating to the 24 hour race and the Nürburgring. The result is countless, emotional, moving and exciting stories related to the most legendary...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://sportscar-info.de/2016/08/05/fotostrecke-die-eifel-aus-der-vogelperspektive-2018/#gallery-2" target="_blank">Fotostrecke: Die Eifel aus der Vogelperspektive - SportsCar-Info.de</a></span>
+                <span class="ml-1 text-sm opacity-80">Über zwanzig Kilometer Asphalt mäandrieren sich durch die Eifelwälder: Aus der Vogelperspektive mutet der längste Rundkurs der Welt geradezu winzig an. Fotograf Julian Schmidt hatte die Gelegenheit, die Nordschleife des Nürburgrings aus luftiger Höhe zu porträtieren.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Owf2R9XMa8Y" target="_blank">Gran Turismo presents The Ring</a></span>
+                <span class="ml-1 text-sm opacity-80">This movie is a tribute to the Nordschleife, the world’s largest and most challenging racetrack.  Built in 1927 in a breathtaking landscape better known as the Green Hell, the Nürburgring is a legend in its own right and has been challenged by racings best drivers including the likes of Rudolf Caracciola, Jackie Stewart, Juan Manuel Fangio, Stirling Moss, James Hunt, Niki Lauda, Michael Schumac...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://cms3.gt-eins.at/" target="_blank">GT-Eins</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://www.gt-eins.at/cgi-bin/GT1-Forum/YaBB.pl" target="_blank">GT-Eins Forum</a></span>
+                <span class="ml-1 text-sm opacity-80">Moderator: Harald</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.indycar.com/page-not-found?item=%2fways-to-watch%2fstream&amp;user=extranet%5cAnonymous&amp;site=indycar" target="_blank">INDYCAR Live</a></span>
+                <span class="ml-1 text-sm opacity-80">The Official Site of IndyCar News, Drivers, Schedule &amp; Shop | IndyCar.com</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=W6LWLt59HEA" target="_blank">Legendäres Rennen 2008</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://motor-kritik.de/" target="_blank">Motor-Kritik</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=mCTQXWGbPKE" target="_blank">Motorsport Photographer Jamey Price | Golden Hour</a></span>
+                <span class="ml-1 text-sm opacity-80">Jamey Price is a renowned motorsport photographer from Charlotte, North Carolina. Price&#39;s unique and colorful images have been published around the world in magazines, newspapers, and websites including The New York Times, HotRod, Hagerty, MAXIM, Car&amp;Driver, CycleWorld, Road&amp;Track, Autoweek, RACER, MotorTrend, Autosport, F1 Racing magazine, Motorsport Magazine, Formula1.com, Lamborghini.com, To...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://de.motorsport.com/" target="_blank">Motorsport.com</a></span>
+                <span class="ml-1 text-sm opacity-80">Die neuesten Ergebnisse und Statistiken. Wir berichten über F1, MotoGP, DTM, Le Mans, VLN, Sportwagen und weitere Rennserien. Unsere Datenbank bietet Tausende Fotos, Videos, News und eine Usercommunity. Also mach mit!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=iE8G4YbW1uY" target="_blank">NIKI LAUDA&#39;S F1 FERRARI IN MONACO (BEHIND THE SCENES)</a></span>
+                <span class="ml-1 text-sm opacity-80">In loving memory of Niki Lauda.  Behind the scenes of my first viral video during the Historic Grand Prix of Monaco 2021. https://www.instagram.com/lucasjavabrito/ Full rear wing lap: https://www.youtube.com/watch?v=uN_xsxNZfvg&amp;t=12s&amp;ab_channel=ACMMedia  Insta360 cameras affiliate links: One R - https://www.insta360.com/sal/one_r?insrc=INR4YIS  One X 2 - https://www.insta360.com/sal/one_x2?insr...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.outdooractive.com/de/route/wanderung/ahrtal/nordschleife-bruennchen-mit-hunden/113560012/" target="_blank">Nordschleife: Brünnchen - mit Hunden • Wanderung</a></span>
+                <span class="ml-1 text-sm opacity-80">GPS-Rundwanderung an Teilen der Nordschleife zwischen Brünnchen und Kesselchen</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://nuerburgringclassic.de/" target="_blank">Nürburgring Classic</a></span>
+                <span class="ml-1 text-sm opacity-80">ADAC Nürburgring Classic. Das Race Event für Oldtimer und Youngtimer am Nürburgring. Racing-Action auf Nordschleife und Grand-Prix-Kurs</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.nuerburgring.de/" target="_blank">Nürburgring Homepage</a></span>
+                <span class="ml-1 text-sm opacity-80">Die schönste Rennstrecke der Welt ist Deine Leidenschaft? Hier findest Du alle Informationen, Veranstaltungen und Fanartikel der legendären Rennstrecke.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.google.com/maps/d/viewer?mid=1llwVYOFRqFitedCnen9371zrt4I&amp;hl=en_US&amp;ll=0%2C0&amp;z=12" target="_blank">Nürburgring Nordschleife</a></span>
+                <span class="ml-1 text-sm opacity-80">The world&#39;s most beautiful racetrack, also known as the Green Hell.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.dslr-forum.de/threads/nuerburgring-nordschleife.478168/" target="_blank">Nürburgring Nordschleife DSLR-Forum</a></span>
+                <span class="ml-1 text-sm opacity-80">Iwie habe ich hier über die suche keinen thread über die besten Nordschleifen Fotoplätze gefunden, also versuche ich es mal.   noch sehr unvollständig, sind jetzt nur die stellen wo ich selbst war Von Tribüne T13 dem Streckenverlauf folgend:   Ausgang Hocheichen, innen Auf grund der...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://www.pro-steilstrecke.de/steilstrecke/nuerburgring_steilstrecke.php" target="_blank">PS Nürburgring - Steilstrecke</a></span>
+                <span class="ml-1 text-sm opacity-80">Pro Steilstrecke, Webseite zum Mythos Nürburgring. Informationen, Anekdoten und Bilder  über die Nord-, Süd- und Start- und Zielschleife.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://racer.com/" target="_blank">RACER</a></span>
+                <span class="ml-1 text-sm opacity-80">RACER is the premier source for everything that is racing. Stay up to date with the latest news, events, and results.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.racingblog.de/" target="_blank">Racingblog</a></span>
+                <span class="ml-1 text-sm opacity-80">F1, NASCAR, WEC und alles was schnell ist</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://calendar.google.com/calendar/u/0/embed?mode=AGENDA&amp;height=800&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=9vdcbe3v885jtkma6pkek64j60@group.calendar.google.com&amp;color=%23853104&amp;ctz=Europe/Rome" target="_blank">Racingblog TV-Planer</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://my.cbox.ws/racingblog" target="_blank">Racingblog · Cbox</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://radiolemans.co/" target="_blank">RadioLeMans.com</a></span>
+                <span class="ml-1 text-sm opacity-80">Midweek Motorsport                                                                                                            	             	             	        6 days ago</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://player.radiolemans.co/cgi-sys/defaultwebpage.cgi" target="_blank">RS Player</a></span>
+                <span class="ml-1 text-sm opacity-80">SORRY!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://sportscardigest.com/" target="_blank">Sports Car Digest</a></span>
+                <span class="ml-1 text-sm opacity-80">The leading coverage for sports, racing and vintage car enthusiasts. Welcome to the world of rare and collector cars, from news, auctions, events, racing and more.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.eifel-rallye-festival.de/de/starterliste.html" target="_blank">Starterliste 2025 - Eifel Rallye Festival</a></span>
+                <span class="ml-1 text-sm opacity-80">Webdesign: Norbert Kettenhofen</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.eifel-rallye-festival.de/files/Teilnehmer/Starterlisten/ERF-2025-Starterliste-DS1.pdf" target="_blank">Starterliste 2025 PDF - Eifel Rallye Festival</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=LU657hfITd8" target="_blank">Steve McQueen: The Lost Formula 1 Movie - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Watch never-before-seen footage of car racing in the 1960s when the sport was full of danger.  In this documentary, from award-winning filmmaker Richard Mikulski, we take a fascinating look at the forgotten story of Formula 1 racing in the 1960s. Featuring exclusive footage and interviews with some of the biggest names in motorsport, The Lost Formula 1 Movie is a must-watch for all automobile e...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.ardmediathek.de/video/ard-history/100-jahre-nuerburgring-geschichte-einer-kultstrecke/swr/Y3JpZDovL3N3ci5kZS9hZXgvbzIyMjAzNDM" target="_blank">SWR 100 Jahre Nürburgring - Geschichte einer Kultstrecke</a></span>
+                <span class="ml-1 text-sm opacity-80">Der Nürburgring ist ein Mythos - Spiegelbild von Wirtschafts- und Gesellschaftsgeschichte, Politik und Sport der vergangenen 100 Jahre. Einst als Arbeitsbeschaffungsmaßnahme für die strukturschwache Eifel entstanden, verhalf die Autoverrücktheit einer ganzen Nation dieser &#39;grünen Hölle&#39; zu gefürchteter Beliebtheit. 2.500 Arbeiter schufteten von 1925-1927 in einer kaum besiedelten Region. Das Er...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Np6xTXAkaRI" target="_blank">That time Ford defeated Porsche: The Legend of the Zakspeed Capri and Fox Mustang - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">This video is a documentary about Erich Zakowski, his cars and the men who drove them.  The Zakspeed Capri and Mustangs were some of the most interesting race cars ever made.  Zakspeed and Ford takes on the Fire breathing turbocharged monsters of Group 5 and the king of the hill which was the Porsche 935 Turbo.  Video Corrections:  The Kevlar body panels are are not a hybrid of carbon and fiber...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.timing71.org/s/n24" target="_blank">Timing71</a></span>
+                <span class="ml-1 text-sm opacity-80">Timing71 motorsport live timing aggregator</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=FFwoxM1MiBw" target="_blank">Truth In 24</a></span>
+                <span class="ml-1 text-sm opacity-80">&quot;Truth in 24&quot; chronicles the Audi Sport racing teams as they attempt to win a record fifth consecutive 24 Hours of Le Mans. The films gives viewers an unprecedented behind-the-scenes view of the strategies engineers and drivers use as they set out to make history against local favorite, Team Peugeot. &quot;Truth in 24&quot; rides alongside drivers Tom Kristensen, Allan McNish and Dindo Capello as they pr...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=27F26UA1i6M&amp;feature=youtu.be" target="_blank">TRUTH IN 24 II: Every Second Counts</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.nuerburgring-langstrecken-serie.de/de/startseite/" target="_blank">VLN - Nürburgring Langstrecken Serie</a></span>
+                <span class="ml-1 text-sm opacity-80">Die VLN Langstreckenmeisterschaft Nürburgring ist die größte Breitensportserie der Welt. Neunmal im Jahr starten im Schnitt 170 Rennfahrzeuge – von seriennahen Renntourenwagen bis zum ausgewachsenen GT3-Boliden – auf der schönsten und anspruchsvollsten Rennstrecke der Welt, der Nürburgring Nordschleife.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://youtube.com/watch?v=9M9wYn" target="_blank">Walter Röhrl im Interview mit Christian Geistdörfer Das Jahr 1980 im Rückspiegel</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://www.lemanszone.de/index.html" target="_blank">www.LeMansZone.de - Eine deutsche Fanseite zu den 24 Stunden von Le Mans</a></span>
+                <span class="ml-1 text-sm opacity-80">Eine Fanseite zu den 24 Std. von Le Mans</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.zwischengas.com/de/index.html" target="_blank">Zwischengas</a></span>
+                <span class="ml-1 text-sm opacity-80">Alles zu Oldtimer- &amp; Youngtimer-Automobile: detaillierte Berichte, News, Aktualitäten, Reportagen, Testberichte und Kaufberatung.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

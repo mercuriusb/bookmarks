@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/java - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details open><summary><a class="active-tag" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/java</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jooq.org/10-things-you-didnt-know-about-jooq/" target="_blank">10 Things You Didn’t Know About jOOQ</a></span>
+                <span class="ml-1 text-sm opacity-80">Regrets, union type emulations, jOOQ&#39;s pronunciation, RDBMS bugs, mutability, and more fun facts about jOOQ in this article.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://bsky.app/profile/myfear.com/post/3lth27uwnbu2s" target="_blank">@myfear.com on Bluesky</a></span>
+                <span class="ml-1 text-sm opacity-80">How Quarkus works with OpenTelemetry on OpenShift   buff.ly/DJzWhZ4 #Java #quarkus #OpenShift #OpenTelemetry</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://xavieraraujo.github.io/databases/2023/12/02/a-deep-dive-on-java-spring-framework-transactional-annotation.html" target="_blank">A deep dive on Java Spring framework transactional annotation</a></span>
+                <span class="ml-1 text-sm opacity-80">Introduction</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackify.com/streams-guide-java-8/" target="_blank">A Guide to Java Streams in Java 8 - Stackify</a></span>
+                <span class="ml-1 text-sm opacity-80">This tutorial will guide you through the core concepts and new features of Java Streams, covering basic and advanced stream operations.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/apangin/nalim" target="_blank">apangin/nalim: Fast Java native interface based on JVMCI</a></span>
+                <span class="ml-1 text-sm opacity-80">Fast Java native interface based on JVMCI. Contribute to apangin/nalim development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.baeldung.com/database-auditing-jpa" target="_blank">Auditing with JPA, Hibernate, and Spring Data JPA</a></span>
+                <span class="ml-1 text-sm opacity-80">This article demonstrates three approaches to introducing auditing into an application: JPA, Hibernate Envers, and Spring Data JPA.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://awesomejava.resamvi.io/" target="_blank">Awesome Java Projects</a></span>
+                <span class="ml-1 text-sm opacity-80">Table of Contents</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=NJxqVoEi5JI" target="_blank">Be more productive with IntelliJ IDEA - Marit van Dijk - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">IntelliJ IDEA is designed to help developers stay in the flow while working. It has a powerful editor, refactorings, navigation, and all kinds of smart features to help you write and read code. At the same time, it is jam packed with tools professional developers need, like Maven, Gradle, Spring, Git, Databases, Test tools and more. And did I mention a fantastic debugger? In this talk, you will...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jetbrains.com/idea/2024/02/build-a-spring-boot-app-with-ai-assistant/" target="_blank">Build a Spring Boot App with AI Assistant | The IntelliJ IDEA Blog</a></span>
+                <span class="ml-1 text-sm opacity-80">In this article, we’ll be building a small Java Spring Boot web application in IntelliJ IDEA with the help of JetBrains AI Assistant. If you’d like to follow along with this tutorial, you’ll need I</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.manning.com/books/data-oriented-programming-in-java" target="_blank">Data-Oriented Programming in Java - Chris Kiehl</a></span>
+                <span class="ml-1 text-sm opacity-80">Simplify your Java code with data-oriented programming!  Data is the heart of your code. Data-oriented programming is a programming technique that enables you to precisely model domains and write large enterprise-scale applications that are oriented around the data they manage. Take a data-oriented approach to your Java applications, and you’ll enjoy simpler state management, improved readabili...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dzone.com/articles/database-caching-with-redis-and-java" target="_blank">Database Caching With Redis and Java - DZone</a></span>
+                <span class="ml-1 text-sm opacity-80">Explore database caching with Redis and Java and see some of the different caching strategies.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/datafaker-net/datafaker?tab=readme-ov-file" target="_blank">datafaker-net/datafaker: Generating fake data for the JVM (Java, Kotlin, Groovy) has never been easier!</a></span>
+                <span class="ml-1 text-sm opacity-80">Generating fake data for the JVM (Java, Kotlin, Groovy) has never been easier! - datafaker-net/datafaker</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jetbrains.com/idea/2025/04/debugging-java-code-in-intellij-idea/" target="_blank">Debugging Java Code in IntelliJ IDEA</a></span>
+                <span class="ml-1 text-sm opacity-80">In this blog post, we will look at how to debug Java code using the IntelliJ IDEA debugger. We will look at how to fix a failing test, how to find out where an `Exception` is thrown, and how to find p</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.baeldung.com/spring-boot-auto-configuration-report" target="_blank">Display Auto-Configuration Report in Spring Boot | Baeldung</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn which beans are automatically configured in your Spring Boot application by generating an auto-configuration report during startup.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.jobrunr.io/en/" target="_blank">Distributed Java Background Job Scheduler · JobRunr</a></span>
+                <span class="ml-1 text-sm opacity-80">The simple, open-source Java library for reliable background processing. Never lose a job again. Get a full dashboard, automatic retries, and durable job scheduling backed by your existing database.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/distributed-transactions-quarkus-jta-xa-postgresql" target="_blank">Distributed Transactions Made Simple with Quarkus and JTA</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how to build atomic operations across PostgreSQL and MSSql databases using XA transactions in three real-world banking examples.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/drewnoakes/metadata-extractor" target="_blank">drewnoakes/metadata-extractor: Extracts Exif, IPTC, XMP, ICC and other metadata from image, video and audio files</a></span>
+                <span class="ml-1 text-sm opacity-80">Extracts Exif, IPTC, XMP, ICC and other metadata from image, video and audio files - drewnoakes/metadata-extractor</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/dynamic-role-based-access-quarkus-java" target="_blank">Dynamic Role-Based Access in Quarkus: Fine-Grained Security Without Redeploys</a></span>
+                <span class="ml-1 text-sm opacity-80">How Java developers can build a database-driven authorization system with real-time permission changes, caching, and declarative enforcement.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/eclipse-transformer/transformer" target="_blank">eclipse/transformer: Eclipse Transformer provides tools and runtime components that transform Java binaries, such as individual class files and complete JARs and WARs, mapping changes to Java packages, type names, and related resource names.</a></span>
+                <span class="ml-1 text-sm opacity-80">Eclipse Transformer provides tools and runtime components that transform Java binaries, such as individual class files and complete JARs and WARs, mapping changes to Java packages, type names, and ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/embeddable-inheritance-jpa-hibernate/" target="_blank">Embeddable Inheritance with JPA and Hibernate - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how to map embeddable inheritance when using JPA and Hibernate. This feature is supported since Hibernate version 6.6.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.topcoder.com/thrive/articles/generating-model-classes-using-hibernate-reverse-engineering" target="_blank">Generating Model Classes Using Hibernate Reverse Engineering</a></span>
+                <span class="ml-1 text-sm opacity-80">In our last article, we made our first model class, users, manually. However, creating tables manually is a re</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/DiUS/java-faker" target="_blank">GitHub - DiUS/java-faker: Brings the popular ruby faker gem to Java</a></span>
+                <span class="ml-1 text-sm opacity-80">Brings the popular ruby faker gem to Java. Contribute to DiUS/java-faker development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/valdemarjuniorr/guidelines-study/tree/master/books/Effective%20Java" target="_blank">guidelines-study/books/Effective Java at master · valdemarjuniorr/guidelines-study · GitHub</a></span>
+                <span class="ml-1 text-sm opacity-80">Repositório com Guias de estudos sobre API, livros e tecnologias - valdemarjuniorr/guidelines-study</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://reflectoring.io/spring-timezones/" target="_blank">Handling Timezones in a Spring Boot Application</a></span>
+                <span class="ml-1 text-sm opacity-80">Handling time zones in a Spring Boot Application</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/herreriasjose/hibernate-legacy-databases-guide" target="_blank">herreriasjose/hibernate-legacy-databases-guide: Hibernate, Java and legacy RDBMS databases (a brush up guide)</a></span>
+                <span class="ml-1 text-sm opacity-80">Hibernate, Java and legacy RDBMS databases (a brush up guide) - herreriasjose/hibernate-legacy-databases-guide</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/hibernate/hibernate-orm/pull/9629" target="_blank">HHH-17404 : Add support of reading/writing from/to special source/target in FormatMapper by ejannett · Pull Request #9629 · hibernate/hibernate-orm</a></span>
+                <span class="ml-1 text-sm opacity-80">This PR brings code changes needed by HHH-17404. This adds the support of Oracle OSON (JSON binary format) to Hibernate allowing improved performance over JSON to String conversions. Two new types ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.javacodegeeks.com/hibernate-envers-extending-revision-info-with-custom-fields.html" target="_blank">Hibernate Envers – Extending Revision Info with Custom Fields - Java Code Geeks</a></span>
+                <span class="ml-1 text-sm opacity-80">Java hibernate envers extending revision custom fields: Learn how to use Envers in Java by adding custom fields for enhanced auditing.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thorben-janssen.com/hibernate-performance-tuning/" target="_blank">Hibernate Performance Tuning Tips - 2022 Edition</a></span>
+                <span class="ml-1 text-sm opacity-80">Unlock Hibernate&#39;s best performance by following these best practices for efficient mappings and fast queries.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/books/high-performance-java-persistence/?utm_source=GitHub&amp;utm_medium=banner&amp;utm_campaign=hibernatetypes" target="_blank">High-Performance Java Persistence - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">High-Performance Java Persistence book helps you get the most out of your data access layer, be it JDBC, JPA, Hibernate or jOOQ based.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://lordofthejars.github.io/quarkus-cheat-sheet/" target="_blank">Home of Quarkus Cheat-Sheet</a></span>
+                <span class="ml-1 text-sm opacity-80">Table of Contents</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackoverflow.com/questions/6402162/how-to-enable-intellij-hot-code-swap" target="_blank">hotswap - How to enable Intellij hot code swap - Stack Overflow</a></span>
+                <span class="ml-1 text-sm opacity-80">Intellij does not seem to be doing basic hot code swap on my installation.  For this code:  public class MainTest {     public void method1() {         System.out.println(&quot;Breakpoint here&quot;);     } ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=XpunFFS-n8I" target="_blank">How Netflix Uses Java - 2025 EditionSuchenInfoShoppingTon einschalten 2-fachFalls die Wiedergabe nicht in Kürze beginnt, empfehlen wir dir, das Gerät neu zu starten.•Nächstes VideoLiveDemnächstAbbrechenJetzt abspielenAll right, we can get started. Um, soI&#39;m just going to talk about basicallyTeilenMit Playlist teilenBei dem Versuch, Informationen zum Teilen abzurufen, ist ein Fehler aufgetreten. Versuche es bitte später noch einmal.Später ansehenTeilenLink kopieren</a></span>
+                <span class="ml-1 text-sm opacity-80">👉 Join us for JavaOne 2026. Sign up now to get ongoing updates https://go.oracle.com/LP=149517  The Netflix architecture and the way we use Java is ever-changing. On top of that, Java itself and the OSS ecosystem is changing faster than ever.   In this talk, you’ll learn how Netflix is using Java in 2025 and what benefits and possible issues we’re seeing running most of our services on the lat...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jooq.org/how-to-turn-a-list-of-flat-elements-into-a-hierarchy-in-java-sql-or-jooq/" target="_blank">How to create hierarchies of Java objects from flat lists with Collector</a></span>
+                <span class="ml-1 text-sm opacity-80">This article illustrates various ways of turning a flat representation of hierarchical dataa into an object or JSON hierarchy, using SQL, jOOQ, or vanilla Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vaadin.com/docs/latest/flow/integrations/quarkus" target="_blank">How to integrate Vaadin with Quarkus</a></span>
+                <span class="ml-1 text-sm opacity-80">Integrate Vaadin with Quarkus to build high-performance Java applications.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/how-to-map-a-composite-identifier-using-an-automatically-generatedvalue-with-jpa-and-hibernate/" target="_blank">How to map a composite identifier using an automatically @GeneratedValue with JPA and Hibernate - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Introduction One of my readers asked me to answer the following StackOverflow question. While I already covered the best way to map composite identifiers with JPA and Hibernate, this use case is different because one column is automatically generated. Domain Model Considering we have the following book database table: The identifier is formed out of two columns: publisher_id which designates a ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://docs.hibernate.org/orm/7.0/introduction/html_single/" target="_blank">https://docs.jboss.org/hibernate/orm/7.0/introduction/html_single/Hibernate_Introduction.html</a></span>
+                <span class="ml-1 text-sm opacity-80">Hibernate 6 was a major redesign of the world’s most popular and feature-rich ORM solution. The redesign touched almost every subsystem of Hibernate, including the APIs, mapping annotations, and the query language. This new Hibernate was suddenly more powerful, more robust, more portable, and more type safe.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/amusarra/quarkus-graphql-quickstart" target="_blank">https://github.com/amusarra/quarkus-graphql-quickstart</a></span>
+                <span class="ml-1 text-sm opacity-80">Quarkus GraphQL Quickstart + MinIO as Object Store S3. It&#39;s much more than just a Quickstart ;-) - amusarra/quarkus-graphql-quickstart</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://ionutbalosin.com/2024/03/analyzing-jvm-energy-consumption-for-jdk-21-an-empirical-study/" target="_blank">https://ionutbalosin.com/2024/03/analyzing-jvm-energy-consumption-for-jdk-21-an-empirical-study/</a></span>
+                <span class="ml-1 text-sm opacity-80">Power consumption is a crucial consideration in modern computing. Firstly, it directly impacts the energy efficiency of devices, contributing to reduced electricity costs and environmental sustainability. With the proliferation of technology and the increasing number of devices we use, minimizing power consumption helps conserve energy resources.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://javapro.io/2025/06/06/stay-updated-with-every-new-release/" target="_blank">https://javapro.io/2025/06/06/stay-updated-with-every-new-release/</a></span>
+                <span class="ml-1 text-sm opacity-80">Want to make sure you always receive the latest JAVAPRO magazine?By subscribing to our newsletter, you’ll automatically get…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://jooq-mcp.fly.dev/sse" target="_blank">https://jooq-mcp.fly.dev/sse</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://martinelli.ch/spec-driven-development-with-ai-a-new-approach-and-a-journey-into-the-past/" target="_blank">https://martinelli.ch/spec-driven-development-with-ai-a-new-approach-and-a-journey-into-the-past/</a></span>
+                <span class="ml-1 text-sm opacity-80">The software development world is buzzing about AI-assisted coding. Tools like Claude Code, Windsurf, and JetBrains Junie promise to make us more productive. But most approaches focus on generating code faster - they&#39;re still code-centric.    What if we took a different approach? What if we made requirements the source of truth and let</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/quarkus-transactions-panache-guide" target="_blank">https://myfear.substack.com/p/quarkus-transactions-panache-guide</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how to master database transactions in Quarkus using Hibernate ORM with Panache. From simple CRUD operations to advanced rollback, this hands-on guide covers it all.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vaadin.com/blog/build-modern-web-apps-100-in-kotlin?utm_content=287629617&amp;utm_medium=social&amp;utm_source=linkedin&amp;hss_channel=lcp-52231" target="_blank">https://vaadin.com/blog/build-modern-web-apps-100-in-kotlin?utm_content=287629617&amp;utm_medium=social&amp;utm_source=linkedin&amp;hss_channel=lcp-52231</a></span>
+                <span class="ml-1 text-sm opacity-80">Discover web development with Vaadin Flow for Kotlin developers. Learn how Vaadin simplifies creating modern web apps by abstracting browser complexities.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.docker.com/blog/testcontainers-best-practices/" target="_blank">https://www.atomicjar.com/2023/11/testcontainers-best-practices/</a></span>
+                <span class="ml-1 text-sm opacity-80">This article explains the best practices to follow while using Testcontainers for writing integration tests.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.wimdeblauwe.com/blog/2025/06/24/how-i-write-production-ready-spring-boot-applications/" target="_blank">https://www.wimdeblauwe.com/blog/2025/06/24/how-i-write-production-ready-spring-boot-applications/</a></span>
+                <span class="ml-1 text-sm opacity-80">This blog post will explain how I currently write Spring Boot applications. I have been writing Java for over 25 years, and most of that involved Spring and its ecosystem. I will talk about how I architect my app, package structure, naming conventions, etc.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://immutables.github.io/" target="_blank">Immutables</a></span>
+                <span class="ml-1 text-sm opacity-80">Java toolkit based around usage of immutable objects and fluent interfaces</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://inside.java/?elq_mid=265936&amp;sh=142209160609312918082211&amp;cmid=DEVT240613P00013C00012" target="_blank">Inside.java</a></span>
+                <span class="ml-1 text-sm opacity-80">News and views from members of the Java team at Oracle</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=qg6tj8Tf36E" target="_blank">IntelliJ IDEA Conf 2025. Day 2 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">On June 3–4, 2025, JetBrains is hosting a free virtual event – IntelliJ IDEA Conf. IntelliJ IDEA Conf is a celebration of the developer community, bringing together professionals who strive for excellence in software development.  #IntelliJIDEAConf #Java #Kotlin  Agenda:  0:00 – Intro 10:17 – &quot;Sudo, Make Me a Sandwich!&quot; – Live Coding With Agentic AI in IntelliJ IDEA by Anton Arhipov 1:11:09 – I...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://mincong.io/2020/04/13/introduction-of-immutables/" target="_blank">Introduction of Immutables</a></span>
+                <span class="ml-1 text-sm opacity-80">Introduction of Java framework Immutables which creates immutable objects and builders for you. Type-safe, null-safe and thread-safe, with no boilerplate.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackoverflow.com/questions/65654804/multiple-websecurityconfigureradapters-jwt-authentication-and-form-login-in-spr" target="_blank">java - Multiple WebSecurityConfigurerAdapters: JWT authentication and form login in spring security - Stack Overflow</a></span>
+                <span class="ml-1 text-sm opacity-80">I have spring boot app with thymeleaf. I am using spring security formLogin method for security and now I need to add JWT for only some APIs.  @EnableWebSecurity public class SecurityConfigurations...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackoverflow.com/questions/21101250/sending-get-request-with-authentication-headers-using-resttemplate" target="_blank">java - Sending GET request with Authentication headers using restTemplate - Stack Overflow</a></span>
+                <span class="ml-1 text-sm opacity-80">I need to retrieve resources from my server by sending a GET request with some Authorization headers using RestTemplate. After going over the docs I noticed that none of the GET methods accepts hea...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://javabubble.org/" target="_blank">Java Bubble</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.javacodegeeks.com/java-concurrency-cheatsheet.html" target="_blank">Java Concurrency Cheatsheet</a></span>
+                <span class="ml-1 text-sm opacity-80">Interested to learn about Java concurrency? Then check out our detailed Java concurrency cheatsheet and you will get started in no time!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.codejava.net/frameworks/hibernate/java-hibernate-reverse-engineering-tutorial-with-eclipse-and-mysql" target="_blank">Java Hibernate Reverse Engineering Tutorial with Eclipse and MySQL</a></span>
+                <span class="ml-1 text-sm opacity-80">How to generate code for model classes from database using Hibernate Reverse Engineering feature of Hibernate Tools</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.manning.com/books/java-persistence-with-spring-data-and-hibernate" target="_blank">Java Persistence with Spring Data and Hibernate</a></span>
+                <span class="ml-1 text-sm opacity-80">Covering transactions, persistent application testing, and non-relational databases, this book is your go-to resource for managing data in Java applications.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.happycoders.eu/java/" target="_blank">Java – How-Tos and Tutorials - HappyCoders.eu</a></span>
+                <span class="ml-1 text-sm opacity-80">Become a better Java programmer! The latest Java features, how-tos and tutorials on advanced Java development topics.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/playlist?list=PLX8CzqL3ArzVV1xRJkRbcM2tOgVwytJAi" target="_blank">JavaOne 2025 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://javarevisited.blogspot.com/" target="_blank">Javarevisited: Blog about Java Programming Tutorials, Examples, Design Patterns, Interview Questions and Answers, FIX Protocol, Tibco RV messaging, UNIX and Linux Commands, XML, SQL, MySQL, Oracle, jQuery, JavaScript,HTML, Multithreading, Collection, Error and Exception, Debugging, Best Practices and Practical tips from my experience.</a></span>
+                <span class="ml-1 text-sm opacity-80">A blog about Java, Programming, Algorithms, Data Structure, SQL, Linux, Database, Interview questions, and my personal experience.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.jbang.dev/" target="_blank">JBang</a></span>
+                <span class="ml-1 text-sm opacity-80">Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://tools.jboss.org/downloads/" target="_blank">JBoss Tools - Downloads</a></span>
+                <span class="ml-1 text-sm opacity-80">Latest stable versions of Red Hat CodeReady Studio and JBoss Tools</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://platform.jetbrains.com/" target="_blank">JetBrains Platform</a></span>
+                <span class="ml-1 text-sm opacity-80">JetBrains Platform community for developers creating plugins and extensions for JetBrains products.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme" target="_blank">JetBrains/compose-multiplatform-ios-android-template: Compose Multiplatform iOS+Android Application project template</a></span>
+                <span class="ml-1 text-sm opacity-80">Compose Multiplatform iOS+Android Application project template - JetBrains/compose-multiplatform-ios-android-template</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/jobrunr/jobrunr" target="_blank">JobrRunr Github</a></span>
+                <span class="ml-1 text-sm opacity-80">An extremely easy way to perform background processing in Java. Backed by persistent storage. Open and free for commercial use. - jobrunr/jobrunr</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.jvm-weekly.com/p/jobrunr-brings-carbon-aware-scheduling" target="_blank">JobRunr brings Carbon Aware Scheduling to JVM: Saving the planet one job at a time - JVM Weekly vol. 138</a></span>
+                <span class="ml-1 text-sm opacity-80">This time, we’re highlighting four important projects that have been released recently. Trust me, each of them have something section-worthy!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://javadoc.io/doc/org.jobrunr/jobrunr/latest/index.html" target="_blank">JobRunr Java Docs</a></span>
+                <span class="ml-1 text-sm opacity-80">Latest version of org.jobrunr:jobrunr</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.reddit.com/r/java/comments/1luic04/jobrunr_v8_released_java_job_scheduler_now_with/" target="_blank">JobRunr v8 released: Java job scheduler now with Carbon Aware Jobs : r/java</a></span>
+                <span class="ml-1 text-sm opacity-80">hi u/agentoutlier we still remember you from the original release of JobRunr here on Reddit</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jooq.org/jooq-3-15s-new-multiset-operator-will-change-how-you-think-about-sql/" target="_blank">jOOQ 3.15’s New Multiset Operator Will Change How You Think About SQL – Java, SQL and jOOQ.</a></span>
+                <span class="ml-1 text-sm opacity-80">This is how SQL should have been used all along. They called it The Third Manifesto, ORDBMS, or other things. Regrettably, it never really took off. Because most vendors didn’t adopt it. And …</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://jreleaser.org/" target="_blank">JReleaser</a></span>
+                <span class="ml-1 text-sm opacity-80">The quick and effortless way to release your project!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://jspecify.dev/" target="_blank">JSpecify Main | JSpecify</a></span>
+                <span class="ml-1 text-sm opacity-80">Standard Annotations for Java Static Analysis</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://just.maciejwalkowiak.com/" target="_blank">Just - Command Line toolkit for developing Spring Boot applications - Just</a></span>
+                <span class="ml-1 text-sm opacity-80">Command Line toolkit for developing Spring Boot applications</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.architecture-weekly.com/p/kafka-consumers-under-the-hood-of" target="_blank">Kafka Consumers: Under the Hood of Message Processing</a></span>
+                <span class="ml-1 text-sm opacity-80">Let&#39;s discuss today how Kafka handles message consumption. We&#39;ll start by explaining Consumer Groups and how they manage consumers and data distribution. Then, go deeper into partition assignments, fault tolerance, and the trade-offs involved. We&#39;ll wrap it up with real-world implications of Kafka’s design, comparing it to other solutions and discussing if it&#39;s always as great as pictured.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.javacodegeeks.com/kafka-message-acknowledgement-options.html" target="_blank">Kafka Message Acknowledgement Options - Java Code Geeks</a></span>
+                <span class="ml-1 text-sm opacity-80">Kafka message acknowledgement options: Explore Kafka message acknowledgment options for producers &amp; consumers to ensure performance.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://klibs.io/" target="_blank">Klibs.io — Search 1500+ KMP libraries | JetBrains</a></span>
+                <span class="ml-1 text-sm opacity-80">AI-powered search engine for Kotlin Multiplatform projects. Explore the best KMP packages, access metadata, and learn about the authors.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/langchain4j/langchain4j" target="_blank">LangChain for Java: Supercharge your Java application with the power of LLMs</a></span>
+                <span class="ml-1 text-sm opacity-80">LangChain4j is an open-source Java library that simplifies the integration of LLMs into Java applications through a unified API, providing access to popular LLMs and vector databases. It makes impl...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://adoptium.net/de/temurin/releases" target="_blank">Latest Releases | Adoptium</a></span>
+                <span class="ml-1 text-sm opacity-80">Eclipse Adoptium provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.morling.dev/blog/kip-932-queues-for-kafka/" target="_blank">Let&#39;s Take a Look at... KIP-932: Queues for Kafka! - Gunnar Morling</a></span>
+                <span class="ml-1 text-sm opacity-80">In the &quot;Let’s Take a Look at…​!&quot; blog series I am going to explore interesting projects, developments and technologies in the data and streaming space. This can be KIPs and FLIPs, open-source projects, services, and more. The idea is to get some hands-on experience, learn about potential use cases and applications, and understand the trade-offs involved. If you think there’s a specific subject ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/geekculture/listen-to-database-changes-with-apache-kafka-35440a3344f0" target="_blank">Listen to Postgres Changes with Apache Kafka | by Josip Vojak | Geek Culture | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">Apache Kafka with Debezium connector is an elegant way to utilize the change data capture design pattern.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/adevinta-tech-blog/make-data-migration-easy-with-debezium-and-apache-kafka-4c9e2b9b6601" target="_blank">Make data migration easy with Debezium and Apache Kafka</a></span>
+                <span class="ml-1 text-sm opacity-80">How Team Search has built an ETL pipeline with a throughput of 3000 events per second</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/manifold-systems/manifold/tree/master" target="_blank">manifold-systems/manifold: Manifold is a Java compiler plugin, its features include Metaprogramming, Properties, Extension Methods, Operator Overloading, Templates, a Preprocessor, and more.</a></span>
+                <span class="ml-1 text-sm opacity-80">Manifold is a Java compiler plugin, its features include Metaprogramming, Properties, Extension Methods, Operator Overloading, Templates, a Preprocessor, and more. - manifold-systems/manifold</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.baeldung.com/java-mapstruct-mapping-collections" target="_blank">Mapping Collections with MapStruct | Baeldung</a></span>
+                <span class="ml-1 text-sm opacity-80">Explore how to map collections using MapStruct.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/java-records-json-hibernate/" target="_blank">Mapping Java Records to JSON columns using Hibernate - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how to map Java Records to JSON columns with Oracle, SQL Server, PostgreSQL, MySQL, and the Hibernate Types project.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://mapstruct.org/documentation/stable/reference/html/" target="_blank">MapStruct 1.5.5.Final Reference Guide</a></span>
+                <span class="ml-1 text-sm opacity-80">This is the reference documentation of MapStruct, an annotation processor for generating type-safe, performant and dependency-free bean mapping code. This guide covers all the functionality provided by MapStruct. In case this guide doesn’t answer all your questions just join the MapStruct GitHub Discussions to get help.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://kotlinlang.org/docs/dokka-markdown.html" target="_blank">Markdown | Kotlin Documentation</a></span>
+                <span class="ml-1 text-sm opacity-80">15 October 2025</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://codeberg.org/michael-simons/scrobbles4j" target="_blank">michael-simons/scrobbles4j</a></span>
+                <span class="ml-1 text-sm opacity-80">A set of modules around tracking, displaying and analyzing musical habits (&quot;scrobbling&quot;) via Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="http://www.miglayout.com/" target="_blank">MiG Layout</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thorben-janssen.com/composite-primary-keys-sequence/" target="_blank">Modeling sequence-based composite primary keys with Hibernate</a></span>
+                <span class="ml-1 text-sm opacity-80">Composite primary keys that include a sequence-based value require a special mapping that most developers usually avoid.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=POK4Zp1oRN8" target="_blank">Modern frontends with Thymeleaf and htmx by Wim Deblauwe - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Frontend development is getting more and more complex when using JavaScript frameworks like Angular or React. On top of that, the landscape is also rapidly changing. Developers claim that this is needed to build the highly interactive web experiences we all come to know and like. However, that is not true. This talk will show how you can use the productive combination of Java 17, Spring Boot, T...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/@2015-2-60-004/multiple-spring-security-configurations-form-based-token-based-authentication-c65ffbeabd07" target="_blank">Multiple Spring Security Configurations — Form-Based &amp; Token-Based Authentication</a></span>
+                <span class="ml-1 text-sm opacity-80">I will start by giving a practical scenario, Suppose you are building a monolithic application with a backend and frontend packed together…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/12-developer-labors/must-read-on-optional-type-b171e1b397bb" target="_blank">Must(read) on Optional(type). This article is long time coming. It… | by piotr szybicki | 12 developer labors | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">This article is long time coming. It culmination my 4 year struggle to understand proper usage of the optional type.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jetbrains.com/idea/2024/01/new-livestream-virtual-threads-in-action/" target="_blank">New Livestream: Virtual Threads in Action!</a></span>
+                <span class="ml-1 text-sm opacity-80">Join us for the new IntelliJ IDEA Livestream episode with Dmitry Aleksandrov to learn about the world&#39;s first web framework fully based on virtual threads.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=q-wLJjEbxyg" target="_blank">OOP vs Data Oriented Programming: Which One to Choose? - Venkat Subramaniam - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">We rely heavily on polymorphism when programming with the object-oriented paradigm. That has served us really well, especially to create extensible code. However, like any tool and technique, there are times when that may not be the right choice. Java now provides an alternative that is useful in those select situations—the data-oriented programming. In this presentation, we will start with an ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://docs.quarkiverse.io/quarkus-openapi-generator/dev/index.html" target="_blank">OpenAPI Generator :: Quarkiverse Documentation</a></span>
+                <span class="ml-1 text-sm opacity-80">This a multipurpose Quarkus&#39; extension for generation of Rest Clients and Server stubs based on OpenAPI specification files.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://foojay.io/today/openrewrite-migrate-to-spring-boot-3-2/" target="_blank">OpenRewrite: Migrate to Spring Boot 3.2</a></span>
+                <span class="ml-1 text-sm opacity-80">Simplify your migration process to Spring Boot 3.2 with the help of OpenRewrite.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://projectreactor.io/docs" target="_blank">Project Reactor - Documentation</a></span>
+                <span class="ml-1 text-sm opacity-80">Reactor is a fourth-generation reactive library, based on the Reactive Streams specification, for building non-blocking applications on the JVM</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/quarkiverse" target="_blank">Quarkiverse Hub</a></span>
+                <span class="ml-1 text-sm opacity-80">A place to host and build Quarkus extensions. Quarkiverse Hub has 186 repositories available. Follow their code on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/quarkusio/quarkus/discussions/48256" target="_blank">Quarkus at RivieraDev 2025 #48256</a></span>
+                <span class="ml-1 text-sm opacity-80">Event Description: Riviera DEV is a conference by developers, for developers. It is a fun and relaxed event offered at an affordable price so that every developer can enjoy the experience. Provide ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.eisele.net/2025/09/quarkus-foundations-for-java-developers.html" target="_blank">Quarkus Foundations for Java Developers</a></span>
+                <span class="ml-1 text-sm opacity-80">Over the past months I’ve been publishing a steady stream of hands-on tutorials on The Main Thread , my Substack dedicated to Quarkus , Java...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://quarkus.io/guides/qute-reference" target="_blank">Qute Reference Guide - Quarkus</a></span>
+                <span class="ml-1 text-sm opacity-80">Quarkus: Supersonic Subatomic Java</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.jooq.org/reactive-sql-with-jooq-3-15-and-r2dbc/" target="_blank">Reactive SQL with jOOQ 3.15 and R2DBC – Java, SQL and jOOQ.</a></span>
+                <span class="ml-1 text-sm opacity-80">One of the biggest new features of the recently released jOOQ 3.15 is its new support for reactive querying via R2DBC. This has been a highly popular feature request, and we finally delivered on it…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/Randgalt/record-builder" target="_blank">RecordBuilder</a></span>
+                <span class="ml-1 text-sm opacity-80">Record builder generator for Java records. Contribute to Randgalt/record-builder development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/eclipse-aspectj/aspectj/releases" target="_blank">Releases · eclipse/org.aspectj</a></span>
+                <span class="ml-1 text-sm opacity-80">Contribute to eclipse-aspectj/aspectj development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.baeldung.com/rest-api-search-language-spring-data-specifications" target="_blank">REST Query Language with Spring Data JPA Specifications | Baeldung</a></span>
+                <span class="ml-1 text-sm opacity-80">How to implement a query language for a REST API using Spring Data Specifications.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/java-ai-expense-splitter-quarkus-langchain4j" target="_blank">Scan, Split, Share: Building a Java AI Expense App with Quarkus and LangChain4j</a></span>
+                <span class="ml-1 text-sm opacity-80">Use a local multimodal model to read receipts and split bills with AI. All in pure Java, no cloud required.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=3QnwTmHGct8" target="_blank">Scripting auf der JVM mit JBang von Yassine Benabbas - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">For updates and more, join our community 👉 https://www.linkedin.com/company/devoxx-united-kingdom  When it comes to large projects, the Java ecosystem has Maven and Gradle. However, the file structure of these tools is not suitable for projects containing a single source code file. Fortunately for us, JBang makes developing small projects in Java, Kotlin, or Groovy as simple as in Python. Sinc...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=UtFQ7mMb7ZA" target="_blank">Secrets of Performance Tuning Java on Kubernetes - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Initially, getting Java to run on Kubernetes may seem complicated, but after a few lines of YAML and a bit of work with Docker, you will wonder what all that fuss was. It is easy! Then you start looking at the performance of your Java app in one core, one GB of memory container, and this is when it all very quickly gets murky. Ops, SREs, and Java developers need to be aware of the JVM&#39;s inner w...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/@truongbui95/jwt-authentication-and-authorization-with-spring-boot-3-and-spring-security-6-2f90f9337421" target="_blank">Secure Authentication and Authorization with JWT in Spring Boot 3 and Spring Security 6: Step-by-Step Guide | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">During my journey of learning Spring Security, I had some thinking whether there are other developers who share a similar experience. Those…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dassum.medium.com/securing-spring-boot-rest-api-with-json-web-token-and-jdbc-token-store-67558a7d6c29" target="_blank">Securing Spring Boot REST API with JSON Web Token and JDBC Token Store</a></span>
+                <span class="ml-1 text-sm opacity-80">In this tutorial, we will learn how to secure Spring Boot REST API with OAuth 2.0 and JSON Web Token (JWT).</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://microservices.io/patterns/service-registry.html" target="_blank">Service registry pattern</a></span>
+                <span class="ml-1 text-sm opacity-80">A pattern language for microservices</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://stackoverflow.com/questions/26327957/should-java-8-getters-return-optional-type/26328555#26328555" target="_blank">Should Java 8 getters return optional type? - Stack Overflow</a></span>
+                <span class="ml-1 text-sm opacity-80">Optional type introduced in Java 8 is a new thing for many developers.  Is a getter method returning Optional&lt;Foo&gt; type in place of the classic Foo a good practice? Assume that the value can be</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Jjrencq8sUQ" target="_blank">Simon Martinelli – Auf Wiedersehen Microservices, Hallo Self-Contained Systems - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Microservices have been a popular approach to building modern software, offering scalability and flexibility. But for many teams, they bring challenges like increased complexity, difficult debugging, and managing too many small services.  In this talk, we’ll introduce an alternative: Self-Contained Systems (SCS). Unlike microservices, SCS allows each part of your application to operate independ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.javacodegeeks.com/2024/03/simplified-java-data-transfer-objects-dto-free-java.html" target="_blank">Simplified Java Data Transfer Objects (DTO-Free Java)</a></span>
+                <span class="ml-1 text-sm opacity-80">Discover the advantages and challenges of implementing a DTO-Free Java approach in your application development.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.sivalabs.in/blog/using-java-records-with-spring-boot-3/" target="_blank">SivaLabs - Using Java Records with Spring Boot 3</a></span>
+                <span class="ml-1 text-sm opacity-80">&lt;p&gt;Records were introduced in Java 14 as a preview feature and became a standard feature with JDK 16. Records are a concise representation of immutable data class.&lt;/p&gt;</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/quarkus-hibernate-filters-soft-deletes" target="_blank">Soft Deletes Done Right: Hibernate Filters in Quarkus with Panache and PostgreSQL</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how to build a clean, audit-friendly soft-delete system in a modern Java application using Quarkus and Hibernate Filters.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://dzone.com/articles/spring-boot-32-replace-your-resttemplate-with-rest" target="_blank">Spring Boot 3.2: Replace Your RestTemplate With RestClient</a></span>
+                <span class="ml-1 text-sm opacity-80">This Spring Boot 3.2 tutorial explores an addition built upon WebClient called RestClient, a more intuitive and modern approach to consuming RESTful services.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/javarevisited/spring-boot-authorization-creating-an-authorization-server-for-your-microservices-50a3aefd6ce8" target="_blank">Spring Boot Authorization: Creating an Authorization Server for your Microservices | by C. R. Raja Vignesh | Javarevisited | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">This article explains in detail about implementing an Authentication mechanism using a centralized Authorization Server and an API gateway.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.devglan.com/spring-security/spring-boot-jwt-auth" target="_blank">Spring Boot Security Jwt Authentication</a></span>
+                <span class="ml-1 text-sm opacity-80">Implement JWT authentication with Spring Boot and maven.Using OncePerRequestFilter class to define custom authentication mechanism to URLs as well as for methods.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.bezkoder.com/spring-boot-jwt-authentication/" target="_blank">Spring Boot Token based Authentication with Spring Security &amp; JWT - BezKoder</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Boot JWT Authentication example with MySQL/PostgreSQL and Spring Security - Spring Boot 2 Application with Spring Security and JWT Authentication</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.bezkoder.com/spring-boot-postgresql-example/" target="_blank">Spring Boot, JPA/Hibernate, PostgreSQL example with Maven - BezKoder</a></span>
+                <span class="ml-1 text-sm opacity-80">How to connect to Postgresql database - Spring Boot, PostgreSQL CRUD example using Maven &amp; Spring Data JPA, Hibernate</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://docs.spring.io/spring-data/jpa/docs/2.3.1.RELEASE/reference/html/#reference" target="_blank">Spring Data JPA - Reference Documentation</a></span>
+                <span class="ml-1 text-sm opacity-80">© 2008-2019 The original authors.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thomasandolf.medium.com/spring-security-jwts-getting-started-ebdb4e4f1dd1" target="_blank">Spring Security + JWTs getting started | by Thomas Andolf | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Security + JWTs getting started JWTs are becoming increasingly popular on the internet especially with the javascript community. This post will focus on how to enable the support for handling …</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.toptal.com/developers/spring/spring-security-tutorial" target="_blank">Spring Security JWT Tutorial | Toptal®</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Security is the de facto industry standard when it comes to securing Spring-based apps, but it can be tricky to configure. This article demonstrates how you can implement it without wasting too much time.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/spring-projects/spring-security/tree/5.4.x/samples/boot/oauth2resourceserver-static" target="_blank">spring-security/samples/boot/oauth2resourceserver-static at 5.4.x · spring-projects/spring-security · GitHub</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Security. Contribute to spring-projects/spring-security development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.baeldung.com/spring-security-block-brute-force-authentication-attempts" target="_blank">Stop Brute Force Authentication Attempts with Spring Security | Baeldung</a></span>
+                <span class="ml-1 text-sm opacity-80">Block users by IP after a number of failed authentication attempts - a simple mechanism implemented with Spring Security.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://suddo.io/quarkus" target="_blank">Suddo Quarkus</a></span>
+                <span class="ml-1 text-sm opacity-80">Supersonic Subatomic Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.devoxx.co.uk/talk/?id=8052" target="_blank">Talks - Devoxx UK</a></span>
+                <span class="ml-1 text-sm opacity-80">In this live coding session, we’ll explore how to use Java Virtual Threads in both simple scenarios and complex Spring Boot applications, demonstrating how this powerful feature can make your code more readable, faster, and resource-efficient.Startin</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.wimdeblauwe.com/books/taming-thymeleaf/" target="_blank">Taming Thymeleaf - Wim Deblauwe</a></span>
+                <span class="ml-1 text-sm opacity-80">Practical Guide to building a web application with Spring Boot and Thymeleaf About the book Taming Thymeleaf will teach you about writing web applications with Spring Boot and Thymeleaf in no-time. This book teaches you step-by-step how to get started with those technologies and build a fully fledged web application including security, validation, internationalization, testing and more. Thymele...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/quarkus-fleet-insurance-premium-recalculation-temporal-snapshots?utm_medium=web" target="_blank">Temporal State in Practice with Quarkus: Build a Fleet Insurance Engine</a></span>
+                <span class="ml-1 text-sm opacity-80">Snapshots, reinsurance layers, and pro-rated billing using Hibernate ORM Panache and REST Jackson.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://java.testcontainers.org/" target="_blank">Testcontainers for Java</a></span>
+                <span class="ml-1 text-sm opacity-80">Not using Java? Here are other supported languages!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/basejparepository-hypersistence-utils/" target="_blank">The awesome BaseJpaRepository from Hypersistence Utils</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn how you can use the BaseJpaRepository from the Hypersistence Utils project as an alternative to the default Spring Data JpaRepository.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/the-best-way-to-implement-an-audit-log-using-hibernate-envers/" target="_blank">The best way to implement an audit log using Hibernate Envers - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn what is the best way to implement an audit log to track INSERT, UPDATE, and DELETE statements using Hibernate Envers.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/the-best-way-to-soft-delete-with-hibernate/" target="_blank">The best way to soft delete with Hibernate - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Introduction Each database application is unique. While most of the time, deleting a record is the best approach, there are times when the application requirements demand that database records should never be physically deleted. So who uses this technique? For instance, StackOverflow does it for all Posts (e.g. Questions and Answers). The StackOverflow Posts table has a ClosedDate column which ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vladmihalcea.com/java-records-jpa-hibernate/" target="_blank">The best way to use Java Records with JPA and Hibernate - Vlad Mihalcea</a></span>
+                <span class="ml-1 text-sm opacity-80">Learn the best way to use Java Records with JPA and Hibernate. While not suitable for entity mappings, Records are a good alternative for DTO projections.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.jooq.org/sakila" target="_blank">The Sakila Database</a></span>
+                <span class="ml-1 text-sm opacity-80">jOOQ, a fluent API for typesafe SQL query construction and execution.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://rockthejvm.com/articles/the-ultimate-guide-to-java-virtual-threads" target="_blank">The Ultimate Guide to Java Virtual Threads | Rock the JVM</a></span>
+                <span class="ml-1 text-sm opacity-80">Project Loom and virtual threads: Explore how they promise to bring modern concurrency paradigms from Kotlin and Scala to Java, even while still in preview</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://camunda.com/" target="_blank">The Universal Process Orchestrator | Camunda</a></span>
+                <span class="ml-1 text-sm opacity-80">Camunda&#39;s process orchestration platform allows developers to design, automate and improve processes. Start your free trial today.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.togglz.org/" target="_blank">Togglz - Features flag for Java</a></span>
+                <span class="ml-1 text-sm opacity-80">Feature Flags for the Java platform</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/uakihir0/kbsky" target="_blank">uakihir0/kbsky: Kotlin multiplatform Bluesky/ATProtocol library.</a></span>
+                <span class="ml-1 text-sm opacity-80">Kotlin multiplatform Bluesky/ATProtocol library. Contribute to uakihir0/kbsky development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://piotrminkowski.com/2023/01/30/useful-unknown-java-libraries/" target="_blank">Useful &amp; Unknown Java Libraries - Piotr&#39;s TechBlog</a></span>
+                <span class="ml-1 text-sm opacity-80">This article will teach you about some not famous but useful Java libraries like Instancio, Datafaker, Blaze-Persistence or JPAStreamer.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://abhishek-gupta.gitbook.io/java-websocket-api-handbook/websocket_client_api" target="_blank">WebSocket Client API</a></span>
+                <span class="ml-1 text-sm opacity-80">As discussed in the API Overview chapter, WebSocket has the notion of server and client components. Everything we have seen so far in the previous chapters is applicable to both these aspects. A WebSocket client endpoint</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/quarkus-cli-java-developers-guide" target="_blank">Wielding the Quarkus CLI: Why Java Developers Should Embrace This Command-Line Power Tool</a></span>
+                <span class="ml-1 text-sm opacity-80">Simplify your Quarkus development, boost productivity, and free yourself from Maven vs. Gradle complexity with one unified CLI.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/wimdeblauwe/htmx-spring-boot" target="_blank">wimdeblauwe/htmx-spring-boot-thymeleaf: Spring Boot and Thymeleaf helpers for working with htmx</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Boot and Thymeleaf helpers for working with htmx - wimdeblauwe/htmx-spring-boot</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.bmarwell.de/2025/04/28/you-might-already-have-maven-repository.html?mtm_kwd=bsky" target="_blank">You might already have a Maven repository</a></span>
+                <span class="ml-1 text-sm opacity-80">Avoid setting up a separate Maven repository! Discover how your existing Git host (GitHub, GitLab, Gitea) might already serve your Java artifacts.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/carrotdata/carrot-cache-high-performance-ssd-friendly-caching-library-for-java-30bf2502ff76" target="_blank">🚀 Carrot Cache: High-Performance, SSD-Friendly Caching Library for Java | by Vladimir Rodionov | Carrot Data Engineering Blog | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">We are happy to announce that Carrot Data has officially open-sourced Carrot Cache under the Apache 2.0 license. After two years of intense…</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

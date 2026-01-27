@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>music/videos - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details ><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details open><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="active-tag" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">music/videos</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=G13YByqmsCQ" target="_blank">&quot;Waiting&quot; (Hubert Gredler) - CrossCurrent Quartet @ Musikwerkstatt Wels, Nov. 25 2025</a></span>
+                <span class="ml-1 text-sm opacity-80">Bass: Juraj Griglak  @burleska   Drums: Walter Sitz  @WalterSitz   Keys: Hubert Gredler  @hubertgredler   Guitar: Joe Doblhofer  www.joedoblhofer.com https://www.instagram.com/joedoblhofer/</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=3GALJl6Y16w" target="_blank">AIR - Live at the Niemeyer Space for ARTE Concert (Binaural Show) (Full Concert - Official Video) - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">World Tour 2025 playing Moon Safari live → http://airfrenchband.com AIR&#39;s full live performance for La Blogothèque (Paris, 2016) Full concert: http://bit.ly/AirBinaural 𝗙𝗼𝗹𝗹𝗼𝘄 𝗔𝗜𝗥 → http://instagram.com/airfrenchband  http://facebook.com/intairnet  http://twitter.com/airofficial http://airfrenchband.com  #AIR #AIRfrenchband</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=jjuorGiEUS4" target="_blank">Air: Tiny Desk Concert</a></span>
+                <span class="ml-1 text-sm opacity-80">Lars Gotrich | December 5, 2025 There&#39;s nothing easy about the laid-back cool of Air&#39;s music. On record and for film soundtracks, the French electronic duo turns distressed dreams into symphonies plucked from cotton candy clouds — sonically light, but heavy with emotion. Yet to see Air&#39;s members perform live, everything seems so effortless.  Nicolas Godin and Jean-Benoît Dunckel have been looki...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=U-DkAhHDiwM" target="_blank">Arcturus Part 1</a></span>
+                <span class="ml-1 text-sm opacity-80">This is a recording from the Hampshire Jam III festival in Liphook, Hampshire in October 2004 and was only the second concert that ARC had performed. The duo is of course label boss Ian Boddy and his sorely missed friend and musical collaborator Mark Shreeve.  The album Arcturus was released in 2005 on DiN Records and has sold out on CD long ago but is still available as a download: https://din...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=u8nuT1rDB7o" target="_blank">Bowie David feat. John Frusciante - Bring Me The Disco King - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">This is a remix by ex-Nine Inch Nails bass player/keyboardist Danny Lohner for the soundtrack to the 2003 film Underworld. Maynard James Keenan, Milla Jovovich, Josh Freese and John Frusciante also contributed to the remixed track.  Disclaimer - I do not own this video or the music. Re-posting as I enjoy this song and the original poster had removed their video.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=I4nHr44vE9I" target="_blank">Can - Vernal Equinox Live - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">BBC Live 1975</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/" target="_blank">Chet Baker Live @ Ronnie Scott&#39;s</a></span>
+                <span class="ml-1 text-sm opacity-80">Subscribe to Jazz at Ronnie Scotts for more: http://www.youtube.com/JazzatRonnieScotts  Watch more classic jazz from Ronnie Scotts:  Nina Simone: My Baby Just Cares - https://www.youtube.com/watch?v=0sK1xrGwHsw Chico Freeman: The Traveller - https://www.youtube.com/watch?v=Nom0sIBgARk Memphis Slim: Baby Please Come Home and Stepping Out - https://www.youtube.com/watch?v=PxPBRCiQC7o Anita O&#39;Day:...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=MwnFX0_H-rA" target="_blank">Cindy und Bert – Der Hund von Baskerville (Black Sabbath - Paranoid cover)</a></span>
+                <span class="ml-1 text-sm opacity-80">I tried to sync up the audio.  German lyrics:  Nebel zieht in dichten Schwaden Übers Moor von Forest Hill Grün-gespenstig grinst ein Irrlicht Es ist Nacht in Baskerville Wer verbreitet Angst und Schrecken Wer vernichtet, was er will Jeder sucht sich zu verstecken Vor dem Hund von Baskerville Wen er anfällt Dieser Hund von Baskerville, oh yeah Hat verloren In dem Kampf um Baskerville, oh, yeah U...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=R81jAk9LgiQ" target="_blank">Clarke Stanley Tiny Desk Concert - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">This Black Music Month, Tiny Desk honors the anniversaries of landmark albums that have shaped the course of music and culture.  Mitra I. Arthur | June 17, 2025 Once the Tiny Desk logo fades away, one of the things you&#39;ll notice is a wall of amps. Robust sound has always been a hallmark of bassist Stanley Clarke&#39;s musicality; he reminded our audio team not only to pay attention to what the soun...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.npr.org/2025/06/17/g-s1-70053/stanley-clarke-tiny-desk-concert" target="_blank">Clarke Stanley Tiny Desk Concert : NPR</a></span>
+                <span class="ml-1 text-sm opacity-80">Stanley Clarke and his band 4EVER perform a locked-in set of classics from the bassist&#39;s catalog while also giving them new life.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=vBeujTXtzxA" target="_blank">Cluster on Brain Records, Brian Eno and Harmonia | Red Bull Music Academy</a></span>
+                <span class="ml-1 text-sm opacity-80">► Subscribe to Red Bull Music Academy: https://win.gs/SubscribeRBMA Highly influential and utterly unique, Hans-Joachim Roedelius and the late Dieter Moebius shaped the direction of popular music – without even intending to do so.  This talk, at the 2010 Red Bull Music Academy in London, takes in their earliest collaborations as Cluster, their work with Neu’s Michael Rother as Harmonia, their l...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=J-gWGkfapbk" target="_blank">Cure: Robert Smith - &#39;Songs of a Lost World&#39; track-by-track | Tim&#39;s Listening Party - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">The Cure&#39;s legendary frontman Robert Smith joined Tim Burgess on Tim&#39;s Listening Party to discuss The Cure&#39;s critically-acclaimed 2024 album &#39;Songs of a Lost World&#39;.  In the in-depth interview over an hour they chatted about everything from recording at Rockfield Studios, dedicating the album to The Cure&#39;s fans, the emotions of playing live, their intimate Troxy show, how Reeves Gabrels joined ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=9V12hWZvmtk" target="_blank">Curiousmusic has just announced &#39;A Very Special New Project From Tim Story - Featuring contributions from Eve Maret, Mark Mothersbaugh, Rother Michael and more.&#39; I´m sure many of you will recognise the sound of the music</a></span>
+                <span class="ml-1 text-sm opacity-80">Coming Soon: A Very Special New Project from Tim Story.   Featuring contributions from Eve Maret, Mark Mothersbaugh, Michael Rother and more.  curiousmusic.us</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=T8iXttkok4I" target="_blank">Czukay Holger - Blessed Easter - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">-</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Of-iP_VL7Bg" target="_blank">Davis Miles - Live in Vienna 1973 Stadthalle ganzes Konzert - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Vienna Stadthalle 1973 ganzes Konzert mit Miles Davis (tpt, org); Dave Liebman (ss, ts, fl); Pete Cosey (g, perc); Reggie Lucas (g); Michael Henderson (el-b); Al Foster (d); James Mtume Forman (cga, perc)</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://m.youtube.com/watch?v=WmIn_IfJh90&amp;t=2130s&amp;pp=2AHSEJACAQ%3D%3D" target="_blank">Davis Miles - Montreux Jazz Festival - 07 July 1988 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=oCMDf5MXd2s" target="_blank">Davis Miles Quintet, Concert in Karlsruhe, November 7th, 1967 (in color) - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">00:39 Agitations  07:41 Footprints 13:43 I fall in love too easily 25:16 Gingerbread boy 30:39 The theme  Miles Davis - trumpet Wayne Shorter - saxophone Ron Carter - bass  Herbie Hancock - piano  Tony Williams - drums</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=wneX5-M07TA" target="_blank">FKJ &amp; Yussef Dayes - Live From The Greenhouse - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">&#39;Live from the Greenhouse&#39; vinyl: https://fkj.ffm.to/greenhouse  ------------------------------------- FKJ &amp; Yussef Dayes - Live From The Greenhouse  00:25 Gab 05:06 Run 07:56 Nostalgia 10:38 Mystery 15:29 Canputanam 18:31 Eyes On Us (interlude) 19:45 Last Hour 23:42 One More  ------------------------------------- Directors: UNCANNY  Production Company: Smuggler  EP: Joel Spencer  Producer: Sid...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=JwfaDytMCBk" target="_blank">GABRIEL PETER family portrait - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Unieke beelden achter de schermen van Peter en de hele band.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=NyydSocn5dM" target="_blank">GoGo Penguin - From the North - GoGo Penguin Live in Manchester - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">GoGo Penguin present their new EP “From the North,” recorded live at Old Granada Studios in Manchester, now operating as Versa Studio 4.  0:26 - Wave Decay  5:32 - Ascent 10:03 - Friday Film Special    14:15 - Everything Is Going to Be OK 19:02 - An Unbroken Thread of Awareness 21:59 - You’re Stronger Than You Think  25:08 - Parasite  Stream &amp; download the EP here: https://gogopenguin.lnk.to/fr...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/@groenlandrecords/videos" target="_blank">groenlandrecords - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=wFbIBcTjm4k" target="_blank">Hill Judith | KNKX Studio Session</a></span>
+                <span class="ml-1 text-sm opacity-80">The first KNKX session performance at our temporary location at Avast! Studios was a family affair. But it wasn&#39;t without a little stress as Judith Hill (@JudithHillMusic) shared her uniquely funky music with us.  Hill&#39;s quartet on this trip to Seattle included drummer John Staten and Hill&#39;s parents, funk veterans Pee Wee Hill and Michiko Hill on bass and keyboards. The singer, guitarist, piani...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=gZqWYD_X2BA" target="_blank">K&amp;D SESSIONS LIVE - &#39;Speechless Live&#39; at Elbphilharmonie Hamburg - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Filmed at the premier show of the K&amp;D SESSIONS LIVE at the Elbphilharmonie in Hamburg on 25.Oct.2024.  Film by Oscar Pecher and Hovn Studios.  https://www.oscarpecher.com/ https://hovnstudios.com/  Peter Kruder - Synths &amp; Dubs Richard Dorfmeister - Guitars &amp; Synths Andreas Lettner - Drums Albin Janoska - Keys &amp; Synths Max Kanzler - Percussion Peter Schönbauer - Bass  K&amp;D Sessions LIVE TOUR 2025...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=QDMcC6MEAiE" target="_blank">Kraftklub – &quot;Schief in jedem Chor&quot; | ZDF Magazin Royale - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">„Hey, gibt es bei euch gute Parkmöglichkeiten? Und können wir ein paar Freund*innen mitbringen?“, haben uns Kraftklub vor ein paar Tagen geschrieben. Wir dachten, es ginge um einen Parkplatz für ihren Nightliner und ein bis zwei zusätzliche Namen auf der Gästeliste. Mit einem Kran, an dem ein Schild über ganz Ehrenfeld hängt, dem Kölner Jugendchor St. Stephan und hunderten Menschen haben wir ni...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.3sat.de/kultur/rockpalast-crossroads/rockpalast-crossroads-kratzen-104.html" target="_blank">Kratzen - Rockpalast Crossroads</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.npr.org/2025/06/25/g-s1-70062/living-colour-tiny-desk-concert" target="_blank">Living Colour: Tiny Desk Concert : NPR</a></span>
+                <span class="ml-1 text-sm opacity-80">Did we really squeeze the big sound of Living Colour behind the Tiny Desk? Yes, we did. And, yet, the band lost none of its intensity.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=lGoyw8ml9WM" target="_blank">Marti Fischer &amp; Musik-Studierende: Synthwave</a></span>
+                <span class="ml-1 text-sm opacity-80">&quot;5 Styles&quot;-Workshop mit Studierenden der Hochschule für Musik und Theater München CC BY Marti Fischer 2024  Klassische Stilübungen mal anders – in diesem Workshop verwandeln Marti Fischer und die Studierenden der HMTM die Harmonie des Pachelbel-Kanons und eine von KI geschriebene Liebeslied-Lyrics in verschiedene Styles: Synthwave, Helge Schneider, Hip Hop und Earth, Wind &amp; Fire.   Den gesamten...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=1EfyGJ1KyHw" target="_blank">Massive Attack Live from Abbey Road - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Live from Abbey Road Studios  0:00 . 0:36 Intro 1:05 Interview 2:26 Teardrop 8:04 Interview 9:10 Mezzanine 15:14 Interview 15:49 Angel 20:37 Credits  Live From Abbey Road Studios, Season 1 Episode 09 @AbbeyRoad @MassiveAttack @JBL @Live @Dr.House @Teardrop @Mezzanine @Angel @TripHop   *Includes copyrighted content  Suscribe to my channel plis!!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=pt2e4wv7Q_o" target="_blank">Massive Attack: Unfinished: The Making of Massive Attack - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">A BBC documentary, first broadcast on the 6th September 2016, to celebrate the 25th anniversary of Massive Attack&#39;s seminal debut album Blue Lines.  The program not only explores Massive Attack&#39;s background and formation, but also delves into the burgeoning Bristol music scene of the 1970&#39;s and 1980&#39;s.  The documentary is narrated by actor Paul McGann, and features new interviews with long term...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=g-JxQOMwESY" target="_blank">MOLVÆR NILS PETTER live in Ingolstadt, November 15 2024</a></span>
+                <span class="ml-1 text-sm opacity-80">Live at &quot;Jazzparty&quot; in Maritim Congress Center Ingolstadt</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=lBTR0vpW_og" target="_blank">Nighthawks live | Leverkusener Jazztage 2023 | Jazzline - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Besetzung Reiner Winterschladen - trumpet, flugelhorn Jörg Lehnhardt - guitar Dal Martino - bass, vocals Jürgen Dahmen - keyboards, conga Thomas Alkier - drums  📸 Fotos (von Rainer Leigraf): https://www1.wdr.de/fernsehen/rockpalast/events/nighthawks-leverkusener-jazztage-dreiundzwanzig-100.html  Filmmusik für Filme, die es (noch) nicht gibt. Soundscapes, die sich großflächig über die Schotterp...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.arte.tv/de/videos/051447-001-A/nile-rodgers-from-disco-to-daft-punk/" target="_blank">Nile Rodgers: From Disco to Daft Punk - Die ganze Doku | ARTE</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=5iYyBxUislE" target="_blank">PRINCE &amp; 3RDEYEGIRL - CRAZY2COOL (June 1, 2014 - Le Zénith, Paris, FR)</a></span>
+                <span class="ml-1 text-sm opacity-80">Around the World In A Day available now https://prince.lnk.to/ATWIADYD In celebration of the exclusive partnership announced between The Prince Estate and Paris Saint-Germain, we bring you the entire “CRAZY2COOL” medley, recorded June 1, 2014 at Le Zénith in Paris, FR. Read more about the collaboration here - https://en.psg.fr/teams/club/content/the-prince-estate-and-paris-saint-germain-announc...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=G9gmOGjO9L0" target="_blank">Radiohead - Present Tense (Live at Lollapalooza Chicago 2016) - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">A Moon Shaped Pool Tour Lyrics:  This dance This dance It&#39;s like a weapon It&#39;s like a weapon Of self defense Self defense Against the present Against the present Present tense  I won&#39;t get heavy Don&#39;t get heavy Keep it light and Keep it moving I am doing No harm As my world Comes crashing down I&#39;m dancing Freaking out Deaf, dumb, and blind  In you I&#39;m lost In you I&#39;m lost  I won&#39;t turn around w...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=d_HiP0i7dyk" target="_blank">Red Hot Chili Peppers - Buenos Aires, Argentina 2023 (HD) | River Plate Stadium</a></span>
+                <span class="ml-1 text-sm opacity-80">Hola! Les agradeceria que nos siguieran en Twitter: https://twitter.com/RHCPtvArgentina Muchas gracias y disfruten el show  Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infring...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=W7YF_DqZY_c" target="_blank">Red Hot Chili Peppers - Live at the Pyramids</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=T8y9A35enDw" target="_blank">Ribot Marc - LIVE 60 JAZZALDIA: MARC RIBOT HURRY RED TELEPHONE – UZTAILAK 25, 2025 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">#60jazzaldia #livejazzaldia #sansebastianjazzfestival  🎶 MARC RIBOT HURRY RED TELEPHONE 📅 Uztailak 25, 2025  📌 Trinitate Plaza Donostia / San Sebastián 🌐 www.jazzaldia.eus  - Follow all the action #60jazzaldia +info https://jazzaldia.eus/ Instagram @JazzaldiaDonostia Facebook @JazzaldiaDonostia Twitter @jazzaldia   Marc Ribot (gitarra), Ava Mendoza (gitarra), Sebastian Steinberg (kontrabaxu...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=P4WvnSYHH1s" target="_blank">Rodgers Nile &amp; CHIC - Live at Pinkpop 2022 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">1:40 Get Lucky 7:09 Let’s Dance 11:35 Le Freak 16:11 Good Times  PP22: Nile Rodgers showt zijn snoepketting vol hits https://3voor12.vpro.nl/update~1d9e2380-8a94-4dc1-ad1d-ae57052e855d~pp22--nile-rodgers-showt-zijn-snoepketting-vol-hits~.html  Meer Pinkpop 2022: https://3voor12.nl/pinkpop  NTR/VPRO/BNNVARA verzorgen namens de NPO de hele verslaggeving van Pinkpop. Zie, hoor en lees alles via 3v...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=MDTlUtrzeFI" target="_blank">Rodrigo Olivia - Just Like Heaven (feat. Robert Smith) (Glastonbury 2025) - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Warning: Contains flashing images  Watch full performances from Glastonbury on BBC iPlayer: https://www.bbc.co.uk/iplayer/episodes/b007r6vx/glastonbury Listen to full performances from Glastonbury on BBC Sounds: www.bbc.co.uk/sounds/brand/m002dwy4</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=IY914S5aebs" target="_blank">Roni Size · AV DJ Set, Live from Bristol</a></span>
+                <span class="ml-1 text-sm opacity-80">The iconic Roni Size brought New Forms to bluedot 2018 for one of the weekend’s most extraordinary sets, accompanied with an amazing 3D AV set. Roni and his team join forces with bluedot again for a brand new live AV performance, filmed live from his studio.  Enjoying the broadcast? Please donate to our home of Jodrell Bank Discovery Centre… https://www.jodrellbank.net/support-jodrell-bank-disc...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=t_zYJTvyM4c" target="_blank">Rother Michael (NEU!) performing &quot;Negativland&quot;</a></span>
+                <span class="ml-1 text-sm opacity-80">Michael Rother (on guitar and live electronics) Franz Bargmann (on guitar) Slobodan Kajkut (replacing Hans Lampe on drums super last minute!)  filmed at the  Elevate Festival Closing Concert 08.03.2020 @ Orpheum Extra, Graz by David Visnjic (edited by Laurin Hofmann)   &quot;Negativland - composed by Klaus Dinger and Michael Rother. Released on the first NEU! album in 1972, available as LP and CD on...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=wUumTBqk7zo" target="_blank">Rother Michael - Live Session &amp; interview</a></span>
+                <span class="ml-1 text-sm opacity-80">Michael Rother - Live Session &amp; interview 6Music 09-09-2019  00:00 Interview 04:23 Gitarrero 09:26 Neuschnee  15:28 Interview  28:42 Seeland   Michael Rother is a German multi-instrumentalist experimental musician. He was a member of Kraftwerk in 1971 and formed the legendary bands NEU! (with Klaus Dinger) and Harmonia (with Hans-Joachim Roedelius and Dieter Moebius of Cluster) before releasing...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=IjnS52TOZjE" target="_blank">Space Mirage | 70s A Berlin School | Vintage Synths and Electronic Vibes</a></span>
+                <span class="ml-1 text-sm opacity-80">🎧 Listen to All Albums: https://obukhovaudio.bandcamp.com 🎧 Apple Music / iTunes: https://music.apple.com/au/artist/obukhovaudio/1598442565  🎼 Welcome to the world of Vintage Space Mirage — a sanctuary where analog dreams drift through time.  Here, the pulse of vintage synthesizers and the whisper of classic electronic machines awaken vast, cinematic soundscapes that shimmer and evolve like ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=V40YstCKggc" target="_blank">Sting Isle Of Wight 20.06.2025</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=lcZq9JPjQ-k" target="_blank">Streetmark - Welcome (inclusiv Intro) - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Psychodelic-Krautrock</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Cma_-E6pG2Y" target="_blank">The Killers &amp; Bruce Springsteen: Encore At The Garden - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Support your local indie record store with &quot;The Killers &amp; Bruce Springsteen: Encore At The Garden&quot; Find your store here: http://recordstoreday.com  Directed By Giorgio Testi Executive Producers: Beth Earl, Lily Sobhani  Producer: Stacy Fallon Co-producer: Kelsey Ayres   Follow The Killers: Instagram:  https://www.instagram.com/thekillers/ Facebook:  https://www.facebook.com/Thekillers/ Twitter:...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/shorts/ol43Efpt-r0" target="_blank">Tina Weymouth: A Master of Groove, Part 1</a></span>
+                <span class="ml-1 text-sm opacity-80">A short bio about Tina Weymouth, the Bassist for Talking Heads, and Songwriter and Founder of Tom Tom Club.  #tinaweymouth #bassplayer #tomtomclub #femaleartist</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=mKJG57qnYdc" target="_blank">Tom Tom Club: NPR Music Tiny Desk Concert</a></span>
+                <span class="ml-1 text-sm opacity-80">Tom Tom Club began as a side project of Talking Heads&#39; rhythm section: the bass of Tina Weymouth and the drums of Chris Frantz. The group&#39;s music was a staple of parties and clubs back then, and the music took on a life of its own in various samples and remakes, especially in the pop hit &quot;Genius of Love.&quot; Watch the legendary band perform in a rare acoustic set at the NPR Music offices.  Set Lis...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=rAOHJqJMYDA" target="_blank">Underworld | Boiler Room: London - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">The long-awaited Boiler Room debut from UK rave legends, Underworld, live from London.   Few acts in electronic music hold the weight of history in the same way Underworld do. Surging from the late 80s synthpop into the UK rave scene, Underworld reimagined the tangibility of the genre, with an undeniable legacy that lives on to this day.  ►  Listen to Boiler Room’s archive on Apple Music: https...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=KGLWFfesqXk" target="_blank">Vince Clarke Interview on BBC show The Old Grey Whistle Test - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Vince Clarke is interviewed on the BBC show The Old Grey Whistle Test   From my personal collection of VHS recordings</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=fo-z_IeO4ms" target="_blank">Weather Report | Live In 1978 | Full Live Concert | Rockpalast - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Sept. 1978 Weather Report&#39;s headlining status afforded them the opportunity to play a very long set amounting to two hours in length. Given the previous year&#39;s success with the poll winning &quot;Heavy Weather&quot; album one might have expected them to concentrate on this more or less exclusively, but instead, fans were treated to material from right across the band/s career and solo spots by everybody....</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=JcuNiFGq5A8" target="_blank">Wesseltoft Bugge, Dhafer Youssef, Erik Truffaz - live 2004 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Jazz a Vienne 2004 Bugge Wesseltoft - keyboards Dhafer Youssef - vocals, oud, percussion  Jonas Lonna - DJ Ole Morten Vaagan - bass Andreas Bye - drums Rikard Gensollen - percussion + Erik Truffaz - trumpet ( on last track )  Frick - 0:00 He Is ? - 7:07 Sunday - 18:33 Trio ( improvisation ) - 27:20 Film Ing. - 31:54 Oh Ye ( feat Erik Truffaz ) - 43:15  + special guest Erik Truffaz - trumpet</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=24lhWTPVPnQ" target="_blank">What’s It Like Drumming For Frank Zappa? | Chad Wackerman</a></span>
+                <span class="ml-1 text-sm opacity-80">Chad Wackerman is live in the Drumeo studio for the first time ever!   Join Chad Wackerman and Brandon Toews as they dive into his legendary career as Frank Zappa’s drummer from 1981 to 1988, and explore Chad’s approach to mastering odd time signatures. Known for his incredible versatility and deep understanding of rhythm, Chad shares invaluable tips you can apply to your own drumming.  Try 7 D...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/@YestertoonsEnglish" target="_blank">YESTERTOONS - Official Channel - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=26X9ecyMZss" target="_blank">Zappa Frank - Dog Breath Variations + Uncle Meat - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Frank Zappa / Ensemble Modern, Alte Oper, Frankfurt, Germany, 17 sept 1992  It was his last professional public appearance, as the cancer was spreading to such an extent that he was in too much pain to enjoy an event that he otherwise found &quot;exhilarating&quot;. Recordings from the concerts appeared on The Yellow Shark, Zappa&#39;s last release during his lifetime.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

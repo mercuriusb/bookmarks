@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/architecture - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="active-tag" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/architecture</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=fu-k4O21Q1Q" target="_blank">(1) Scrum vs Agile Methodology: What&#39;s the difference? - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Want to know the difference between Agile and Scrum?  Whether you&#39;re doing software development, product development or maybe even Agile project management (if there is such a thing?), then you need to understand the difference between Scrum and Agile.  By the way, here&#39;s a full article I did comparing Agile and Scrum, along with advice on how to choose between Scrum and Agile. Give it a read! ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://vaughnvernon.com/" target="_blank">@VaughnVernon | Vaughn Vernon Domain-Driven Design</a></span>
+                <span class="ml-1 text-sm opacity-80">As a leading expert in Domain-Driven Design I champion simplicity. I consult and teach around Domain-Driven Design and reactive software development.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://danluu.com/monorepo/" target="_blank">Advantages of monorepos</a></span>
+                <span class="ml-1 text-sm opacity-80">The build system inside of Google</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://apichangelog.substack.com/p/api-prototyping-in-practice?triedRedirect=true" target="_blank">API Prototyping in Practice</a></span>
+                <span class="ml-1 text-sm opacity-80">What techniques can help you validate your APIs?</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://javarevisited.substack.com/p/system-design-basics-authentication?publication_id=1444904&amp;post_id=180573530&amp;isFreemail=true&amp;r=2183eh&amp;triedRedirect=true" target="_blank">Authentication Explained: When to Use Basic, Bearer, OAuth2, JWT &amp; SSO</a></span>
+                <span class="ml-1 text-sm opacity-80">Authentication Explained: When to Use Basic, Bearer, OAuth2, JWT &amp; SSO</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.bleass.com/monolit/" target="_blank">BLEASS Monolit | BLEASS</a></span>
+                <span class="ml-1 text-sm opacity-80">Free Download for Mac &amp; WindowsFree Download for iPhone &amp; iPad BLEASS Monolit combines the rich analogue sound and intuitive ease-of-use of BLEASS Alpha with the creative expressiveness of BLEASS Omega. The result is a compact, efficient, mono-synth tailor-made for…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://en.wikipedia.org/wiki/Change_data_capture" target="_blank">Change data capture</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html" target="_blank">Clean Coder Blog</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://blog.frankel.ch/elastic-java-sdk-design/" target="_blank">Clean Design, Strong Client: The way of the Elasticsearch&#39;s Java SDK</a></span>
+                <span class="ml-1 text-sm opacity-80">Java has a vast ecosystem of APIs, not all of which are effective or easy to learn. Developing a good API is not trivial: misdesigning key elements, defining simple abstractions, and threading models are among the themes that must be addressed. The official Elasticsearch Java SDK is a project with a design effort that has been made to address these elements.   Recently, this project surprised m...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://en.wikipedia.org/wiki/Dependency_inversion_principle" target="_blank">Dependency inversion principle - Wikipedia</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.amazon.com/dp/B09CQ5M545?ref_=ast_author_dp#customerReviews" target="_blank">Designing Hexagonal Architecture with Java: An architect&#39;s guide to building maintainable and change-tolerant applications with Java and Quarkus 1. Auflage, Kindle Ausgabe</a></span>
+                <span class="ml-1 text-sm opacity-80">Amazon.com: Designing Hexagonal Architecture with Java: An architect&#39;s guide to building maintainable and change-tolerant applications with Java and Quarkus eBook : Vieira, Davi: Kindle-Shop</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://software-architecture-summit.de/blog/modeling-und-design/annegret-junker-im-interview-ueber-domain-driven-api/" target="_blank">Dr. Annegret Junker im Interview</a></span>
+                <span class="ml-1 text-sm opacity-80">Jetzt ansehen: Experteninterview auf dem Software Architecture Summit im März 2024</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=p0wimdpCNGk" target="_blank">Event Sourcing and CQRS Explained | When should you use them? - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Event Sourcing and CQRS are possibly the most fascinating architectural patterns in the software world, especially when combined with an event-driven architecture (EDA). In contrast to traditional applications that store exclusively the current state of the system while losing the history of all operations and changes applied to it, event sourcing dictates that all state changes have to be repr...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=_JQUQ-4u7Xk" target="_blank">Get all my Coding Problems of 2024 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Join the Persistence Hub and get the 11 Coding Problems of 2024 for free!  👉🏻 https://thorben-janssen.com/join-persistence-hub/  -------------------------------------------------------------------------------------- I&#39;m a freelance consultant and trainer helping Java developers create better persistence layers using Hibernate and Spring Data. Get the best videos to grow your persistence skill...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.javacodegeeks.com/2025/12/hexagonal-architecture-ports-and-adapters-achieving-true-domain-independence.html" target="_blank">Hexagonal Architecture (Ports and Adapters): Achieving True Domain Independence</a></span>
+                <span class="ml-1 text-sm opacity-80">Explore hexagonal architecture and the ports and adapters pattern that isolates business logic from infrastructure, enabling testable systems</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.happycoders.eu/software-craftsmanship/hexagonal-architecture/" target="_blank">Hexagonal Architecture – What Is It? Why Use It?</a></span>
+                <span class="ml-1 text-sm opacity-80">What is Hexagonal Architecture (Ports &amp; Adapters)? – Advantages over Layered Architecture – Hexagonal Architecture, Microservices and DDD</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://romanglushach.medium.com/hexagonal-architecture-the-secret-to-scalable-and-maintainable-code-for-modern-software-d345fdb47347" target="_blank">Hexagonal Architecture: The Secret to Scalable and Maintainable Code for Modern Software | by Roman Glushach | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">Hexagonal architecture, also known as ports and adapters architecture, is an architectural pattern that aims to create loosely coupled…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.happycoders.eu/de/software-craftsmanship/hexagonale-architektur/" target="_blank">Hexagonale Architektur – Was ist das? + Ihre Vorteile</a></span>
+                <span class="ml-1 text-sm opacity-80">Was ist hexagonale Architektur (Ports &amp; Adapters)? – Vorteile gegenüber der Schichtenarchitektur – Hexagonale Architektur, Microservices und DDD</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://ddd.academy/domain-driven-design-in-java/" target="_blank">https://ddd.academy/domain-driven-design-in-java/</a></span>
+                <span class="ml-1 text-sm opacity-80">Gien Verschatse, Thomas Coopman, Stijn Vannieuwenhuyse, and Anton Stöckl — Learn to build rich domain models and use advanced tactical…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/java-monorepo-dynamic-builds-github-actions-automation" target="_blank">Level Up Your Java CI: A Fully Automated Monorepo Pipeline with GitHub Actions</a></span>
+                <span class="ml-1 text-sm opacity-80">Dynamic builds, mixed Java versions, and auto-generated badging for 50+ Quarkus examples</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://m.devoxx.com/events/dvbe25/talks/5910/live-coding-the-hive-a-modularization-strategy-for-your-modular-monolith-or-microservices" target="_blank">m.devoxx.com/events/dvbe2...</a></span>
+                <span class="ml-1 text-sm opacity-80">By Julien Topçu, Thomas PIERRAIN. This talk addresses the pitfalls of poorly designed microservices and introduces the modular monolith and Hive architecture style. Hive decouples deployment from software design, enabling flexible, scalable systems. Learn how this “Build once, Deploy as you wish” approach helps manage</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://verraes.net/2025/08/domain-and-bounded-contexts-dont-map-one-on-one/" target="_blank">No, Your Domains and Bounded Contexts Don’t Map 1 on 1 Bounded Contexts are a design choice to suit engineering needsverraes.net</a></span>
+                <span class="ml-1 text-sm opacity-80">Bounded Contexts are a design choice to suit engineering needs</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://victorrentea.ro/blog/overengineering-in-onion-hexagonal-architectures/" target="_blank">Overengineering in Onion/Hexagonal Architectures – Victor Rentea</a></span>
+                <span class="ml-1 text-sm opacity-80">Clean Architecture, Onion Architecture, and Hexagonal Architecture (aka Ports-and-Adapters) have become the norm for backend system design today. Powerful influencers have promoted these architectures without stressing enough that they are (overly)complex, exhaustive blueprints that need …</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://phauer.com/2020/package-by-feature/" target="_blank">Package by Feature</a></span>
+                <span class="ml-1 text-sm opacity-80">Package by feature to create self-contained and independent packages that are easy to understand and less error-prone</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://herbertograca.com/2017/09/14/ports-adapters-architecture/" target="_blank">Ports &amp; Adapters Architecture</a></span>
+                <span class="ml-1 text-sm opacity-80">The Ports &amp; Adapters Architecture (aka Hexagonal Architecture) was thought of by Alistair Cockburn and written down on his blog in 2005. This is how he defines its goal in one sentence: Allow a…</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://medium.com/mr-plan-publication/programmings-sacred-cows-how-best-practices-became-the-industry-s-most-dangerous-religion-07287854a719" target="_blank">Programming’s Sacred Cows: How Best Practices Became the Industry’s Most Dangerous Religion | by Terrance Craddock | Mr. Plan ₿ Publication | Mar, 2025 | Medium</a></span>
+                <span class="ml-1 text-sm opacity-80">Why your obsession with “doing it right” might be killing innovation and crushing your soul</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.heise.de/news/software-architektur-tv-Vaughn-Vernon-about-Domain-driven-Design-9732792.html" target="_blank">software-architektur.tv: Vaughn Vernon about Domain-driven Design | heise online</a></span>
+                <span class="ml-1 text-sm opacity-80">Für diese englischsprachige Episode des Videocasts zu Softwarearchitektur hat sich Eberhard Wolff Vaughn Vernon eingeladen, DDD-Experte und Autor.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.linkedin.com/posts/ricofritzsche_stop-treating-your-domain-model-like-a-shared-activity-7347184425320767489-YYPK?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAAEgUut8BpGHK9o8EMEYiva6gxWB9bRBgGxw" target="_blank">Stop treating your domain model like a shared database table. | Rico Fritzsche</a></span>
+                <span class="ml-1 text-sm opacity-80">Stop treating your domain model like a shared database table.  What I’m challenging here is the way traditional DDD applies tactical design through OOP principles: stateful objects, behavior encapsulation, method-driven logic, and polymorphism. That leads to classic issues:  ☑️Tightly coupled models ☑️Hidden logic flows ☑️Poor transparency ☑️Difficulty reflecting actual workflows  What I advoca...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.kitze.io/posts/saddest-just-ship-it-story-ever" target="_blank">The saddest &quot;Just Ship It&quot; story ever</a></span>
+                <span class="ml-1 text-sm opacity-80">This is a story of how it took me way too long to ship a product, and I ended up paying for a competitor product instead.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://systemdr.substack.com/p/tls-handshake-latency-when-your-load" target="_blank">TLS Handshake Latency: When Your Load Balancer Becomes a Bottleneck</a></span>
+                <span class="ml-1 text-sm opacity-80">You’ve scaled your backend services, tuned your databases, and optimized your API responses.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://tomato-architecture.github.io/" target="_blank">Tomato Architecture</a></span>
+                <span class="ml-1 text-sm opacity-80">A pragmatic approach to software development</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://software-architecture-summit.de/blog/software-architektur/vertical-slice-architecture-einfuhrung/" target="_blank">Vertical Slice Architecture</a></span>
+                <span class="ml-1 text-sm opacity-80">Von der Schichtenarchitektur zur Vertical Slice Architecture: Reduzieren Sie Komplexität und steigern Sie die Produktivität in der Softwareentwicklung.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://faun.pub/why-senior-developers-google-basic-syntax-fa56445e355f" target="_blank">Why Senior Developers Google Basic Syntax</a></span>
+                <span class="ml-1 text-sm opacity-80">The Truth About Expert Programming</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.humanlayer.dev/blog/writing-a-good-claude-md" target="_blank">Writing a good CLAUDE.md</a></span>
+                <span class="ml-1 text-sm opacity-80">`CLAUDE.md` is a high-leverage configuration point for Claude Code. Learning how to write a good `CLAUDE.md` (or `AGENTS.md`) is a key skill for agent-enabled software engineering.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.docker.com/blog/do-you-really-need-microservices/" target="_blank">You Want Microservices—But Do You Need Them? | Docker</a></span>
+                <span class="ml-1 text-sm opacity-80">Spring Modulith</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

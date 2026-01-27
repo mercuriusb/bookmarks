@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>smarthome - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details ><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="active-tag" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">smarthome</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://balkon.solar/" target="_blank">Alles über Steckersolar, Balkonkraftwerke &amp; Solar! – Dein Balkon kann mehr. Dein Garten, deine Terasse, Wand oder Dach auch! Unabhängig.</a></span>
+                <span class="ml-1 text-sm opacity-80">Willkommen bei Balkon.Solar e.V.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.oneforall.com/de-de/universal-fernbedienungen/urc-1240-contour-4/support" target="_blank">Contour 4</a></span>
+                <span class="ml-1 text-sm opacity-80">Die Contour 4 von One For All eignet sich ideal zur Steuerung von 4 Endgeräten: TV, Set Top Box (Satellit/Terrestrik/Kabel), DVD/Blu-ray Player, Aux und Audiogeräte. Die handliche Universalfernbedienung ermöglicht die einfache Steuerung aller Endgeräte wie mit den Originalfernbedienungen! Die Einrichtung der Fernbedienung erfolgt in 3 Schritten, einfach und schnell in weniger als einer Minute. ...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://homematic-forum.de/forum/viewtopic.php?t=28407" target="_blank">Die ungeliebten Nachtspeicheröfen, für mich GELÖST! - HomeMatic-Forum / FHZ-Forum</a></span>
+                <span class="ml-1 text-sm opacity-80">Moderator: Co-Administratoren</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://evcc.io/" target="_blank">evcc - Sonne tanken ☀️🚘 - PV-Überschussladen für steuerbare Wallboxen</a></span>
+                <span class="ml-1 text-sm opacity-80">Sonne tanken. Ganz einfach. evcc ist ein Energie-Management-System mit Fokus auf Elektromobilität. Die Software steuert deine Wallbox oder Schaltsteckdose. Um intelligente Entscheidungen zu treffen, kommuniziert es auch mit deinem Fahrzeug, Wechselrichter oder Hausspeicher. Die Software ist Open-Source und lebt von der Community. Jetzt loslegen Raspberry Pi, Docker und co. Laden, wenn die Sonne...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.efr.de/wp-content/uploads/2022/03/Bedienungsanleitung_EFR-SGM-D4-1.pdf" target="_blank">https://www.efr.de/wp-content/uploads/2022/03/Bedienungsanleitung_EFR-SGM-D4-1.pdf</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.treppenlifter.me/hublift-3m.html" target="_blank">Hublifte bis 3m Höhe: Preise, Beratung &amp; Einbau</a></span>
+                <span class="ml-1 text-sm opacity-80">Hublifte bis 3m Höhe ✆ Tel. Beratung: 0800 222 7150 inklusive ✓ Service ✓ Garantie ✓ Finanzierung Lassen Sie sich beraten.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.hausbau-forum.de/threads/hoermann-garagen-torsteuerung-a445-erfahrungen.42084/page-5" target="_blank">Hörmann Garagen-Torsteuerung A445 Erfahrungen</a></span>
+                <span class="ml-1 text-sm opacity-80">Weiss nicht was für ein Spezialist dran war. Aber der Taster schließt dann den Kreis. Somit müsstest du auch dort anschließen.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.techniker-forum.de/thema/nachtspeicherheizung-per-wifi-moeglich.115105/" target="_blank">Nachtspeicherheizung per Wifi möglich ?? | Techniker-Forum</a></span>
+                <span class="ml-1 text-sm opacity-80">Habe Nachtspeicheröfen von AEG möchte fragen ob es möglich ist diese per Wifi Aufzuladen z.B über Handy das man einen Tag bevor man nach Hause kommt diese anschalten bzw. ausschalten kann.Habe schon viel gegoogelt aber nix brauchbares finden können.  Gruß Steffen</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.heise.de/bestenlisten/testsieger/top-10-das-beste-balkonkraftwerk-mit-800-watt-im-test-mit-exklusiven-rabatten/19w3c1t" target="_blank">Top 10: Das beste Balkonkraftwerk mit 800 Watt im Test – mit exklusiven Rabatten | Heise online bestenlisten</a></span>
+                <span class="ml-1 text-sm opacity-80">Balkonkraftwerke sind günstig, einfach zu installieren und reduzieren die Stromkosten. Wir zeigen die besten Mini-PV-Anlagen aus unseren Tests.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

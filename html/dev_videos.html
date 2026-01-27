@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/videos - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="active-tag" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/videos</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.udemy.com/join/passwordless-auth/?next=%2Fcourse-dashboard-redirect%2F%3Fcourse_id%3D1376910&amp;action=login&amp;mode" target="_blank">Adobe Photoshop CC Masterclass — Vom Einsteiger zum Profi</a></span>
+                <span class="ml-1 text-sm opacity-80">Udemy ist eine Online-Kursplattform mit 250.000 Kursen und 80 Millionen Teilnehmer:innen, auf der du Kurse belegen oder als Dozent:in anbieten kannst. Hier kannst du Programmierung, Marketing, Data Science und vieles mehr lernen.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=9H5VK9vJ-aw" target="_blank">Behind HTMX: Carson Gross on the re-Rise of Hypermedia | Backend Banter 024 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">This is a podcast about backend development, so I couldn&#39;t miss the chance to chat with Carson Gross, the creator of HTMX and author of the book Hypermedia Systems. HTMX is all about giving backend developers the power to build modern webapps, without needing to write a line of frontend JavaScript. In a way, it&#39;s a return to the way the web used to work pre-React  Learn back-end development - h...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.udemy.com/join/passwordless-auth/?next=%2Fcourse-dashboard-redirect%2F%3Fcourse_id%3D5970706&amp;action=login&amp;mode" target="_blank">Cloud-native Microservices with Quarkus</a></span>
+                <span class="ml-1 text-sm opacity-80">Udemy ist eine Online-Kursplattform mit 250.000 Kursen und 80 Millionen Teilnehmer:innen, auf der du Kurse belegen oder als Dozent:in anbieten kannst. Hier kannst du Programmierung, Marketing, Data Science und vieles mehr lernen.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.udemy.com/join/passwordless-auth/?next=%2Fcourse-dashboard-redirect%2F%3Fcourse_id%3D693188&amp;action=login&amp;mode" target="_blank">Complete Guide to Elasticsearch</a></span>
+                <span class="ml-1 text-sm opacity-80">Udemy ist eine Online-Kursplattform mit 250.000 Kursen und 80 Millionen Teilnehmer:innen, auf der du Kurse belegen oder als Dozent:in anbieten kannst. Hier kannst du Programmierung, Marketing, Data Science und vieles mehr lernen.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.udemy.com/join/passwordless-auth/?next=%2Fcourse%2Flearn-openshift%2Flearn%2Flecture%2F46207123%3Fcomponents%3Dadd_to_cart%252Cavailable_coupons%252Cbase_purchase_section%252Cbuy_button%252Cbuy_for_team%252Ccacheable_buy_button%252Ccacheable_deal_badge%252Ccacheable_discount_expiration%252Ccacheable_price_text%252Ccacheable_purchase_text%252Ccurated_for_ufb_notice_context%252Ccurriculum_context%252Cdeal_badge%252Cdiscount_expiration%252Cgift_this_course%252Cincentives%252Cinstructor_links%252Clifetime_access_context%252Cmoney_back_guarantee%252Cprice_text%252Cpurchase_tabs_context%252Cpurchase%252Crecommendation%252Credeem_coupon%252Csidebar_container%252Cpurchase_body_container%26couponCode%3DST8MT101424&amp;action=login&amp;mode#overview" target="_blank">Course: OpenShift for the Absolute Beginners - Hands-on | Udemy</a></span>
+                <span class="ml-1 text-sm opacity-80">Udemy ist eine Online-Kursplattform mit 250.000 Kursen und 80 Millionen Teilnehmer:innen, auf der du Kurse belegen oder als Dozent:in anbieten kannst. Hier kannst du Programmierung, Marketing, Data Science und vieles mehr lernen.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/playlist?list=PLRsbF2sD7JVoSl0q9XTZ_RKlucdQL5sBp" target="_blank">Devoxx Belgium 2023 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=4LJKUWujVZs" target="_blank">Faster Java Without Changing Any Code by Simon Ritter - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">For more info on the next Devoxx UK 👉  https://www.devoxx.co.uk  Applications that run on the JVM benefit from a managed runtime environment with JIT compilation that can easily exceed the performance of natively compiled code. In this byte-sized session, we&#39;ll look at some ways to improve the performance of your JVM-based applications without having to change a single line of code or even rec...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=0cLdSd41Cis" target="_blank">HTMX - Dynamic HTML without Javascript - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">This week we complete work on our add new item story. Then, while we wait for our owner Alison to decide if it’s good enough, we investigate a new technology, HTMX.  Let’s see whether HTMX lives up to its promise of interactive webpages without having to learn a Javascript framework.  In this episode  * 00:00:32 A bug in the last feature * 00:00:56 Noticeable page reloads * 00:01:27 Adding HTML...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=nNtELewCaD4" target="_blank">HTMX - What they don&#39;t want you to know! - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">📚 Learn to write cleaner React code with the new SOLID React book:  https://solidreact.dev  HTMX or what&#39;s known as &quot;hypertext with a little bit of AJAX&quot; is really making web development easier and bringing the old good days of only working with HTML without the need for new frontend libraries, frameworks or even doing and handling HTTP requests. It provides a simple syntax that makes everythi...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=gCdfnWVjWNE" target="_blank">Hätte ich DAS früher gewusst! ssh-add erleichtert dir deine SSH Verbindungen - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Willkommen zu meinem neuesten Video  In diesem Video tauchen wir weiter in die Welt der SSH-Schlüssel und deren Verwaltung ein. Und ich zeige dir, wie du mit dem Tool ssh-add deine SSH-Verbindungen effizienter gestalten kannst.  SSH (Secure Shell) ist ein unverzichtbares Werkzeug für die Verwaltung von entfernten Servern, aber der Aufbau von SSH-Verbindungen kann manchmal etwas nerven. Gerade d...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/@IGotAnOffer-Engineering" target="_blank">IGotAnOffer: Engineering - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80"></span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=53ccfLqYpWY" target="_blank">IntelliJ IDEA Tips &amp; Tricks by Anton Arhipov youtube.com</a></span>
+                <span class="ml-1 text-sm opacity-80">Modern IDEs are pretty complex. Even IDE developers say they sometimes discover new features only while reading the IDE&#39;s code. Does this sound familiar: your colleague is trying to find a class in the project tree, and they don&#39;t remember a class name, so you are trying hard not to scream: &quot;Just press Ctrl+Shift+E!!!&quot;. Generally, developers use their IDEs and do not utilize the power of automa...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=HmGmV5O_d-M" target="_blank">JobRunr Quick Start - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Short introduction to the ultimate library for background processing in Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=TpD6bT9M1CE" target="_blank">JPA Buddy – From Zero to Hero | @MarcoCodes - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">In this #noslides live-coding session, you’ll learn about JPA Buddy’s functionality for managing your JPA data model from the ground up. JPA Buddy currently works as a plugin, but starting with the 2023.3 release, its main functionality will be bundled into IntelliJ IDEA Ultimate by default.  We’ll cover its coding assistance and smart inspection features that let you easily create JPA entiti...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=x8kkjmCZTaw" target="_blank">LangChain4j - use the power of LLMs in Java! - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">An introduction to LangChain4j : what it is, why use it, with 7 short demos showing its main use cases in Java. We&#39;ll use Azure OpenAI and MistralAI, Dalle-3, GPT-4 and Mistral 7B, learn how to use embeddings and vector databases, and how to use the RAG pattern. The demos use a Spring Boot application that is easy to understand and re-use in your own projects. It is available at https://github....</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=0ulldVwZiKA" target="_blank">Say Goodbye to Containers - Ephemeral Environments with Nix Shell</a></span>
+                <span class="ml-1 text-sm opacity-80">With Nix Shell, you can instantly spin up the exact environment you need, tailored to specific projects, and discard it with ease once you&#39;re done. No containers!  We&#39;ll walk you through the installation of Nix and various ways to craft custom environments with Nix Shell.  ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ Sponsor: Cast AI 🔗 https://cast.ai/devopstoolkit 🔗 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬  #NixOS #NixShell #EphemeralEnvi...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=aolI_Rz0ZqY" target="_blank">So You Think You Know Git - FOSDEM 2024 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Scott Chacon&#39;s FOSDEM 2024 talk on Git Tips and Tricks and why he&#39;s working on GitButler now (https://gitbutler.com)  Scott talks about:  00:00 - Introduction 01:06 - About Me (well, Scott Chacon) 02:36 - How Well Do You Know Git? 05:09 - Our Agenda 06:25 - Some Helpful Config Stuff 09:42 - Oldies But Goodies 16:22 - Some New Stuff (You May Not Have Noticed) 23:48 - Some Big Repo Stuff / Monore...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=lBOwPYvdvLQ" target="_blank">The Elegance of Pattern Matching in Modern Java</a></span>
+                <span class="ml-1 text-sm opacity-80">JavaOne is back!  ➱  https://oracle.com/javaone  This  presentation will examine the evolution of switch from a statement to an expression and on to powerful pattern-matching machinery in modern Java. You&#39;ll also explore the reasons to refactor code to use this elegant and concise feature.  Presented by Venkat Subramaniam - Founder, Agile Develper, Inc.   ⎯⎯⎯⎯⎯⎯ More information ⎯⎯⎯⎯⎯⎯ ◦  Agile...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=qL9A21N-6J4" target="_blank">Unleashing AI in Java: A Guide to Semantic Kernel, LangChain4j, and Spring AI by Marcus Hellberg</a></span>
+                <span class="ml-1 text-sm opacity-80">Are you a Java developer curious about building AI apps, but feel restricted by the prevalence of Python and JavaScript tools? This talk is for you. We&#39;ll explore Java AI libraries like Semantic Kernel, LangChain4j, and Spring AI, demystifying how to get started with AI engineering right within your favorite language.  Through hands-on code examples using Spring Boot, React, and Hilla, we&#39;ll sh...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=dZWDRxN-Ng4" target="_blank">Virtual threads in action! - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Helidon 4 became the world’s first web framework fully based on virtual threads – one of the major game changers in the industry! Virtual threads, which first appeared in Project Loom and then as a production feature in Java 21, dramatically improve resource usage in the JVM, allowing us to achieve performance comparable to reactive engines, but with a fully blocking paradigm. In this talk, I a...</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

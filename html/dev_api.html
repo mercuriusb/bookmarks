@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>dev/api - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details open><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details open><summary><a class="active-tag" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">dev/api</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://thenewstack.io/api-governance-using-patterns-from-paypal-netflix-and-more/" target="_blank">API Governance: Using Patterns From PayPal, Netflix and More - The New Stack</a></span>
+                <span class="ml-1 text-sm opacity-80">A lot of organizations leave API governance to chance, but that&#39;s a risky approach. Instead, see how global enterprises guide their API development.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://scottsosna.com/2025/07/07/api-standards-are-data-standards/" target="_blank">API Standards ARE Data Standards – Scott&#39;s Blog</a></span>
+                <span class="ml-1 text-sm opacity-80">Aside from those whom have ignored technology trends for the last twenty years, everyone else is aware of – and likely working with – service-based architectures, whether micro, domain-driven, modulith, integration, data, or something else. From service-based we’ve evolved to API-First, where APIs are first class deliverables around which all solutions are built: front-end, back-end, mobile, ex...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://redmonk.com/sogrady/2025/06/09/open-source-apis/" target="_blank">Beyond Code: APIs as the Next OSS Battleground</a></span>
+                <span class="ml-1 text-sm opacity-80">On August 13th, 2010, Oracle sued Google over copyright and patent infringement claims relating to the reimplementation of the Java runtime within its Android platform. The suit took over a decade …</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/bundesAPI/deutschland/tree/main" target="_blank">bundesAPI/deutschland: Die wichtigsten APIs Deutschlands in einem Python Paket.</a></span>
+                <span class="ml-1 text-sm opacity-80">Die wichtigsten APIs Deutschlands in einem Python Paket. - bundesAPI/deutschland</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://traefik.io/pricing" target="_blank">Compare Traefik Products &amp; Get Pricing | Traefik Labs</a></span>
+                <span class="ml-1 text-sm opacity-80">Compare Traefik products based on the your desired use case—including application proxy, API gateway, and API management—and get pricing for each.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://bsky.app/profile/danieloh30.bsky.social/post/3lkpyhggchk2h" target="_blank">Daniel Oh: &quot;Building Scalable, Agile, and Secure APIs with Kubernetes and Microservices www.cncf.io/blog/2025/03... #cncf @cncf.io&quot; — Bluesky</a></span>
+                <span class="ml-1 text-sm opacity-80">Building Scalable, Agile, and Secure APIs with Kubernetes and Microservices www.cncf.io/blog/2025/03... #cncf @cncf.io</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://apichangelog.substack.com/p/documenting-api-governance?triedRedirect=true" target="_blank">Documenting API Governance - by Bruno Pedro</a></span>
+                <span class="ml-1 text-sm opacity-80">How do you document the processes behind API governance?</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://apidesignmatters.substack.com/p/from-here-to-there-from-where-to?r=3qth1&amp;triedRedirect=true" target="_blank">From Here to There, from Where to Here - by David Biesack</a></span>
+                <span class="ml-1 text-sm opacity-80">Patterns for Web API Query Parameters</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.the-main-thread.com/p/quarkus-stripe-api-versioning-adapter-java-tutorial" target="_blank">How Stripe-Style API Versioning in Quarkus Saves Your Demos and Your Sanity</a></span>
+                <span class="ml-1 text-sm opacity-80">A practical, end-to-end guide to building date-based API adapters, version routers, and backward-compatible responses in modern Java.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://nginxproxymanager.com/" target="_blank">Nginx Proxy Manager</a></span>
+                <span class="ml-1 text-sm opacity-80">Docker container and built in Web Application for managing Nginx proxy hosts with a simple, powerful interface, providing free SSL support via Let&#39;s Encrypt</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://github.com/oasdiff/oasdiff" target="_blank">Open API Diff and Changes</a></span>
+                <span class="ml-1 text-sm opacity-80">OpenAPI Diff and Breaking Changes. Contribute to oasdiff/oasdiff development by creating an account on GitHub.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://apichangelog.substack.com/p/openapi-is-not-enough" target="_blank">OpenAPI Is Not Enough</a></span>
+                <span class="ml-1 text-sm opacity-80">There are things you simply can&#39;t do with OpenAPI.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://startwithawhy.com/reverseproxy/2025/07/26/Reverseproxy-Deep-Dive-Part3.html" target="_blank">Reverse Proxy Deep Dive (Part 3): The Hidden Complexity of Service Discovery | Mitendra Mahto</a></span>
+                <span class="ml-1 text-sm opacity-80">Thoughts on software development</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.reddit.com/r/AskProgramming/comments/1g8ne5t/seeking_recommendations_for_best_api_management/?rdt=38721" target="_blank">Seeking Recommendations for Best API Management Tools : r/AskProgramming</a></span>
+                <span class="ml-1 text-sm opacity-80">Navigation öffnen                                                                                           Zur Reddit-Startseite</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://systemdr.substack.com/p/tls-handshake-latency-when-your-load" target="_blank">TLS Handshake Latency: When Your Load Balancer Becomes a Bottleneck</a></span>
+                <span class="ml-1 text-sm opacity-80">You’ve scaled your backend services, tuned your databases, and optimized your API responses.</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>

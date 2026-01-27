@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ios-music - Bookmarks</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .menu a.active-tag {
+            background-color: transparent !important;
+            color: #570df8 !important;
+            font-weight: bold !important;
+        }
+
+        .menu a.active-tag:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="index.html">Bookmarks</a>
+    </div>
+    <div class="flex-none gap-2">
+        <div class="form-control">
+            <input class="input input-bordered w-24 md:w-auto" id="search-input" onkeyup="handleSearch(event)" placeholder="Search..." type="text"/>
+        </div>
+    </div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+    <aside class="w-64 bg-base-200 overflow-y-auto border-r border-base-300">
+        <ul class="menu p-4 w-full">
+            <li class="menu-title">Tags</li>
+            <li><details ><summary><a class="" href="apps.html">apps</a></summary><ul><li><a class="" href="apps_bookmarks.html">bookmarks</a></li><li><a class="" href="apps_collection.html">collection</a></li><li><details ><summary><a class="" href="apps_dev.html">dev</a></summary><ul><li><a class="" href="apps_dev_db.html">db</a></li><li><a class="" href="apps_dev_tools.html">tools</a></li></ul></details></li><li><a class="" href="apps_editor.html">editor</a></li><li><a class="" href="apps_files.html">files</a></li><li><a class="" href="apps_graphics.html">graphics</a></li><li><a class="" href="apps_media.html">media</a></li><li><a class="" href="apps_office.html">office</a></li><li><details ><summary><a class="" href="apps_smarthome.html">smarthome</a></summary><ul><li><a class="" href="apps_smarthome_home-assistant.html">home-assistant</a></li></ul></details></li><li><details ><summary><a class="" href="apps_systemtools.html">systemtools</a></summary><ul><li><a class="" href="apps_systemtools_backup.html">backup</a></li><li><a class="" href="apps_systemtools_mac.html">mac</a></li></ul></details></li><li><details ><summary><a class="" href="apps_ystemtools.html">ystemtools</a></summary><ul><li><a class="" href="apps_ystemtools_windows.html">windows</a></li></ul></details></li></ul></details></li><li><details ><summary><a class="" href="dev.html">dev</a></summary><ul><li><a class="" href="dev_ai.html">ai</a></li><li><details ><summary><a class="" href="dev_api.html">api</a></summary><ul><li><a class="" href="dev_api_tools.html">tools</a></li></ul></details></li><li><a class="" href="dev_architecture.html">architecture</a></li><li><a class="" href="dev_container.html">container</a></li><li><details ><summary><a class="" href="dev_db.html">db</a></summary><ul><li><a class="" href="dev_db_apps.html">apps</a></li></ul></details></li><li><a class="" href="dev_git.html">git</a></li><li><a class="" href="dev_html.html">html</a></li><li><a class="" href="dev_index.html">index</a></li><li><details ><summary><a class="" href="dev_java.html">java</a></summary><ul><li><a class="" href="dev_java_articles.html">articles</a></li><li><a class="" href="dev_java_libs.html">libs</a></li><li><a class="" href="dev_java_persistance.html">persistance</a></li><li><details ><summary><a class="" href="dev_java_quarkus.html">quarkus</a></summary><ul><li><a class="" href="dev_java_quarkus_extension.html">extension</a></li></ul></details></li><li><a class="" href="dev_java_spring.html">spring</a></li></ul></details></li><li><details ><summary><a class="" href="dev_javascript.html">javascript</a></summary><ul><li><a class="" href="dev_javascript_db.html">db</a></li><li><a class="" href="dev_javascript_lib.html">lib</a></li><li><a class="" href="dev_javascript_react.html">react</a></li><li><a class="" href="dev_javascript_svelte.html">svelte</a></li><li><a class="" href="dev_javascript_ui.html">ui</a></li></ul></details></li><li><a class="" href="dev_kotlin.html">kotlin</a></li><li><a class="" href="dev_python.html">python</a></li><li><a class="" href="dev_testing.html">testing</a></li><li><details ><summary><a class="" href="dev_tools.html">tools</a></summary><ul><li><a class="" href="dev_tools_generators.html">generators</a></li></ul></details></li><li><a class="" href="dev_videos.html">videos</a></li></ul></details></li><li><a class="" href="environment.html">environment</a></li><li><a class="" href="gifs.html">gifs</a></li><li><a class="active-tag" href="ios-music.html">ios-music</a></li><li><a class="" href="motorsport.html">motorsport</a></li><li><details ><summary><a class="" href="music.html">music</a></summary><ul><li><a class="" href="music_index.html">index</a></li><li><a class="" href="music_news.html">news</a></li><li><a class="" href="music_videos.html">videos</a></li></ul></details></li><li><a class="" href="photos.html">photos</a></li><li><a class="" href="readlater.html">readlater</a></li><li><a class="" href="smarthome.html">smarthome</a></li>        </ul>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8" id="main-content">
+        <h1 class="text-3xl font-bold mb-6">ios-music</h1>
+        <div class="space-y-2" id="bookmark-list">
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://waldorfmusic.com/de/blofeld-ipad/" target="_blank">Blofeld iPad – Waldorf Music</a></span>
+                <span class="ml-1 text-sm opacity-80">für iPad       Blofeld für iPad   Der vielseitige Blofeld-Synthesizer ist jetzt in einer speziell optimierten Version für dein iPad verfügbar – inklusive Plugin-Unterstützung für mobile DAWs.  Mit der App kannst du sogar deinen Blofeld-Hardware-Synth steuern und nahtlos deine bestehenden Soundsets weiterverwenden. Die Sound-Engine basiert auf der</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://synthanatomy.com/2025/05/cem-olcay-nikaya-review-wavetable-and-fm-synthesizer-for-ios-and-macos.html" target="_blank">Cem Olcay Nikaya review, wavetable and FM Synthesizer for iOS and macOS</a></span>
+                <span class="ml-1 text-sm opacity-80">Cem Olcay Nikaya is a new two-oscillator wavetable and 2-OP FM Synthesizer with advanced sound design features for iOS and macOS.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://audiomodern.com/shop/plugins/chordjam/" target="_blank">CHORDJAM by Audiomodern™ | The Ultimate Chord Machine</a></span>
+                <span class="ml-1 text-sm opacity-80">An award-winning MIDI chord generator plugin that builds chords and progression patterns through intuitive user-guided randomization.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=Kpb313MT9HQ" target="_blank">How To Set Up AUM To Record Into Cubasis - FULL Tutorial For The iPad</a></span>
+                <span class="ml-1 text-sm opacity-80">You can get AUM Audio Mixer here at the App Store https://itunes.apple.com/us/app/aum-audio-mixer/id1055636344?mt=8  You can get Cubasis here at the App Store https://itunes.apple.com/us/app/cubasis-2-mobile-music-creation-system/id583976519?mt=8  Please help support thesoundtestroom by becoming a Patreon for as little as $1 a month. You will also have access to exclusive Patreon only content a...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=vR-nbz8DJzI" target="_blank">How To Use That 800 Year Old Melody Technique That&#39;s Awesome 👨‍🔬 - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">Howdy doody, Buckaroonies! Let&#39;s talk about the power of the magical Fugue Machine and how you can recreate it in any DAW! 💿 DistroKid (Save 7%) ► https://distrokid.com/vip/venustheory  Become a Patron ► https://venustheory.com/buckaroonie-babez Samples and Presets ► https://venustheory.com/store Gear List ► https://venustheory.com/gear  My Awesome Partners: 🎶 Get Bitwig! ► https://bit.ly/2S3...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://synthyfrog.com/technology-is-audiounit/type-is-host/sort-pricedropped-desc/" target="_blank">iOS Musician Apps, Supported Technologies is Audio Unit (AU), Type is Host (29)</a></span>
+                <span class="ml-1 text-sm opacity-80">Price drop 																			KeyStage</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://waldorfmusic.com/de/microwave-1-fuer-ipad/" target="_blank">Microwave 1 für iPad – Waldorf Music</a></span>
+                <span class="ml-1 text-sm opacity-80">für iPad     for iPad         Microwave 1 iPad  Mit seiner einzigartigen Interpretation der Wavetable-Synthese in Kombination mit analogen Filtern definierte der Microwave die Hybrid-Synthese in ihrer besten Form. Jetzt veröffentlicht Waldorf Music den Microwave 1 App für iPads inklusive AUv3</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.keyboards.de/" target="_blank">Online-Magazin für Keyboards, Synthesizers, Recording &amp; DJ</a></span>
+                <span class="ml-1 text-sm opacity-80">Das Online-Magazin für Keyboards, Synthesizers, Recording und DJ-Instrumente: Täglich neue Blogs, Stories und Tutorials!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://patchstorage.com/" target="_blank">Patchstorage | Discover &amp; Showcase Your Patches</a></span>
+                <span class="ml-1 text-sm opacity-80">We are a community of audio &amp; video programming enthusiasts who share and discuss their projects!</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://audiomodern.com/shop/plugins/riffer/" target="_blank">RIFFER by Audiomodern™ | The Creative MIDI Sequencer</a></span>
+                <span class="ml-1 text-sm opacity-80">A top-rated smart MIDI tool that generates musical Riffs &amp; Sequences. The best and most feature-rich generative MIDI Sequencer on the market.</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=YXm7h-xbpZM" target="_blank">ROZETA - CELLS Polyphonic Step Sequencer - Tutorial for the iPad - YouTube</a></span>
+                <span class="ml-1 text-sm opacity-80">You can get ROZETA Sequencer Suite here at the App Store https://itunes.apple.com/us/app/rozeta-sequencer-suite/id1292546479?mt=8&amp;uo=4&amp;at=1l3voJz  You can get AUM Audio Mixer here at the App Store https://itunes.apple.com/us/app/aum-audio-mixer/id1055636344?mt=8&amp;uo=4&amp;at=1l3voJz  You can get Syntronik here at the App Store https://itunes.apple.com/us/app/syntronik/id1263088043?mt=8&amp;uo=4&amp;at=1l3vo...</span>
+            </div>
+                        <div>
+                <span class="font-bold"><a class="link link-primary" href="https://www.youtube.com/watch?v=zCY_MvAp-5w" target="_blank">Rozeta Scaler + Fugue Machine Demo</a></span>
+                <span class="ml-1 text-sm opacity-80">🎧 Hey friends Help me hit 5K subs. Subscribe here :  http://bit.ly/subipadloops​   Running Fugue Machine through Rozeta Scaler will give you instant access to manipulate those scales and keys. Fun experimentation! I was having fun with this combo and wanted to share. Also shown, Rozeta LFO slowly modulating the filter cut off in BS-16i. ApeFilter and EOS2 take it to another sonic level.  Apps ...</span>
+            </div>
+                    </div>
+    </main>
+</div>
+<script src="search.js"></script>
+</body>
+</html>
